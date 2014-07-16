@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ruby | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: Can't Verify RubyGems on OS X]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2013/12/14/sneak-attack-cant-verify-rubygems-on-os-x/"/>
+    <updated>2013-12-14T21:24:43-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2013/12/14/sneak-attack-cant-verify-rubygems-on-os-x</id>
+    <content type="html"><![CDATA[<p><a href="http://www.jacopretorius.net/2013/10/could-not-verify-the-ssl-certificate-for-rubygems.html">Why Johnny Can’t Install Gems on OS X</a></p>
+
+<p>Back to flipping out…</p>
+]]></content>
+  </entry>
+  
+</feed>

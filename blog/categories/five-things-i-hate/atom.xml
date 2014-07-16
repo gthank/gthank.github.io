@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: five_things_I_hate | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/five-things-i-hate/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Five Things I Hate (or at least dislike) About Python]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/06/01/five-things-i-hate-or-at-least-dislike/"/>
+    <updated>2009-06-01T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/06/01/five-things-i-hate-or-at-least-dislike</id>
+    <content type="html"><![CDATA[<h4 id="implicit-variable-creation">1. Implicit Variable Creation</h4>
+
+<p>This is probably my biggest complaint. <em>Why</em> would you want to
+implicitly create a variable the first time something is assigned to it?
+This might make sense in a language where variables are immutable by
+default (after all, you only ever assign a variable once), but Python
+isn’t. Also, I realize there is a technical difference between rebinding
+names and changing the value of a variable; I don’t find that particular
+distinction useful here.</p>
+
+<h4 id="dearth-of-collections-in-the-standard-library">2. Dearth of Collections (in the standard library)</h4>
+
+<p>Don’t get me wrong: <a href="http://docs.python.org/library/collections.html#collections.defaultdict">defaultdict</a> and
+<a href="http://docs.python.org/library/collections.html#collections.namedtuple">namedtuple</a> are nice, but on occasion I really find
+myself wishing for some more advanced data structures, e.g.,
+<a href="http://en.wikipedia.org/wiki/Red-black_tree">Red-Black tree</a> I’m not even talking about
+probabilistic structures like <a href="http://en.wikipedia.org/wiki/Bloom_filter">Bloom filters</a> or
+<a href="http://en.wikipedia.org/wiki/Skip_list">skip lists</a>.</p>
+
+<h4 id="lack-of-tail-call-eliminationtco">3. Lack of <a href="http://c2.com/cgi/wiki?TailCallOptimization">Tail-call Elimination</a></h4>
+
+<p>I know it <a href="http://neopythonic.blogspot.com/2009/04/tail-recursion-elimination.html">likely won’t happen</a> but I still wish I had it.
+To me (and I’m sure many others), recursive algorithms are the most
+natural way to express certain algorithms, e.g., traversing a tree. I
+can do it using a loop, but it really drops me out of the zone.</p>
+
+<h4 id="concurrency-in-the-standard-library">4. Concurrency in the Standard Library</h4>
+
+<p>In an ideal world, Python would support concurrency on a level with
+first- class functions, similar to <a href="http://en.wikipedia.org/wiki/Erlang_(programming_language)">Erlang</a>. It’s almost
+not even fair to ding Python on this, since pretty much every other
+language its age has the same problem, but a man can dream, right? At
+least the <a href="http://docs.python.org/library/multiprocessing.html"><code>multiprocessing</code> module</a> made it into
+the standard library.</p>
+
+<h4 id="interfaces">5. Interfaces</h4>
+
+<p>It would be really swell if Python had support for something like
+<a href="http://en.wikipedia.org/wiki/Interface_(computer_science)">interfaces</a>. I
+know that <a href="http://www.python.org/dev/peps/pep-3119">PEP 3119</a> introduced
+<code>Abstract Base Classes</code>, so this one is probably on the way to being remedied,
+but the feature is so new I haven’t yet encountered it in the wild.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Five Things I Hate About Java]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/06/01/five-things-i-hate-about-java/"/>
+    <updated>2009-06-01T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/06/01/five-things-i-hate-about-java</id>
+    <content type="html"><![CDATA[<p>I’m sure you’ve all seen the
+<a href="http://use.perl.org/~brian_d_foy/journal/32556">Five Things</a> meme.
+Here’s the five things I hate about Java.</p>
+
+<h4 id="lack-of-type-inferencing">1. Lack of Type Inferencing</h4>
+
+<p>There’s just enough generics-related type inferencing to leave me
+wanting more.</p>
+
+<h4 id="no-first-class-functions">2. No First-class Functions</h4>
+
+<p>I don’t care if there are
+<a href="http://en.wikipedia.org/wiki/Function_object#In_Java">patterns</a> for
+doing this, it’s not very idiomatic, and the boilerplate obscures the
+intent of the code, which largely defeats the purpose.</p>
+
+<h4 id="no-read-eval-print-loop-abbr-titleread-eval-print-loopreplabbr">3. No Read-Eval-Print Loop (<abbr title="Read-Eval-Print-Loop">REPL</abbr>)</h4>
+
+<p>I can’t praise the <abbr title="Read-Eval-Print-Loop">REPL</abbr>
+enough. Java should have had one of these in the JDK in 1.0.</p>
+
+<h4 id="checked-exceptions">4. Checked Exceptions</h4>
+
+<p>The standard library is riddled with
+<a href="http://en.wikipedia.org/wiki/Exception_handling#Checked_exceptions">checked exceptions</a> that really should have
+been unchecked, and third-party libraries have followed suit. In
+fact, <a href="http://java.sun.com/javase/6/docs/api/index.html?java/lang/Exception.html">Exception</a> should have been unchecked
+and we should have <code>CheckedException</code> as a subclass instead of
+<a href="http://java.sun.com/javase/6/docs/api/index.html?java/lang/RuntimeException.html">RuntimeException</a>.</p>
+
+<h4 id="array-covariance">5. Array Covariance</h4>
+
+<p>It’s broken. Especially now that Java has
+<a href="http://www.java-tips.org/java-se-tips/java.lang/covariant-return-types.html">covariant returns</a> (thanks Java 5!),
+this bothers me just often enough that I’ve forgotten how broken it is
+right before I need/want it.</p>
+
+<h4 id="honorable-mention-no-tail-call-eliminationtco">Honorable Mention: No <a href="http://c2.com/cgi/wiki?TailCallOptimization">Tail-call Elimination</a></h4>
+
+<p>This very nearly bumped Array Covariance. I <em>really</em> wish tail-call
+elimination would catch on in mainstream languages.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

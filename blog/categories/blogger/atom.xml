@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: blogger | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/blogger/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Syntax Highlighting on Blogger]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2008/08/23/syntax-highlighting-on-blogger/"/>
+    <updated>2008-08-23T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2008/08/23/syntax-highlighting-on-blogger</id>
+    <content type="html"><![CDATA[<p>You may have noticed that my code blocks are suddenly
+syntax-highlighted. You might think a tech-oriented company like Google
+would have included something like this by default, but you’d be wrong.</p>
+
+<p>My new syntax highlighting comes courtesy of
+<a href="http://softwaremaniacs.org/soft/highlight/en/">highlight.js</a>,
+which is great, although it does have some holes in the English
+documentation. Unfortunately, I couldn’t find any place it was being
+hosted for free, so I needed to set up a place of my own from which to
+serve it. Enter <a href="http://code.google.com/appengine/">Google App Engine</a>.</p>
+
+<p>App Engine is Google’s entry into the
+<a href="http://en.wikipedia.org/wiki/Cloud_computing">cloud computing</a>
+space; if you write your application according to their guidelines,
+Google will run it on their infrastructure. As such, it is
+massive overkill for serving up static files, but it’s free and
+it has good reporting tools. So I followed the
+<a href="http://code.google.com/appengine/docs/gettingstarted/helloworld.html">“Hello, World!” documentation</a>,
+added the files for <em>highlight.js</em>, then modified my <code>pp.yaml</code> to add
+handler for serving static files.</p>
+
+<pre><code>- url: /
+ static_dir: highlight
+</code></pre>
+
+<p>Note that this conflicts with the handler from “Hello, World!”; since I
+didn’t want to serve up “Hello, World!” anyway, I just deleted the other
+handler.</p>
+
+<p>According to the documentation for <em>highlight.js</em>, all you should have
+to do now is add one simple block of Javascript:</p>
+
+<pre><code>&lt;script src="$PATH_TO_HOSTED_JS" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+ hljs.initHighlightingOnLoad();
+&lt;/script&gt;
+</code></pre>
+
+<p>This is technically accurate: this will cause the markup to be modified
+to support syntax highlighting. That’s not enough for the highlighting
+to take place, however; you still need to bring in the CSS for the
+highlighting style you want to use (my two favorites are Sunburst and
+IDEA).</p>
+
+<pre><code>&lt;link href="$PATH_TO_HOSTED_CSS" rel="stylesheet"/&gt;
+</code></pre>
+
+<p>On Blogger, the best place to put this code is in the raw HTML for
+your template; that way you don’t have to remember to include it in
+individual posts that will have code blocks. One final note: your code
+blocks have to be marked up by nesting a <code>code</code> tag inside a <code>pre</code>
+tag—if you’ve done something silly like nesting a <code>pre</code> tag inside a
+<code>code</code> tag, it won’t work. Here’s an example of the proper style:</p>
+
+<pre><code>&lt;pre&gt;&lt;code&gt;
+#!/usr/bin/env python
+# -*- coding: iso-8859-1 -*-
+print "Hello, World!"
+&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
+
+<p>Back to flipping out…</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>How Do You Balance Different Target Audiences With Different Needs - Real Ultimate Programming</title>
+  <meta name="author" content="Hank">
+
+  
+  <meta name="description" content="The Problem Different groups of your users have different ways of handling the same
+basic tasks and/or data. Names and addresses are just two of the &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.realultimateprogramming.com//blog/2008/02/22/how-do-you-balance-different-target">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Real Ultimate Programming" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Real Ultimate Programming</a></h1>
+  
+    <h2>The Home for People Who Like to Flip Out and Write Code</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.realultimateprogramming.com/" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/colophon">Colophon</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">How Do You Balance Different Target Audiences With Different Needs</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-02-22T00:00:00-05:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h4 id="the-problem">The Problem</h4>
+
+<p>Different groups of your users have different ways of handling the same
+basic tasks and/or data. Names and addresses are just two of the more
+common types of data that vary from culture to culture. So how do you
+handle this situation? The immediate impetus for this post is
+<a href="http://reddit.com/r/programming/info/69jzv/comments/c038ya4">this proggit comment</a>
+about names. I can see at least 3 different approaches, each of which
+has drawbacks.</p>
+
+<h4 id="the-strategies">The Strategies</h4>
+
+<h5 id="ignore-the-needs-of-the-smaller-target-audiences">Ignore the needs of the smaller target audience(s)</h5>
+
+<p>This is the one I’ve seen most often in the wild, and I can see it’s
+appeal: if you are only giving up a few potential users/customers,
+you’ll probably offset your losses by increasing your saturation in the
+supported target audience(s). Still, I always get a vague feeling of
+unease when I knowingly make it harder/impossible for a group of people
+to use my work.</p>
+
+<h5 id="limit-your-functionality-to-the-common-subset">Limit your functionality to the common subset</h5>
+
+<p>I don’t know that I’ve ever encountered this, and I can see why. When
+you get right down to it, there’s not much about this world that is
+constant across all places, people, and cultures. That doesn’t leave you
+a lot of functionality to put into your app. Even when there is a common
+subset, your different target audiences will probably still prefer to
+use an application/site that supports the nuances they are used to, and
+nuances are the first thing to go when you start chopping functionality
+down to a common subset, pretty much by definition.</p>
+
+<h5 id="hide-the-functionality-that-is-subject-to-change-until-you-know-which-variant-to-expose">Hide the functionality that is subject to change until you know which variant to expose</h5>
+
+<p>There are a couple of problems here:</p>
+
+<ul>
+  <li>You may not even <em>need</em> the information for anything else, and users are famously reluctant to give out personal info. If you <em>do</em> ask them for the information, please keep <a href="http://www.useit.com/alertbox/application-mistakes.html">Application Design Mistake</a> No. 9 in mind.</li>
+  <li>It may not be feasible to hide the functionality in question. If your application/site doesn’t require users to register, for example, then it might be hard to keep track of the information necessary to know which variant of the functionality to expose.</li>
+</ul>
+
+<h4 id="the-solution">The “Solution”</h4>
+
+<p>In reality, I imagine most developers would prefer some mixture of the
+strategies listed above, though I could be wrong. What does <em><strong>your</strong></em>
+solution look like?</p>
+
+<p>Back to flipping out…</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Hank</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-02-22T00:00:00-05:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2008</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2008/02/18/sneak-attack-crunch-mode/" title="Previous Post: Sneak Attack - Crunch Mode">&laquo; Sneak Attack - Crunch Mode</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2008/03/04/javascript-idioms-copying-array/" title="Next Post: JavaScript Idioms - Copying an array">JavaScript Idioms - Copying an array &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+    <h1>Related Posts</h1>
+    <ul class="posts">
+    
+        <li class="related">
+        <a href="/blog/2009/05/14/pyatl-notes/">Notes from PyATL 2009-05-14</a>
+        </li>
+    
+        <li class="related">
+        <a href="/blog/2008/01/16/using-buildix-in-anger/">Using Buildix in Anger</a>
+        </li>
+    
+        <li class="related">
+        <a href="/blog/2009/06/06/review-of-expert-python-programming/">Review of Expert Python Programming, Part Three</a>
+        </li>
+    
+        <li class="related">
+        <a href="/blog/2011/08/30/book-review-python-3-web-development/">Book Review: Python 3 Web Development Beginner's Guide</a>
+        </li>
+    
+        <li class="related">
+        <a href="/blog/2007/05/31/picking-your-next-programming-language/">Picking Your Next Programming Language</a>
+        </li>
+    
+    </ul>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/07/10/notes-from-pyatl-2014-07-10/">Notes From PyATL 2014-07-10</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/09/notes-from-pyatl-2014-01-09/">Notes From PyATL 2014-01-09</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/14/sneak-attack-cant-verify-rubygems-on-os-x/">Sneak Attack: Can't Verify RubyGems on OS X</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/12/notes-from-pyatl-2013-12-12/">Notes From PyATL 2013-12-12</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/13/notes-from-pyatl-2013-06-13/">Notes From PyATL 2013-06-13</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Popular Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2007/05/21/what-is-programmers-purpose-in-life/">What is a programmer's purpose in life?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/05/31/picking-your-next-programming-language/">Picking Your Next Programming Language</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/05/31/speaking-of-debugging/">Speaking of Debugging…</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/06/04/education-of-programmer/">The Education of a Programmer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/06/10/g-client-and-special-sauce/">G-Client and Special Sauce</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Category Cloud</h1>
+    <span id="tag-cloud"><a href='/blog/categories/adium' style='font-size: 100.8955223880597%'>adium(1)</a> <a href='/blog/categories/amqp' style='font-size: 100.8955223880597%'>amqp(1)</a> <a href='/blog/categories/benchmarking' style='font-size: 100.8955223880597%'>benchmarking(1)</a> <a href='/blog/categories/blogger' style='font-size: 100.8955223880597%'>blogger(1)</a> <a href='/blog/categories/book-review' style='font-size: 105.3731343283582%'>book_review(6)</a> <a href='/blog/categories/compilers' style='font-size: 100.8955223880597%'>compilers(1)</a> <a href='/blog/categories/debugging' style='font-size: 100.8955223880597%'>debugging(1)</a> <a href='/blog/categories/design' style='font-size: 100.8955223880597%'>design(1)</a> <a href='/blog/categories/distutils' style='font-size: 100.8955223880597%'>distutils(1)</a> <a href='/blog/categories/django' style='font-size: 102.68656716417911%'>django(3)</a> <a href='/blog/categories/education-sicp' style='font-size: 103.58208955223881%'>Education:SICP(4)</a> <a href='/blog/categories/firefox' style='font-size: 100.8955223880597%'>firefox(1)</a> <a href='/blog/categories/five-things-i-hate' style='font-size: 101.7910447761194%'>five_things_I_hate(2)</a> <a href='/blog/categories/functional-programming' style='font-size: 100.8955223880597%'>functional_programming(1)</a> <a href='/blog/categories/git' style='font-size: 102.68656716417911%'>git(3)</a> <a href='/blog/categories/grails' style='font-size: 101.7910447761194%'>Grails(2)</a> <a href='/blog/categories/haskell' style='font-size: 100.8955223880597%'>Haskell(1)</a> <a href='/blog/categories/homebrew' style='font-size: 100.8955223880597%'>homebrew(1)</a> <a href='/blog/categories/http' style='font-size: 100.8955223880597%'>http(1)</a> <a href='/blog/categories/http-authentication' style='font-size: 100.8955223880597%'>http_authentication(1)</a> <a href='/blog/categories/humor' style='font-size: 100.8955223880597%'>humor(1)</a> <a href='/blog/categories/java' style='font-size: 104.4776119402985%'>Java(5)</a> <a href='/blog/categories/javascript' style='font-size: 101.7910447761194%'>JavaScript(2)</a> <a href='/blog/categories/man' style='font-size: 100.8955223880597%'>man(1)</a> <a href='/blog/categories/matplotlib' style='font-size: 100.8955223880597%'>matplotlib(1)</a> <a href='/blog/categories/maven' style='font-size: 100.8955223880597%'>maven(1)</a> <a href='/blog/categories/mongodb' style='font-size: 100.8955223880597%'>MongoDB(1)</a> <a href='/blog/categories/mongodb' style='font-size: 100.8955223880597%'>mongodb(1)</a> <a href='/blog/categories/netbsd' style='font-size: 100.8955223880597%'>NetBSD(1)</a> <a href='/blog/categories/non-programming' style='font-size: 101.7910447761194%'>non-programming(2)</a> <a href='/blog/categories/note-to-self' style='font-size: 108.95522388059702%'>note-to-self(10)</a> <a href='/blog/categories/note-to-self' style='font-size: 100.8955223880597%'>note_to_self(1)</a> <a href='/blog/categories/np-complete' style='font-size: 100.8955223880597%'>np-complete(1)</a> <a href='/blog/categories/open-source' style='font-size: 100.8955223880597%'>open-source(1)</a> <a href='/blog/categories/optimization' style='font-size: 100.8955223880597%'>optimization(1)</a> <a href='/blog/categories/oracle' style='font-size: 104.4776119402985%'>Oracle(5)</a> <a href='/blog/categories/osx' style='font-size: 106.26865671641791%'>osx(7)</a> <a href='/blog/categories/packaging' style='font-size: 100.8955223880597%'>packaging(1)</a> <a href='/blog/categories/postgresql' style='font-size: 101.7910447761194%'>postgresql(2)</a> <a href='/blog/categories/profiling' style='font-size: 100.8955223880597%'>profiling(1)</a> <a href='/blog/categories/project-euler' style='font-size: 119.70149253731343%'>project_euler(22)</a> <a href='/blog/categories/pyatl' style='font-size: 121.49253731343283%'>PyATL(24)</a> <a href='/blog/categories/pycon' style='font-size: 100.8955223880597%'>pycon(1)</a> <a href='/blog/categories/pygments' style='font-size: 100.8955223880597%'>pygments(1)</a> <a href='/blog/categories/python' style='font-size: 160.0%'>python(67)</a> <a href='/blog/categories/quicksilver' style='font-size: 100.8955223880597%'>quicksilver(1)</a> <a href='/blog/categories/r' style='font-size: 100.8955223880597%'>R(1)</a> <a href='/blog/categories/rails' style='font-size: 101.7910447761194%'>rails(2)</a> <a href='/blog/categories/rest' style='font-size: 100.8955223880597%'>REST(1)</a> <a href='/blog/categories/ruby' style='font-size: 100.8955223880597%'>ruby(1)</a> <a href='/blog/categories/screen' style='font-size: 100.8955223880597%'>screen(1)</a> <a href='/blog/categories/sneak-attack' style='font-size: 136.71641791044777%'>sneak_attack(41)</a> <a href='/blog/categories/solarized' style='font-size: 100.8955223880597%'>solarized(1)</a> <a href='/blog/categories/sphinx' style='font-size: 100.8955223880597%'>Sphinx(1)</a> <a href='/blog/categories/spring-security' style='font-size: 100.8955223880597%'>spring_security(1)</a> <a href='/blog/categories/sql' style='font-size: 100.8955223880597%'>sql(1)</a> <a href='/blog/categories/statistics' style='font-size: 101.7910447761194%'>statistics(2)</a> <a href='/blog/categories/subversion' style='font-size: 100.8955223880597%'>subversion(1)</a> <a href='/blog/categories/sudo' style='font-size: 100.8955223880597%'>sudo(1)</a> <a href='/blog/categories/tee' style='font-size: 100.8955223880597%'>tee(1)</a> <a href='/blog/categories/testing' style='font-size: 100.8955223880597%'>testing(1)</a> <a href='/blog/categories/tuscany' style='font-size: 100.8955223880597%'>tuscany(1)</a> <a href='/blog/categories/unix' style='font-size: 100.8955223880597%'>unix(1)</a> <a href='/blog/categories/usability' style='font-size: 100.8955223880597%'>usability(1)</a> <a href='/blog/categories/user-management' style='font-size: 100.8955223880597%'>user-management(1)</a> <a href='/blog/categories/version-control' style='font-size: 100.8955223880597%'>version-control(1)</a> <a href='/blog/categories/vim' style='font-size: 101.7910447761194%'>vim(2)</a> <a href='/blog/categories/virtualenv' style='font-size: 100.8955223880597%'>virtualenv(1)</a> <a href='/blog/categories/virtualenvwrapper' style='font-size: 100.8955223880597%'>virtualenvwrapper(1)</a> <a href='/blog/categories/windows' style='font-size: 100.8955223880597%'>Windows(1)</a> </span>
+</section>
+
+<section>
+  <h1>Stack Overflow</h1>
+  <a href="http://stackoverflow.com/users/4203/hank-gay"><img src="http://stackoverflow.com/users/flair/4203.png" width="208" height="58" alt="profile for hank-gay at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for hank-gay at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/gthank">@gthank</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'gthank',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Hank -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

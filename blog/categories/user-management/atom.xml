@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: user-management | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/user-management/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Note to Self: Changing info for the postgres system user]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2010/11/22/note-to-self-changing-info-for-postgres/"/>
+    <updated>2010-11-22T00:00:00-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2010/11/22/note-to-self-changing-info-for-postgres</id>
+    <content type="html"><![CDATA[<p>Do you use MacPorts? Ever switch from one version of PostgreSQL to another,
+e.g., 8.4 to 9.0? Did you notice that it started complaining about a non-
+existent home directory for the <code>postgres</code> system user? Me, too.</p>
+
+<p>My first instinct was to edit the user, but there is no entry for <code>postgres</code> in
+<code>/etc/passwd</code>. That led me to this
+<a href="http://girders.org/changing-postgres-user-info-on-os-x-106">excellent article</a>.
+Using that info, I cooked up the following command:</p>
+
+<pre><code>sudo dscl localhost change /Local/Default/Users/postgres NFSHomeDirectory /opt/local/var/db/postgresql84 /opt/local/var/db/postgresql90
+</code></pre>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

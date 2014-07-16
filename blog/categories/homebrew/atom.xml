@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: homebrew | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/homebrew/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to enable git grep -P on OS X using Homebrew]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2012/01/18/how-to-enable-git-grep-p-on-os-x-using/"/>
+    <updated>2012-01-18T00:00:00-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2012/01/18/how-to-enable-git-grep-p-on-os-x-using</id>
+    <content type="html"><![CDATA[<p>If you’re using <a href="http://mxcl.github.com/homebrew/">Homebrew</a> to
+manage software on your OS X Lion box, and using the version of
+<a href="http://git-scm.com/"><code>git</code></a> it provides, you may have noticed that
+you can’t use the <code>-P</code> flag to <code>git grep</code> to enable Perl-compatible
+regular expressions
+(<abbr title="Perl-compatible regular expressions">PCRE</abbr>). It
+turns out the default formula doesn’t enable that option when building
+git. Rather than have to override this every single time you upgrade
+<code>git</code>, it’s far easier to add this line to your <code>.bashrc</code> (or <code>.zshrc</code>):</p>
+
+<pre><code>export USE_LIBPCRE=yes
+</code></pre>
+
+<p>After you do that, you <em>also</em> need to brew install pcre, because if you don’t
+you’ll get a build error when you next attempt to build git. It will look
+something like:</p>
+
+<pre><code>==&gt; Upgrading git
+==&gt; Downloading http://git-core.googlecode.com/files/git-1.7.8.3.tar.gz
+File already downloaded in /Users/hank/Library/Caches/Homebrew
+==&gt; make prefix=/usr/local/Cellar/git/1.7.8.3 install
+GIT_VERSION = 1.7.8.3
+    * new build flags or prefix
+    * new link flags
+./generate-cmdlist.sh &gt; common-cmds.h+ &amp;&amp; mv common-cmds.h+ common-cmds.h
+/usr/bin/llvm-gcc -o hex.o -c -MF ./.depend/hex.o.d -MMD -MP  -O3 -w -pipe  -march=core2 -msse4.1 -I. -DUSE_LIBPCRE -DUSE_ST_TIMESPEC  -DSHA1_HEADER='&lt;openssl/sha.h&gt;'  -DNO_MEMMEM  hex.c
+/usr/bin/llvm-gcc -o ident.o -c -MF ./.depend/ident.o.d -MMD -MP  -O3 -w -pipe  -march=core2 -msse4.1 -I. -DUSE_LIBPCRE -DUSE_ST_TIMESPEC  -DSHA1_HEADER='&lt;openssl/sha.h&gt;'  -DNO_MEMMEM  ident.c
+/usr/bin/llvm-gcc -o kwset.o -c -MF ./.depend/kwset.o.d -MMD -MP  -O3 -w -pipe  -march=core2 -msse4.1 -I. -DUSE_LIBPCRE -DUSE_ST_TIMESPEC  -DSHA1_HEADER='&lt;openssl/sha.h&gt;'  -DNO_MEMMEM  kwset.c
+/usr/bin/llvm-gcc -o levenshtein.o -c -MF ./.depend/levenshtein.o.d -MMD -MP  -O3 -w -pipe  -march=core2 -msse4.1 -I. -DUSE_LIBPCRE -DUSE_ST_TIMESPEC  -DSHA1_HEADER='&lt;openssl/sha.h&gt;'  -DNO_MEMMEM  levenshtein.c
+/usr/bin/llvm-gcc -o list-objects.o -c -MF ./.depend/list-objects.o.d -MMD -MP  -O3 -w -pipe  -march=core2 -msse4.1 -I. -DUSE_LIBPCRE -DUSE_ST_TIMESPEC  -DSHA1_HEADER='&lt;openssl/sha.h&gt;'  -DNO_MEMMEM  list-objects.c
+/usr/bin/llvm-gcc -o ll-merge.o -c -MF ./.depend/ll-merge.o.d -MMD -MP  -O3 -w -pipe  -march=core2 -msse4.1 -I. -DUSE_LIBPCRE -DUSE_ST_TIMESPEC  -DSHA1_HEADER='&lt;openssl/sha.h&gt;'  -DNO_MEMMEM  ll-merge.c
+In file included from revision.h:5,
+                 from list-objects.c:8:
+grep.h:43: error: expected specifier-qualifier-list before ‘pcre’
+make: *** [list-objects.o] Error 1
+make: *** Waiting for unfinished jobs....
+==&gt; Exit Status: 2
+http://github.com/mxcl/homebrew/blob/master/Library/Formula/git.rb#L51
+==&gt; Environment
+HOMEBREW_VERSION: 0.8.1
+HEAD: 730f9b7fbc30a74348223fa78e1ede295dc73340
+HOMEBREW_PREFIX: /usr/local
+HOMEBREW_CELLAR: /usr/local/Cellar
+Hardware: dual-core 64-bit penryn
+OS X: 10.7.2
+Kernel Architecture: x86_64
+Ruby: 1.8.7-249
+/usr/bin/ruby =&gt; /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
+Xcode: 4.2.1
+GCC-4.0: N/A
+GCC-4.2: N/A
+LLVM: build 2336
+Clang: 3.0 build 211
+MacPorts or Fink? false
+X11 installed? true
+==&gt; Build Flags
+CC: /usr/bin/llvm-gcc =&gt; /usr/llvm-gcc-4.2/bin/llvm-gcc-4.2
+CXX: /usr/bin/llvm-g++ =&gt; /usr/llvm-gcc-4.2/bin/llvm-g++-4.2
+LD: /usr/bin/llvm-gcc =&gt; /usr/llvm-gcc-4.2/bin/llvm-gcc-4.2
+CFLAGS: -O3 -w -pipe  -march=core2 -msse4.1
+CXXFLAGS: -O3 -w -pipe  -march=core2 -msse4.1
+MAKEFLAGS: -j2
+
+Error: Failed executing: make prefix=/usr/local/Cellar/git/1.7.8.3 install
+These existing issues may help you:
+    https://github.com/mxcl/homebrew/issues/6820
+    https://github.com/mxcl/homebrew/issues/6971
+    https://github.com/mxcl/homebrew/issues/7462
+    https://github.com/mxcl/homebrew/issues/8030
+    https://github.com/mxcl/homebrew/issues/8913
+    https://github.com/mxcl/homebrew/issues/8977
+    https://github.com/mxcl/homebrew/issues/9017
+    https://github.com/mxcl/homebrew/issues/9023
+    https://github.com/mxcl/homebrew/issues/9435
+    https://github.com/mxcl/homebrew/issues/9538
+    https://github.com/mxcl/homebrew/issues/9574
+    https://github.com/mxcl/homebrew/issues/9618
+Otherwise, please report the bug:
+    https://github.com/mxcl/homebrew/wiki/checklist-before-filing-a-new-issue
+</code></pre>
+
+<p>It’s that little line <code>grep.h:43: error: expected specifier-qualifier-list
+before ‘pcre’</code> that clues you in that you have a
+<abbr title="Perl-compatible regular expressions">PCRE</abbr> problem.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

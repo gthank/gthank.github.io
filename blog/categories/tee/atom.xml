@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: tee | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/tee/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: Oops, I forgot to sudo in Vim]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2010/08/05/sneak-attack-oops-i-forgot-to-sudo-in/"/>
+    <updated>2010-08-05T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2010/08/05/sneak-attack-oops-i-forgot-to-sudo-in</id>
+    <content type="html"><![CDATA[<p>Ever forget to <code>sudo</code> before you started editing that file in vim? Here’s a
+<a href="http://al3k.net/2010/08/vim-forget-sud/">nifty, tee-based trick</a> to save you
+some hassle.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

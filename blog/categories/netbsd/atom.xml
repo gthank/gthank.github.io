@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: NetBSD | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/netbsd/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Note to Self: A NetBSD domU Doesn't Have An Entropy Source By Default]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2011/02/16/note-to-self-netbsd-domu-doesnt-have/"/>
+    <updated>2011-02-16T00:00:00-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2011/02/16/note-to-self-netbsd-domu-doesnt-have</id>
+    <content type="html"><![CDATA[<p>I discovered this after a <a href="http://unix.stackexchange.com/questions/7358/how-long-should-it-take-to-generate-300-bytes-of-entropy-on-a-vps">curious problem</a> led me
+to email my VPS provider and get back a pointer to this
+<a href="http://mail-index.netbsd.org/netbsd-bugs/2009/02/24/msg009501.html">mailing list exchange</a>. Possibly more
+interesting than the original problem, I also learned that
+<a href="http://www.daemon-systems.org/man/rndctl.8.html">this exists</a>.</p>
+
+<p>Back to flipping out…</p>
+]]></content>
+  </entry>
+  
+</feed>

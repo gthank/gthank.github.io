@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Haskell | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/haskell/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Notes from PyATL 2011-10-13]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2011/10/13/pyatl-notes/"/>
+    <updated>2011-10-13T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2011/10/13/pyatl-notes</id>
+    <content type="html"><![CDATA[<h2 id="an-example-python-program-brandon-rhodes">An Example Python Program (Brandon Rhodes)</h2>
+
+<p>Looks like he is going to be using Python to do on-the-fly decompression of
+messages in the <a href="http://www.qmail.org/qmail-manual-html/man5/maildir.html">maildir</a> format.</p>
+
+<p>Pretty cool that he’s teaching the iterator protocol in passing.</p>
+
+<p>I was not aggressive enough; he’s actually opening the emails and searching
+them for keywords.</p>
+
+<p>Here’s the part where he emphasizes just how many batteries are included.</p>
+
+<h2 id="monkeys-typewriters-and-the-complete-works-of-shakespeare-a-brief-introduction-to-list-comprehensions-john-hackett">Monkeys, Typewriters, and the Complete Works of Shakespeare: A Brief Introduction to List Comprehensions (John Hackett)</h2>
+
+<p>He’s preaching to the choir, here. I <em>love</em> me some list comprehensions.</p>
+
+<h2 id="list-comprehensions-in-python-and-haskell-kelsey-hightower">List Comprehensions in Python and Haskell (Kelsey Hightower)</h2>
+
+<p>The term came around in 1977 via NPL (never heard of that one before).</p>
+
+<p>Python chose to crib from Haskell.</p>
+
+<p>Haskell <em>needs</em> comprehensions, because that’s The Way™ you do iteration.</p>
+
+<p>I <em>so</em> need to get around to learning Haskell.</p>
+
+<p><code>[n * 2 | n &lt;- [1..9]]</code> is roughly equivalent to <code>[n * 2 for n in xrange(1,9)]</code></p>
+
+<p><code>[x + y | x &lt;- [1,2], y &lt;- [1,2]]</code> is roughly equivalent to <code>[x + y for x in [1,2] for y in [1,2]]</code></p>
+
+<p><code>[n * 2 | n &lt; [1..9], n &gt; 3, n &lt; 5]</code> is roughly equivalent to <code>[n * 2 for n in xrange(1,10) if x &gt; 3 and x &lt; 5]</code></p>
+
+<p>Sweet! You can store list comprehensions as a function and the source can be the parameter to the function.</p>
+
+<p>Differences:</p>
+
+<ul>
+  <li>storing a comprehension in a function</li>
+  <li>It’s faster in Haskell</li>
+  <li>Comprehensions are essentially syntax sugar in Python, but they’re fundamental in Haskell.</li>
+</ul>
+
+<h2 id="gevent--socketio-rick-copeland">GEvent + Socket.io (Rick Copeland)</h2>
+
+<p>How many of those beers did Brandon have? He just called us butterflies?</p>
+
+<p>Back to flipping out…</p>
+]]></content>
+  </entry>
+  
+</feed>

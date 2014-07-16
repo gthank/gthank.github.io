@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: subversion | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/subversion/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: Reverting a commit in Subversion]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/05/02/sneak-attack-reverting-commit-in/"/>
+    <updated>2009-05-02T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/05/02/sneak-attack-reverting-commit-in</id>
+    <content type="html"><![CDATA[<p>The <a href="http://blog.johang.se/2009/03/revert-commit-in-subversion.html">plain Subversion equivalent of <code>git-revert</code></a>.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

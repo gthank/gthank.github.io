@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: debugging | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/debugging/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: Debugging in Python]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/11/18/sneak-attack-debugging-in-python/"/>
+    <updated>2009-11-18T00:00:00-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/11/18/sneak-attack-debugging-in-python</id>
+    <content type="html"><![CDATA[<p>Nice <a href="http://pythonconquerstheuniverse.wordpress.com/2009/09/10/debugging-in-python/">intro to debugging in Python using pdb</a>.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

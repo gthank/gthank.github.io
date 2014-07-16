@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: benchmarking | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/benchmarking/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Note to Self: Clearing Oracle's Buffer Cache]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/05/18/note-to-self-clearing-oracles-buffer/"/>
+    <updated>2009-05-18T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/05/18/note-to-self-clearing-oracles-buffer</id>
+    <content type="html"><![CDATA[<p>The next time you’re doing some rough benchmarking and you want to
+prevent Oracle’s cache from skewing your subsequent runs:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sql'><span class='line'>    <span class="k">alter</span> <span class="k">system</span> <span class="n">flush</span> <span class="n">buffer_cache</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Be forewarned: sometimes it takes a while to run this one, and you need
+system-level privileges.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

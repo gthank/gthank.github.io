@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: JavaScript | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/javascript/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript Idioms Revisited]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/02/21/javascript-idioms-revisited/"/>
+    <updated>2009-02-21T00:00:00-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/02/21/javascript-idioms-revisited</id>
+    <content type="html"><![CDATA[<p>In an <a href="http://realultimateprogramming.blogspot.com/2008/03/javascript-idioms-copying-array.html">earlier post about JavaScript idioms</a>, I talked
+about a common idiom for copying an array:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="kd">var</span> <span class="nx">myArray</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">source</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">myArray</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">source</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>In <a href="http://realultimateprogramming.blogspot.com/2008/03/javascript-idioms-copying-array.html?showComment=1235169540000#c8827165792720889421">a comment</a>, Jesse offers the following alternative:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="kd">var</span> <span class="nx">args</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>To my eye, this is clearly preferable, and I hope more people use it in
+the future. Thanks for pointing it out, Jesse.</p>
+
+<p>Also: here’s a <a href="http://javascript.crockford.com/style2.html">good list of JavaScript idioms</a>.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript Idioms - Copying an array]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2008/03/04/javascript-idioms-copying-array/"/>
+    <updated>2008-03-04T00:00:00-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2008/03/04/javascript-idioms-copying-array</id>
+    <content type="html"><![CDATA[<p>Ever see a block of JavaScript that looks like this?</p>
+
+<pre><code>var myArray = [];
+for (var i = 0; i &lt; source.length; i++) {
+    myArray[i] = source[i];
+}
+</code></pre>
+
+<p>That’s the popular way to copy the elements of one array (note the lack
+of capitalization) into a new <code>Array</code> (note the capitalization - we’ll get
+to this in a minute). I wasn’t really a fan, at first, but it’s almost
+as pervasive as</p>
+
+<pre><code>while(*dst++ = *src++);
+</code></pre>
+
+<p>in C, so eventually I decided to stop worrying and love the bomb.
+Basically, JavaScript will automatically grow your <code>Array</code> for you, so you
+can dispense with all the sizing you might expect when using something
+called an <code>Array</code>.</p>
+
+<p>Now for the notes you took on capitalization. Not everything that acts like an
+array in JavaScript is actually an <code>Array</code>. One example is the <code>arguments</code>
+property available to <code>Function</code>s. If you happen to need the stuff in
+<code>arguments</code> as an actual Array (because you want to use it as a key for a
+map/dictionary/hash, let’s say), you will find yourself writing some code like
+that above. Just remember that sometimes stuff is “<code>Array</code>-like” without
+actually being an <code>Array</code>, because it can really bite you if you’re not careful.</p>
+
+<p>Back to flipping out…</p>
+]]></content>
+  </entry>
+  
+</feed>

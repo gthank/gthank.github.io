@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: REST | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/rest/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: Building Simple Jersey Web App With Maven]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/06/11/sneak-attack-building-simple-jersey-web/"/>
+    <updated>2009-06-11T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/06/11/sneak-attack-building-simple-jersey-web</id>
+    <content type="html"><![CDATA[<p>Short, easy-to-follow
+<a href="http://blogs.sun.com/japod/entry/building_simple_jersey_web_app">tutorial for Jersey, the Java <abbr title="Reference Implementation">RI</abbr> for RESTful web services</a>.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

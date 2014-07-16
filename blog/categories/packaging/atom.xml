@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: packaging | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/packaging/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Notes from PyATL 2011-06-09]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2011/06/09/pyatl-notes/"/>
+    <updated>2011-06-09T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2011/06/09/pyatl-notes</id>
+    <content type="html"><![CDATA[<h2 id="the-state-of-python-packaging-kelsey-hightower">The State of Python Packaging (Kelsey Hightower)</h2>
+
+<ul>
+  <li>I just won <strong>$20</strong> by naming off pretty much all of the Python packaging
+tools he mentioned.</li>
+  <li>I wonder how nice <a href="http://cournape.github.com/Bento/"><code>bento</code></a> is. I’ve heard about it before, and
+since it’s from the guys behing NumPy it probably has an interesting take on
+things.</li>
+  <li>PyPM sounds like the bee’s knees for Windows.</li>
+  <li>Once again, this guy brings the heat for his presentation.</li>
+  <li>Holy cow! There are a <em>lot</em> of PEPs driving this: <a href="http://www.python.org/dev/peps/pep-0345/"><code>PEP-345</code></a>
+(Metadata for Python Software Packages 1.2), <a href="http://www.python.org/dev/peps/pep-0376/"><code>PEP-376</code></a> (database
+of installed Python distributions), <a href="http://www.python.org/dev/peps/pep-0386/"><code>PEP-386</code></a> (changing the
+version comparison in distutils), <a href="http://www.python.org/dev/peps/pep-0381/"><code>PEP-381</code></a> (mirroring for PyPI),
+<a href="http://www.python.org/dev/peps/pep-0390/"><code>PEP-390</code></a> (static metadata), <a href="http://www.python.org/dev/peps/pep-0396/"><code>PEP-396</code></a> (module version
+numbers).</li>
+  <li><code>pysetup</code> is going to be a more end-user-oriented alternative to <code>pip</code>, and
+it will be in the std lib.</li>
+</ul>
+
+<h2 id="talk-about-names-and-values-in-python-brandon-rhodes">Talk about names and values in Python (Brandon Rhodes)</h2>
+
+<ul>
+  <li>The material is mostly review, but is well presented (no surprise there, since
+Brandon is an excellent presenter).</li>
+  <li>The point about function/class definitions creating a name is well-taken.</li>
+</ul>
+
+<h2 id="exceptions-in-python-sim-harbert">Exceptions! in Python (Sim Harbert)</h2>
+
+<p>Back to flipping out…</p>
+]]></content>
+  </entry>
+  
+</feed>

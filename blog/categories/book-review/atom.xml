@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: book_review | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/book-review/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Book Review: Python 3 Web Development Beginner's Guide]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2011/08/30/book-review-python-3-web-development/"/>
+    <updated>2011-08-30T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2011/08/30/book-review-python-3-web-development</id>
+    <content type="html"><![CDATA[<p>I recently received a free review copy (eBook version) of</p>
+
+<p><a href="http://www.packtpub.com/python-3-web-development-beginners-guide/book" title="Packt Publishing page for Python 3 Web Development Beginner's Guide"><img src="http://www.packtpub.com/sites/default/files/3746OS_Python%203%20Web%20Development%20Beginner’s%20Guide_0.jpg" alt="Cover art for Python 3 Web Development Beginner's Guide" width="320" height="400" /></a></p>
+
+<p>from Packt Publishing. I was looking forward to this book, because I haven’t
+really done much Python 3 work yet, and I wanted to see how it could make my
+life as a web developer better. However, the book wasn’t what I expected.
+Instead of covering the basics of web development and how Python 3 applies, it
+is more of an introduction to the sorts of concerns that come up when you
+build a web framework on top of <a href="http://www.cherrypy.org/">CherryPy</a>. The
+sample code just happens to be in Python 3.</p>
+
+<h2 id="the-good">The Good</h2>
+
+<p>The two best parts of the book, to me, were the coverage of writing a
+<a href="http://jquery.com/">jQuery</a> plugin, and growing an <abbr title="Object-Relational Mapper">ORM</abbr> that uses metaclasses
+to provide a compact, readable way to define the models.</p>
+
+<h2 id="the-bad">The Bad</h2>
+
+<p>I have a rather long list of things I didn’t like about the book, some of
+which are a function of the title setting misleading expectations, and some of
+which I think are just problematic in general.</p>
+
+<p>In general, I didn’t care for the examples. Some of this is personal
+preference: I find that many people (myself included) learn better when they
+must type in the examples instead of opening up the code and reading through a
+completed solution. While the book sometimes indicated that something had been
+left as an exercise to the reader, opening up the sample code showed that the
+exercise actually <em>had not</em> been left to the reader. This mismatch between
+what the text of the book <em>says</em> will be in the sample code and what is
+<em>actually in</em> the sample code occurs in multiple places throughout the book,
+and gives a sense that the book was sloppily edited.</p>
+
+<p>I also felt the examples in general were too complicated. It’s fine to build
+up a complicated example over the course of a book, but instead we got a task
+list, a wiki, a Customer Relationship Management (<abbr title="Customer Relationship Management">CRM</abbr>) tool, a spreadsheet,
+and more. That’s an awful lot to distract you from the beginner’s principles
+that you would expect in a book with this title.</p>
+
+<p>I also didn’t care for many of the shortcuts taken in the book. In most
+instances, the book did acknowledge that the approach taken was not
+appropriate in the real world, but then proceeded with little or no
+justification for why it was done the way it was. The two examples that really
+leap out in this category are the password hashing scheme and the failure to
+use a template engine.</p>
+
+<p>When the book first introduces authentication, it explains that you should
+never store passwords in plaintext. This is absolutely correct, but the book
+then goes on to demonstrate a completely insecure password hashing scheme:
+<strong>UNSALTED</strong> <a href="http://en.wikipedia.org/wiki/SHA-1"><abbr title="Secure Hash Algorithm">SHA1</abbr></a>. The author only
+provides a cursory link to explain what you should actually be doing. In this
+day and age, demonstrating anything less than a
+<a href="http://www.usenix.org/events/usenix99/provos/provos_html/index.html"><code>bcrypt</code></a>-based solution is wrong. Read
+<a href="http://chargen.matasano.com/chargen/2007/9/7/enough-with-the-rainbow-tables-what-you-need-to-know-about-s.html">Enough With The Rainbow Tables</a>
+and
+<a href="http://codahale.com/how-to-safely-store-a-password/">How To Safely Store A Password</a>
+for a far better explanation than I can provide. There’s
+really no excuse for this: the added complexity of using
+<a href="http://code.google.com/p/py-bcrypt/"><code>py-bcrypt</code></a> instead of writing
+your own (insecure) <abbr title="Secure Hash Algorithm">SHA1</abbr>-based solution is trivial at worst; there’s a
+strong case to be made that it would actually be simpler.</p>
+
+<p>The failure to use a template engine (also a weakness acknowledged by the
+book) really makes the code harder to follow than it should be. Virtually any
+serious web development effort is going to take advantage of a template
+engine, and for good reason. This code gives me flashbacks to my days of
+writing Java servlets before the advent of <abbr title="Java Server Pages">JSP</abbr>, and I saw where one other
+reviewer invoked the specter of PHP. The fact that this style of coding draws
+such comparisons should give you an idea of just how unpythonic it is. I would
+be sympathetic to claims of not wanting to add too many external dependencies
+if the book did not already rely significantly on the magic of
+<a href="http://jqueryui.com/">jQuery UI</a>.</p>
+
+<p>My last major complaint is simply one of focus: the book spends substantial
+amounts of time growing an <abbr title="Object-Relational Mapper">ORM</abbr> and teaching Python metaclasses (and doing a
+good job of it), but spends little more than the bare minimum required on
+CherryPy (which is at the core of the code), and essentially none on
+understanding <abbr title="HyperText Transfer Protocol">HTTP</abbr>. In fact, the few times it comes up is usually in relation
+to <code>GET</code> vs. <code>POST</code>, where the decision is usually made based on inane
+implementation details such as whether request arguments are logged by default
+instead of <abbr title="HyperText Transfer Protocol">HTTP</abbr> fundamentals such as idempotency, safety, or cacheability
+(although caching <em>is</em> mentioned elsewhere, in the context of how to prevent
+it). Also, the book does mention security, but it does not give it the sort of
+omnipresent emphasis that is necessary to write good web applications, given
+the hostile nature of the domain. <abbr title="Cross-site Scripting">XSS</abbr>, <abbr title="Cross-Site Request Forgery">CSRF</abbr>, and SQL injection attacks all
+deserve much more attention than they were given.</p>
+
+<h2 id="the-summary">The Summary</h2>
+
+<p>The book has some good content mixed in with the stuff I didn’t like.
+Unfortunately, the good content is rarely specific to web development. For
+example, the chapter that uses metaclasses to clean up the <abbr title="Object-Relational Mapper">ORM</abbr> is one of the
+better resources on metaclasses that I’ve seen, but metaclasses are clearly
+not specific to web development. Furthermore, the impression of sloppy editing
+makes it hard to put as much faith in the content as it probably deserves.
+Given these flaws, I really don’t think I’d recommend this book to a friend
+who was looking to get started with web development.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Now Reading: Python 3 Web Development Beginner's Guide]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2011/08/06/now-reading-python-3-web-development/"/>
+    <updated>2011-08-06T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2011/08/06/now-reading-python-3-web-development</id>
+    <content type="html"><![CDATA[<p>Packt Publishing has kindly given me a free review copy of the eBook
+edition of</p>
+
+<p><a href="http://www.packtpub.com/python-3-web-development-beginners-guide/book">
+<img src="http://www.packtpub.com/sites/default/files/3746OS_Python%203%20Web%20Development%20Beginner’s%20Guide_0.jpg" alt="Cover art for Python 3 Web Development Beginner's Guide" />
+</a></p>
+
+<p>I’ll be reading it and publishing my review here and on the
+<a href="http://pyatl.blogspot.com/">PyATL Book Club blog</a>.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Review of Expert Python Programming, Part Four]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/06/06/review-of-expert-python-programming_06/"/>
+    <updated>2009-06-06T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/06/06/review-of-expert-python-programming_06</id>
+    <content type="html"><![CDATA[<h4 id="chapter-5-writing-a-package">Chapter 5: Writing a Package</h4>
+
+<h5 id="a-common-pattern-for-all-packages">A Common Pattern for All Packages</h5>
+
+<p>This section provides all the details necessary to create a namespaced package
+that consists of multiple eggs glued together by a master egg using
+<a href="http://docs.python.org/library/distutils.html">distutils</a> and
+<a href="http://peak.telecommunity.com/DevCenter/setuptools">setuptools</a>. There are
+multiple subsections that cover everything you should need to build your
+project, register it with the <a href="http://pypi.python.org/pypi">Cheeseshop</a> (or
+any other package index), and upload it for the world to enjoy.</p>
+
+<h6 id="how-to-uninstall-a-package">How to Uninstall a Package</h6>
+
+<p>This section provides a short rationalization for why there isn’t a built-in
+<code>uninstall</code> command and the current workaround. It’s not mentioned in the
+book, but the author is currently working on improving <code>distutils</code>, and an
+<code>uninstall</code> command is on the agenda. The full details are in the
+<a href="http://www.python.org/dev/peps/pep-0376/#adding-an-uninstall-function">Adding an Uninstall Function</a>
+section of <a href="http://www.python.org/dev/peps/pep-0376">PEP 376</a>.</p>
+
+<h5 id="the-template-based-approach">The Template-Based Approach</h5>
+
+<p>After covering the basics of building and distributing a package in the
+previous section, this section focuses on using templates to reduce the tedium
+in creating consistent application skeletons. The tool used in this section is
+<a href="http://pythonpaste.org/">Python Paste</a>. There are a couple of short examples
+using pre-existing templates.</p>
+
+<h5 id="creating-the-package-template">Creating the Package Template</h5>
+
+<p>This section covers the process of creating a custom template that describes
+the structure introduce in the first section.</p>
+
+<p>The rest of the chapter just covers generic aspects of the development cycle,
+such as version numbering, so I will skip it for this review.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Review of Expert Python Programming, Part Three]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/06/06/review-of-expert-python-programming/"/>
+    <updated>2009-06-06T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/06/06/review-of-expert-python-programming</id>
+    <content type="html"><![CDATA[<h4 id="chapter-4-choosing-good-names">Chapter 4: Choosing Good Names</h4>
+
+<p>This chapter is aimed at helping improve API design, mostly by helping
+improve the names you choose when building the API. Ironically enough,
+not all of the advice is about naming, so the chapter title could be
+better. Most of the advice is good, although some of it overlaps with
+<a href="http://www.python.org/dev/peps/pep-0008">PEP 8</a> and some of it is far more general than just Python. That
+doesn’t dilute the value of the advice, but I will skip it in this
+review.</p>
+
+<h5 id="best-practices-for-arguments">Best Practices for Arguments</h5>
+
+<h6 id="build-arguments-by-iterative-design">Build Arguments by Iterative Design</h6>
+
+<p>This advice is applicable to pretty much any language, but it is
+surprising how many people get it wrong. Also, if you’re new to
+languages that allow you to specify default values for parameters, this
+section highlights one of the best uses for that feature.</p>
+
+<h6 id="trust-the-arguments-and-your-tests">Trust the Arguments and Your Tests</h6>
+
+<p>More solid advice: don’t try to recreate a static typing system in a
+dynamically typed language. This isn’t exactly profound insight, but a
+lot of people (myself included) make this mistake when they transition
+to dynamic typing from static typing. Instead of just saying “the tests
+will catch that”, which some interpret as “write unit tests and/or
+assertions to enforce static- style typing”, the author is careful
+to explain that the tests are supposed to test actual use cases. The
+author also mentions <a href="http://en.wikipedia.org/wiki/Design_by_contract">Design-by- Contract</a>.
+While he doesn’t seem to favor it, he does provide a link to
+<a href="http://www.wayforward.net/pycontract/">Contracts for Python</a>. It should be noted that the
+related <a href="http://www.python.org/dev/peps/pep-0316">PEP 316</a> has been deferred, so some people may find
+the resulting code “unpythonic”.</p>
+
+<h6 id="use-args-and-kw-magic-arguments-carefully">Use <code>*args</code> and <code>**kw</code> Magic Arguments Carefully</h6>
+
+<p>The author acknowledges that use of <code>*args</code> and <code>**kw</code> (also seen
+as <code>**kwargs</code>) is sometimes necessary, e.g., metaprogramming, but
+in general considers them a design smell. He also offers advice for
+improving the design, e.g., accepting a single iterable parameter
+instead of <code>*args</code>.</p>
+
+<h5 id="module-and-package-names">Module and Package Names</h5>
+
+<p>Mostly mundane and duplicative of <a href="http://www.python.org/dev/peps/pep-0008">PEP 8</a>, but there are a couple
+of gems: the convention of using a <code>lib</code> suffix in a module or package
+name if it is implementing a protocol, e.g., <code>smtplib</code>; using <code>__init__</code>
+to import some APIs into the top level of the package, including a
+caveat about the increased potential of circular dependencies.</p>
+
+<h5 id="working-on-apis">Working on APIs</h5>
+
+<h6 id="tracking-verbosity">Tracking Verbosity</h6>
+
+<p>Even though this is the sort of generic advice I said I was going to
+skip, I liked it so much I decided to include it anyway. If there is a
+common use case for some sequence of calls into your API, you should
+expose a function that encapsulates it. Doing anything else just invites
+errors.</p>
+
+<h6 id="building-the-namespace-tree">Building the Namespace Tree</h6>
+
+<p>I really liked this section. In just a couple of short pages, the author
+shows an example of evolving the namespace structure for an application.
+I don’t have enough experience in the Python world to know if this is
+a realistic example, but I thought it was presented well and made good
+sense. I also like that the book addresses this topic at all.
+<a href="http://www.python.org/dev/peps/pep-0020/">The Zen of Python</a> says
+“Namespaces are one honking great idea—let’s do more of those!” but I
+don’t see many mentions of resources covering how to design them well.</p>
+
+<h6 id="using-eggs">Using Eggs</h6>
+
+<p>This sections provides a concise explanation of what
+<a href="http://peak.telecommunity.com/DevCenter/PythonEggs">eggs</a> do and a
+sneak preview at how to define them. I would have liked more info, but
+the inset promises more details in Chapter 6.</p>
+
+<h6 id="using-a-deprecation-process">Using a Deprecation Process</h6>
+
+<p>The advice in this section is also generic (don’t break an already-published
+API), but I mentioned it because it shows the Pythonic method for deprecating
+old APIs: <a href="http://docs.python.org/library/exceptions.html#exceptions.DeprecationWarning">DeprecationWarning</a>.</p>
+
+<h5 id="useful-tools">Useful Tools</h5>
+
+<p>This section only lists two tools:
+<a href="http://www.logilab.org/project/pylint">Pylint</a> and
+<a href="http://clonedigger.sourceforge.net/">CloneDigger</a>. They are useful, but some
+tips for using them to greatest effect would have been nice.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Review of Expert Python Programming, Part Two]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/05/23/review-of-expert-python-programming_23/"/>
+    <updated>2009-05-23T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/05/23/review-of-expert-python-programming_23</id>
+    <content type="html"><![CDATA[<h5 id="chapter-3">Chapter 3</h5>
+
+<h6 id="subclassing-built-in-types">Subclassing Built-in Types</h6>
+
+<ul>
+  <li>I started learning Python after this was added, so it never occurred to me <em>not</em> to do this.</li>
+</ul>
+
+<h6 id="accessing-methods-from-superclasses">Accessing Methods from Superclasses</h6>
+
+<ul>
+  <li>Tries to explain <a href="http://docs.python.org/library/functions.html#super"><code>super</code></a>, but it’s quite confusing (mostly due to the multiple-inheritance problems).</li>
+  <li>The standard docs do a better job of making it clear the main benefit is making maintenance easier in single-inheritance examples.</li>
+</ul>
+
+<p><strong>Understanding Python’s Method Resolution Order (<abbr title="Method Resolution Order">MRO</abbr>)</strong></p>
+
+<p>The section isn’t as clear as it could be, but
+it has solid information. It explains what the
+<a href="http://www.python.org/download/releases/2.3/mro/"><abbr title="Method Resolution Order">MRO</abbr></a> is used
+for and how it’s different between 2.2 and 2.3, and the
+<a href="http://docs.python.org/library/stdtypes.html#class.__mro__"><code>__mro__</code> attribute</a>.</p>
+
+<p><strong><code>super</code> Pitfalls</strong></p>
+
+<p>Points out some of the most common problems with
+<a href="http://docs.python.org/library/functions.html#super">super</a>: mixing
+<code>super</code> and classic calls (and how to use <code>__mro__</code> to choose what
+to do) and subclass constructors that take arguments that differ from
+their parent classes.</p>
+
+<h6 id="best-practices">Best Practices</h6>
+
+<ul>
+  <li>Solid, short (so you can remember it) section.</li>
+</ul>
+
+<h6 id="descriptors-and-properties">Descriptors and Properties</h6>
+
+<p><strong>Descriptors</strong></p>
+
+<p>This section isn’t overly clear. It describes what
+<a href="http://docs.python.org/reference/datamodel.html#implementing-descriptors">descriptors</a> are from a technical perspective,
+but doesn’t do a great job of explaining why you’d want to use
+them. Also, a fair number of the examples have errors, e.g., code
+for setting values when the text says it is for reading values.
+Luckily, it contains a link to the (more helpful)
+<a href="http://users.rcn.com/python/download/Descriptor.htm">How-To Guide for Descriptors</a>.</p>
+
+<p><strong>Properties</strong></p>
+
+<p>This section explains
+<a href="http://docs.python.org/library/functions.html#property">property</a> and
+the property attributes it returns (though not necessarily why they’re
+so useful) and does a good job of pointing out some gotchas, e.g., the
+way they don’t pick up overridden methods. The solution offered is
+perfectly sensible: override the property instead of the (typically
+private) method bound to <code>fget</code>.</p>
+
+<h6 id="slots">Slots</h6>
+
+<ul>
+  <li>Short but informative section on <a href="http://docs.python.org/reference/datamodel.html#slots">slots</a> which I haven’t
+seen mentioned before.</li>
+</ul>
+
+<h6 id="meta-programming">Meta-Programming</h6>
+
+<p><strong>The <code>__new__</code> Method</strong></p>
+
+<p>This section covers <a href="http://docs.python.org/reference/datamodel.html#object.__new__"><code>__new__</code></a> and its usefulness for
+making sure that a class’s invariants aren’t violated because a subclass
+didn’t explicitly invoke <a href="http://docs.python.org/reference/datamodel.html#object.__init__"><code>__init__</code></a>.</p>
+
+<p><strong>The <code>__metaclass__</code> method</strong></p>
+
+<p>This section covers customizing class creation using
+<a href="http://docs.python.org/reference/datamodel.html#__metaclass__"><code>__metaclass__</code></a> and points out that, in most
+cases, there are easier-to-understand alternatives. One example of when
+there isn’t is adjusting read-only attributes, e.g., the <code>__doc__</code>
+attribute of the built-in metaclass <code>type</code>. Other suggested usages
+for <code>__metaclass__</code> include frameworks enforcing behavior across
+large groups of classes and orthogonal functionality such as logging.
+The section closes with a link to
+<a href="http://onlamp.com/pub/a/python/2003/04/17/metaclasses.html">A Primer on Python Metaclass Programming</a>.</p>
+
+<h6 id="summary">Summary</h6>
+
+<p>The summary section is a short, bulleted list highlighting the most
+important points made in the chapter. Again, it’s short enough to be
+easily memorable.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Oracle | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/oracle/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: TEMPORARY (Tablespace) Insanity]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2010/07/20/sneak-attack-temporary-tablespace/"/>
+    <updated>2010-07-20T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2010/07/20/sneak-attack-temporary-tablespace</id>
+    <content type="html"><![CDATA[<p>If you ever find yourself cursing about an
+<code>ORA-01652: unable to extend temp segment by 128 in tablespace TEMP</code> at 11 PM
+on your birthday, this
+<a href="http://oratips-ddf.blogspot.com/2008/02/temporary-tablespace-insanity.html">article</a>
+might be just the thing for you.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: Installing cx_Oracle on an Intel Mac]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/05/29/sneak-attack-installing-cxoracle-on/"/>
+    <updated>2009-05-29T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/05/29/sneak-attack-installing-cxoracle-on</id>
+    <content type="html"><![CDATA[<p><a href="http://pedro.emanuel.familiasalgado.org/?p=106">Install instructions</a>
+that actually work for <a href="http://cx-oracle.sourceforge.net/">cx_Oracle</a>
+on an Intel Mac. It requires <a href="http://www.macports.org/">MacPorts</a> and
+doesn’t work with the latest version (5.0.2) of cx_Oracle, so make sure
+you actually use 4.4.1.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Note to Self: Oracle's TIMESTAMP literal syntax]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/05/20/note-to-self-oracles-timestamp-literal/"/>
+    <updated>2009-05-20T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/05/20/note-to-self-oracles-timestamp-literal</id>
+    <content type="html"><![CDATA[<p><code>TIMESTAMP'2009-01-15 00:00:00.000'</code></p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Note to Self: Clearing Oracle's Buffer Cache]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/05/18/note-to-self-clearing-oracles-buffer/"/>
+    <updated>2009-05-18T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/05/18/note-to-self-clearing-oracles-buffer</id>
+    <content type="html"><![CDATA[<p>The next time you’re doing some rough benchmarking and you want to
+prevent Oracle’s cache from skewing your subsequent runs:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sql'><span class='line'>    <span class="k">alter</span> <span class="k">system</span> <span class="n">flush</span> <span class="n">buffer_cache</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Be forewarned: sometimes it takes a while to run this one, and you need
+system-level privileges.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Note to Self: Statistical Analysis Inside Oracle]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/04/03/note-to-self-statistical-analysis-inside/"/>
+    <updated>2009-04-03T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/04/03/note-to-self-statistical-analysis-inside</id>
+    <content type="html"><![CDATA[<p>If you need to do statistical analysis on data in your Oracle database,
+<a href="http://www.psoug.org/reference/OLD/dbms_stat_funcs.html"><code>DBMS_STAT_FUNCS</code></a>
+is your friend, especially the <code>SUMMARY</code> function.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

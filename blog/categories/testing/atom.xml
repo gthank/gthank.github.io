@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: testing | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/testing/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Notes from PyATL 2011-09-08]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2011/09/08/pyatl-notes/"/>
+    <updated>2011-09-08T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2011/09/08/pyatl-notes</id>
+    <content type="html"><![CDATA[<h2 id="welcome-to-python-brandon-rhodes">Welcome to Python (Brandon Rhodes)</h2>
+
+<p>Sweet. I just learned about <a href="http://docs.python.org/library/fileinput.html"><code>fileinput</code></a>.</p>
+
+<h2 id="openopc-for-python-john-pilman">OpenOPC for Python (John Pilman)</h2>
+
+<p><abbr title="OLE for Process Control">OPC</abbr> is
+<abbr title="Object Linking and Embedding">OLE</abbr> for Process Control, and
+it serves as the high-level communications method for lots of control systems.</p>
+
+<p>There is a newer, non-DCOM-based spec called
+<abbr title="OLE for Process Control Unified Architecture">OPC UA</abbr>, but
+it isn’t (yet) widely supported.</p>
+
+<p><a href="http://openopc.sourceforge.net/">OpenOPC</a> is an Open Source library for interacting with
+<abbr title="OLE for Process Control">OPC</abbr> from Python.</p>
+
+<p>On a side note: drag-and-drop programming is real. This control system he’s
+working on is absolutely drag-and-drop programming. It’s just not <em>general
+purpose</em> programming.</p>
+
+<p>I’m having a bit of a hard time following this one; I think my bad angle to the
+screen combined with my lack of knowledge in the domain is a bad combination.</p>
+
+<p>This seems like a huge win for anybody who needs to start munging about with
+multiple pieces in an <abbr title="OLE for Process Control">OPC</abbr>
+environment.</p>
+
+<h2 id="fast-lightweight-testing-for-python-shawn-boyette">Fast, Lightweight Testing for Python (Shawn Boyette)</h2>
+
+<p>Why <a href="https://github.com/firepear/nanotest-py"><code>nanotest-py</code></a>? Because he didn’t like xUnit, and he likes
+to write tools that do exactly what he wants.</p>
+
+<p>It’s a port of <code>nanotest.js</code>, which is itself inspired by
+<a href="http://perldoc.perl.org/Test/More.html"><code>Test::More</code></a>.</p>
+
+<p><code>pis_deeply</code> sort of intrigues me. I will have to go read the code for that and
+see how it is implemented.</p>
+
+<p>I think I might prefer the stuff in the standard library and/or
+<a href="http://code.google.com/p/python-nose/"><code>nose</code></a>, but I think it made it to my list of things to use on
+a side project.</p>
+
+<p>This is only available for Python 3.2 right now, because he used the new
+<a href="http://docs.python.org/dev/library/argparse.html#module-argparse"><code>argparse</code></a> module in the standard lib.</p>
+
+<h2 id="streamlining-workflows-with-puppet-faces-kelsey-hightower">Streamlining Workflows with Puppet Faces (Kelsey Hightower)</h2>
+
+<p>I love me some <a href="http://www.puppetlabs.com/">Puppet</a>. “Infrastructure as Code” is a great
+concept.</p>
+
+<p>Does he have a Puppet script for Oracle‽ Must. Have. </p>
+
+<h3 id="puppet-faces">Puppet Faces</h3>
+
+<p><a href="http://puppetlabs.com/faces/">Puppet Faces</a> is essentially a giant set of
+<abbr title="Application Programming Interface">API</abbr>s to manipulate
+Puppet.</p>
+
+<p>Wow. Their stuff for introspecting what’s already on a system and giving you
+the equivalent Puppet module/whatever is pretty awesome.</p>
+
+<p>The main point of Puppet Faces is to cut out boiler plate and improve facility
+with ad hoc configuration.</p>
+
+<p>Hmm… this is the sort of thing that I can imagine would be useful, but it’s so
+far outside what I do on a daily basis that I don’t have an immediate feel for
+it.</p>
+
+<p>Pretty cool. The <code>jira</code> subcommand is available as a default part of Puppet
+once you finish building the Face.</p>
+
+<p>I guess if your JIRA users are technically savvy, this would be <em>super</em>
+useful, but do you need to protect yourself against the new guy?</p>
+
+<p>You get a REST API, the Ruby API, and a CLI for your Face.</p>
+
+<h2 id="put-on-your-data-goggles-brandon-rhodes">Put on Your Data Goggles (Brandon Rhodes)</h2>
+
+<p>I like how I take very few notes in Brandon’s talks, because he just makes it
+feel so intuitive you feel stupid writing something down.</p>
+
+]]></content>
+  </entry>
+  
+</feed>

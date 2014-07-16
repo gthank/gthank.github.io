@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: pycon | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/pycon/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: Introduction to Python Profiling (PyCon talk)]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/06/01/sneak-attack-introduction-to-python/"/>
+    <updated>2009-06-01T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/06/01/sneak-attack-introduction-to-python</id>
+    <content type="html"><![CDATA[<p>This <a href="http://blip.tv/file/1957086">PyCon talk</a> on profiling is really good
+stuff. Also, it’s nice that he points to
+<a href="http://kcachegrind.sourceforge.net/">KCachegrind</a> and
+<a href="http://www.vrplumber.com/programming/runsnakerun/">RunSnakeRun</a> for better
+visualizations than the default from
+<a href="http://docs.python.org/library/profile.html#module-pstats">cProfile</a>.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

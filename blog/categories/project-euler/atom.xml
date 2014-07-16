@@ -1,0 +1,871 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: project_euler | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/project-euler/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Project Euler: Problem 20]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/08/24/project-euler-problem-20/"/>
+    <updated>2009-08-24T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/08/24/project-euler-problem-20</id>
+    <content type="html"><![CDATA[<p>I finished up <a href="http://projecteuler.net/index.php?section=problems&amp;id=20">Problem 20</a> a while back.
+This problem was <em>really</em> straightforward, especially given
+<a href="http://realultimateprogramming.blogspot.com/2009/03/project-euler-problem-16.html">my work on Problem 16</a>.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'>    <span class="kn">import</span> <span class="nn">math</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">print</span> <span class="nb">sum</span><span class="p">((</span><span class="nb">int</span><span class="p">(</span><span class="n">digit</span><span class="p">)</span> <span class="k">for</span> <span class="n">digit</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="mi">100</span><span class="p">))))</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+</code></pre>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Project Euler: Problem 19]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/08/13/project-euler-problem-19/"/>
+    <updated>2009-08-13T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/08/13/project-euler-problem-19</id>
+    <content type="html"><![CDATA[<p>I recently solved <a href="http://projecteuler.net/index.php?section=problems&amp;id=19">Problem 19</a> from Project Euler. Since I
+don’t really enjoy date math, I decided to brute force it and use the
+<a href="http://docs.python.org/library/datetime.html"><code>datetime</code></a> module from the standard library.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'>    <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">next_first_of_month_in_20th</span><span class="p">():</span>
+</span><span class='line'>    <span class="sd">&quot;&quot;&quot;Generator to list every first of the month during the 20th century.&quot;&quot;&quot;</span>
+</span><span class='line'>    <span class="n">first</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">1901</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">yield</span> <span class="n">first</span>
+</span><span class='line'>    <span class="k">while</span> <span class="n">first</span><span class="o">.</span><span class="n">year</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="mi">2001</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">first</span><span class="o">.</span><span class="n">month</span> <span class="o">==</span> <span class="mi">12</span><span class="p">:</span>
+</span><span class='line'>            <span class="n">first</span> <span class="o">=</span> <span class="n">first</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="n">first</span><span class="o">.</span><span class="n">year</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>            <span class="n">first</span> <span class="o">=</span> <span class="n">first</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">month</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">else</span><span class="p">:</span>
+</span><span class='line'>            <span class="n">first</span> <span class="o">=</span> <span class="n">first</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">month</span><span class="o">=</span><span class="n">first</span><span class="o">.</span><span class="n">month</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">yield</span> <span class="n">first</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+</span><span class='line'>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span class='line'><span class="sd">    Solve `Problem 19`_ from Project Euler.</span>
+</span><span class='line'><span class="sd">    </span>
+</span><span class='line'><span class="sd">    .. _`Problem 19`: http://projecteuler.net/index.php?section=problems&amp;amp;id;=19</span>
+</span><span class='line'><span class="sd">    &quot;&quot;&quot;</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nb">len</span><span class="p">([</span><span class="n">first</span> <span class="k">for</span> <span class="n">first</span> <span class="ow">in</span> <span class="n">next_first_of_month_in_20th</span><span class="p">()</span> <span class="k">if</span> <span class="n">first</span><span class="o">.</span><span class="n">weekday</span><span class="p">()</span> <span class="o">==</span> <span class="mi">6</span><span class="p">])</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">print</span> <span class="n">main</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+</code></pre>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Project Euler, Problems 18 and 67]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/08/07/project-euler-problems-18-and-67/"/>
+    <updated>2009-08-07T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/08/07/project-euler-problems-18-and-67</id>
+    <content type="html"><![CDATA[<p>I recently finished up <a href="http://projecteuler.net/index.php?section=problems&amp;id=18">Problem 18</a> (and shortly thereafter,
+<a href="http://projecteuler.net/index.php?section=problems&amp;id=67">Problem 67</a>). This was a fairly interesting problem, because
+I like graph theory even if I’m bad at it, and I immediately thought
+graph theory when I read this problem.</p>
+
+<p>I started creating <code>Vertex</code> and <code>Edge</code> classes, but quickly decided that was
+too heavyweight for such a small problem. Instead, I chose to use a <code>list</code> of
+<code>lists</code> where the left-hand child of a node is stored in the next row on the
+same column and the right-hand child is stored in the next row and the next
+column.</p>
+
+<p>This made representing and using the data fairly straightforward, but
+I kept running into the problem of doing an exhaustive search. I knew
+this was suboptimal (and completely unsuited for the related
+<a href="http://projecteuler.net/index.php?section=problems&amp;id=67">Problem 67</a>), but I was so locked into thinking of the triangle
+from the top-down I made things over-complicated.</p>
+
+<p>Eventually, I decided I needed to reset my thinking and Googled for hints.
+Once I started thinking of the problem from the bottom up (since the graph,
+after all, is not directed), the solution became clear. Since I didn’t need
+the actual path, I modified the existing data structure to minimize memory
+requirements.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">find_max_sum</span><span class="p">(</span><span class="n">triangle</span><span class="p">):</span>
+</span><span class='line'>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span class='line'><span class="sd">    Find the maximum sum for a path from the top to the bottom of ``triangle``.</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">    &amp;gt;&amp;gt;&amp;gt; test = [[3,], \</span>
+</span><span class='line'><span class="sd">            [7, 5], \</span>
+</span><span class='line'><span class="sd">            [2, 4, 6], \</span>
+</span><span class='line'><span class="sd">            [8, 5, 9, 3]]</span>
+</span><span class='line'><span class="sd">    &amp;gt;&amp;gt;&amp;gt; find_max_sum(test)</span>
+</span><span class='line'><span class="sd">    23</span>
+</span><span class='line'><span class="sd">    &quot;&quot;&quot;</span>
+</span><span class='line'>    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">triangle</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="mi">1</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">_reduce_triangle</span><span class="p">(</span><span class="n">triangle</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">_reduce_triangle</span><span class="p">(</span><span class="n">to_reduce</span><span class="p">):</span>
+</span><span class='line'>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span class='line'><span class="sd">    Reduce ``to_reduce`` in place by rolling up the maximum path info one row.</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">    Don&#39;t return anything to emphasize the in-place nature of this function.</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">    &amp;gt;&amp;gt;&amp;gt; test = [[3,], \</span>
+</span><span class='line'><span class="sd">            [7, 5], \</span>
+</span><span class='line'><span class="sd">            [2, 4, 6], \</span>
+</span><span class='line'><span class="sd">            [8, 5, 9, 3]]</span>
+</span><span class='line'><span class="sd">    &amp;gt;&amp;gt;&amp;gt; _reduce_triangle(test)</span>
+</span><span class='line'><span class="sd">    &amp;gt;&amp;gt;&amp;gt; test</span>
+</span><span class='line'><span class="sd">    [[3], [7, 5], [10, 13, 15]]</span>
+</span><span class='line'><span class="sd">    &amp;gt;&amp;gt;&amp;gt; _reduce_triangle(test)</span>
+</span><span class='line'><span class="sd">    &amp;gt;&amp;gt;&amp;gt; test</span>
+</span><span class='line'><span class="sd">    [[3], [20, 20]]</span>
+</span><span class='line'><span class="sd">    &amp;gt;&amp;gt;&amp;gt; _reduce_triangle(test)</span>
+</span><span class='line'><span class="sd">    &amp;gt;&amp;gt;&amp;gt; test</span>
+</span><span class='line'><span class="sd">    [[23]]</span>
+</span><span class='line'><span class="sd">    &quot;&quot;&quot;</span>
+</span><span class='line'>    <span class="n">last_row</span> <span class="o">=</span> <span class="n">to_reduce</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span><span class='line'>    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">to_reduce</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+</span><span class='line'>        <span class="n">to_reduce</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">][</span><span class="n">index</span><span class="p">]</span> <span class="o">+=</span> <span class="nb">max</span><span class="p">(</span><span class="n">last_row</span><span class="p">[</span><span class="n">index</span><span class="p">:</span><span class="n">index</span> <span class="o">+</span> <span class="mi">2</span><span class="p">])</span>
+</span><span class='line'>    <span class="k">del</span> <span class="n">to_reduce</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+</span><span class='line'>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span class='line'><span class="sd">    Solve `Problem 18`_ of Project Euler.</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">    .. _Problem 18: http://projecteuler.net/index.php?section=problems&amp;amp;id;=18</span>
+</span><span class='line'><span class="sd">    &quot;&quot;&quot;</span>
+</span><span class='line'>    <span class="n">actual</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">75</span><span class="p">,],</span>
+</span><span class='line'>             <span class="p">[</span><span class="mi">95</span><span class="p">,</span> <span class="mi">64</span><span class="p">],</span>
+</span><span class='line'>             <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">82</span><span class="p">],</span>
+</span><span class='line'>             <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+</span><span class='line'>             <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">65</span><span class="p">],</span>
+</span><span class='line'>             <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">34</span><span class="p">],</span>
+</span><span class='line'>             <span class="p">[</span><span class="mi">88</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">67</span><span class="p">],</span>
+</span><span class='line'>             <span class="p">[</span><span class="mi">99</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">92</span><span class="p">],</span>
+</span><span class='line'>             <span class="p">[</span><span class="mi">41</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span>
+</span><span class='line'>             <span class="p">[</span><span class="mi">41</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">29</span><span class="p">],</span>
+</span><span class='line'>             <span class="p">[</span><span class="mi">53</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">14</span><span class="p">],</span>
+</span><span class='line'>             <span class="p">[</span><span class="mi">70</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">57</span><span class="p">],</span>
+</span><span class='line'>             <span class="p">[</span><span class="mi">91</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">48</span><span class="p">],</span>
+</span><span class='line'>             <span class="p">[</span><span class="mi">63</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">31</span><span class="p">],</span>
+</span><span class='line'>             <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">23</span><span class="p">]]</span>
+</span><span class='line'>    <span class="k">print</span> <span class="n">find_max_sum</span><span class="p">(</span><span class="n">actual</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">main</span><span class="p">()</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Starting with this, the solution for <a href="http://projecteuler.net/index.php?section=problems&amp;id=67">Problem 67</a> is trivial: just
+write some code to parse the triangle out of a text file instead of coding it
+directly into the source code:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">find_max_sum</span><span class="p">(</span><span class="n">triangle</span><span class="p">):</span>
+</span><span class='line'>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span class='line'><span class="sd">    Find the maximum sum for a path from the top to the bottom of ``triangle``.</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">    &amp;gt;&amp;gt;&amp;gt; test = [[3,], \</span>
+</span><span class='line'><span class="sd">            [7, 5], \</span>
+</span><span class='line'><span class="sd">            [2, 4, 6], \</span>
+</span><span class='line'><span class="sd">            [8, 5, 9, 3]]</span>
+</span><span class='line'><span class="sd">    &amp;gt;&amp;gt;&amp;gt; find_max_sum(test)</span>
+</span><span class='line'><span class="sd">    23</span>
+</span><span class='line'><span class="sd">    &quot;&quot;&quot;</span>
+</span><span class='line'>    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">triangle</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="mi">1</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">_reduce_triangle</span><span class="p">(</span><span class="n">triangle</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">_reduce_triangle</span><span class="p">(</span><span class="n">to_reduce</span><span class="p">):</span>
+</span><span class='line'>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span class='line'><span class="sd">    Reduce ``to_reduce`` in place by rolling up the maximum path info one row.</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">    Don&#39;t return anything to emphasize the in-place nature of this function.</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">    &amp;gt;&amp;gt;&amp;gt; test = [[3,], \</span>
+</span><span class='line'><span class="sd">            [7, 5], \</span>
+</span><span class='line'><span class="sd">            [2, 4, 6], \</span>
+</span><span class='line'><span class="sd">            [8, 5, 9, 3]]</span>
+</span><span class='line'><span class="sd">    &amp;gt;&amp;gt;&amp;gt; _reduce_triangle(test)</span>
+</span><span class='line'><span class="sd">    &amp;gt;&amp;gt;&amp;gt; test</span>
+</span><span class='line'><span class="sd">    [[3], [7, 5], [10, 13, 15]]</span>
+</span><span class='line'><span class="sd">    &amp;gt;&amp;gt;&amp;gt; _reduce_triangle(test)</span>
+</span><span class='line'><span class="sd">    &amp;gt;&amp;gt;&amp;gt; test</span>
+</span><span class='line'><span class="sd">    [[3], [20, 20]]</span>
+</span><span class='line'><span class="sd">    &amp;gt;&amp;gt;&amp;gt; _reduce_triangle(test)</span>
+</span><span class='line'><span class="sd">    &amp;gt;&amp;gt;&amp;gt; test</span>
+</span><span class='line'><span class="sd">    [[23]]</span>
+</span><span class='line'><span class="sd">    &quot;&quot;&quot;</span>
+</span><span class='line'>    <span class="n">last_row</span> <span class="o">=</span> <span class="n">to_reduce</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span><span class='line'>    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">to_reduce</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+</span><span class='line'>        <span class="n">to_reduce</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">][</span><span class="n">index</span><span class="p">]</span> <span class="o">+=</span> <span class="nb">max</span><span class="p">(</span><span class="n">last_row</span><span class="p">[</span><span class="n">index</span><span class="p">:</span><span class="n">index</span> <span class="o">+</span> <span class="mi">2</span><span class="p">])</span>
+</span><span class='line'>    <span class="k">del</span> <span class="n">to_reduce</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">_parse_triangle_from_file</span><span class="p">(</span><span class="n">data_file</span><span class="p">):</span>
+</span><span class='line'>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span class='line'><span class="sd">    Parse out the triangle data from ``data_file``.</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">    &amp;gt;&amp;gt;&amp;gt; _parse_triangle_from_file(&#39;test_triangle.txt&#39;)</span>
+</span><span class='line'><span class="sd">    [[3], [7, 5], [10, 13, 15]]</span>
+</span><span class='line'><span class="sd">    &quot;&quot;&quot;</span>
+</span><span class='line'>    <span class="n">triangle</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span class='line'>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">data_file</span><span class="p">,</span> <span class="s">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">triangle_file</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">triangle_file</span><span class="p">:</span>
+</span><span class='line'>            <span class="n">triangle</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()])</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">triangle</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+</span><span class='line'>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span class='line'><span class="sd">    Solve `Problem 67`_ of Project Euler.</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">    .. _Problem 67: http://projecteuler.net/index.php?section=problems&amp;amp;id;=67</span>
+</span><span class='line'><span class="sd">    &quot;&quot;&quot;</span>
+</span><span class='line'>    <span class="k">print</span> <span class="n">find_max_sum</span><span class="p">(</span><span class="n">_parse_triangle_from_file</span><span class="p">(</span><span class="s">&#39;triangle.txt&#39;</span><span class="p">))</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">main</span><span class="p">()</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Back to flipping out…</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Project Euler: Problem 11, Redux]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/06/15/project-euler-problem-11-redux/"/>
+    <updated>2009-06-15T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/06/15/project-euler-problem-11-redux</id>
+    <content type="html"><![CDATA[<p>I’ve already <a href="http://projecteuler.net/index.php?section=problems&amp;id=11">solved Problem 11</a>, but I didn’t really do a
+great job: I was doing twice as much work as I needed to. Since I was
+revisiting this code anyway, I decided to play around a little bit with
+<a href="http://docs.python.org/library/functions.html#zip"><code>zip</code></a> and <a href="http://docs.python.org/library/itertools.html"><code>itertools</code></a>. Here’s the new and
+improved solution:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Project Euler: Problem 11 </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">”</span><span class="s">&quot;”Solve Problem 11 from Project Euler.”””</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">itertools</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">operator</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">OFFSET</span> <span class="o">=</span> <span class="mi">3</span>
+</span><span class='line'><span class="n">GRID</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class='line'>    <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+</span><span class='line'>    <span class="p">[</span><span class="mi">49</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+</span><span class='line'>    <span class="p">[</span><span class="mi">81</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">65</span><span class="p">],</span>
+</span><span class='line'>    <span class="p">[</span><span class="mi">52</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">91</span><span class="p">],</span>
+</span><span class='line'>    <span class="p">[</span><span class="mi">22</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">80</span><span class="p">],</span>
+</span><span class='line'>    <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">50</span><span class="p">],</span>
+</span><span class='line'>    <span class="p">[</span><span class="mi">32</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">70</span><span class="p">],</span>
+</span><span class='line'>    <span class="p">[</span><span class="mi">67</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">21</span><span class="p">],</span>
+</span><span class='line'>    <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">72</span><span class="p">],</span>
+</span><span class='line'>    <span class="p">[</span><span class="mi">21</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">95</span><span class="p">],</span>
+</span><span class='line'>    <span class="p">[</span><span class="mi">78</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">92</span><span class="p">],</span>
+</span><span class='line'>    <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">57</span><span class="p">],</span>
+</span><span class='line'>    <span class="p">[</span><span class="mi">86</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">58</span><span class="p">],</span>
+</span><span class='line'>    <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span>
+</span><span class='line'>    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">66</span><span class="p">],</span>
+</span><span class='line'>    <span class="p">[</span><span class="mi">88</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">69</span><span class="p">],</span>
+</span><span class='line'>    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">36</span><span class="p">],</span>
+</span><span class='line'>    <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">16</span><span class="p">],</span>
+</span><span class='line'>    <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">54</span><span class="p">],</span>
+</span><span class='line'>    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">48</span><span class="p">]</span>
+</span><span class='line'><span class="p">]</span>
+</span><span class='line'><span class="n">INVALID_COORDS_PRODUCT</span> <span class="o">=</span> <span class="mi">0</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">_calc_down</span><span class="p">(</span><span class="n">row_index</span><span class="p">,</span> <span class="n">col_index</span><span class="p">):</span>
+</span><span class='line'>    <span class="err">“</span><span class="s">&quot;”Calculate the product of the sequence going straight down from &lt;code&gt;row_index&lt;/code&gt;.”””</span>
+</span><span class='line'>    <span class="n">cols</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">col_index</span><span class="p">,</span> <span class="n">OFFSET</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">last_row</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">row_index</span> <span class="o">+</span> <span class="n">OFFSET</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">GRID</span><span class="p">))</span>
+</span><span class='line'>    <span class="n">coords</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">xrange</span><span class="p">(</span><span class="n">row_index</span><span class="p">,</span> <span class="n">last_row</span><span class="p">),</span> <span class="n">cols</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">values</span> <span class="o">=</span> <span class="p">(</span><span class="n">GRID</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">coords</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nb">reduce</span><span class="p">(</span><span class="n">operator</span><span class="o">.</span><span class="n">mul</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">_calc_right</span><span class="p">(</span><span class="n">row_index</span><span class="p">,</span> <span class="n">col_index</span><span class="p">):</span>
+</span><span class='line'>    <span class="err">“</span><span class="s">&quot;”Calculate the product of the sequence going straight right from &lt;code&gt;col_index&lt;/code&gt;.”””</span>
+</span><span class='line'>    <span class="n">rows</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">row_index</span><span class="p">,</span> <span class="n">OFFSET</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">last_col</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">col_index</span> <span class="o">+</span> <span class="n">OFFSET</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">GRID</span><span class="p">[</span><span class="n">row_index</span><span class="p">]))</span>
+</span><span class='line'>    <span class="n">coords</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">col_index</span><span class="p">,</span> <span class="n">last_col</span><span class="p">))</span>
+</span><span class='line'>    <span class="n">values</span> <span class="o">=</span> <span class="p">(</span><span class="n">GRID</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">coords</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nb">reduce</span><span class="p">(</span><span class="n">operator</span><span class="o">.</span><span class="n">mul</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">_calc_up_right</span><span class="p">(</span><span class="n">row_index</span><span class="p">,</span> <span class="n">col_index</span><span class="p">):</span>
+</span><span class='line'>    <span class="err">“</span><span class="s">&quot;”Calculate the product of the sequence going up and to the right from (&lt;code&gt;row_index&lt;/code&gt;, &lt;code&gt;col_index&lt;/code&gt;).”””</span>
+</span><span class='line'>    <span class="n">last_row</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">row_index</span> <span class="o">-</span> <span class="n">OFFSET</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">last_col</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">col_index</span> <span class="o">+</span> <span class="n">OFFSET</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">GRID</span><span class="p">[</span><span class="n">row_index</span><span class="p">]))</span>
+</span><span class='line'>    <span class="n">coords</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">xrange</span><span class="p">(</span><span class="n">row_index</span><span class="p">,</span> <span class="n">last_row</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">col_index</span><span class="p">,</span> <span class="n">last_col</span><span class="p">))</span>
+</span><span class='line'>    <span class="n">values</span> <span class="o">=</span> <span class="p">(</span><span class="n">GRID</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">coords</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nb">reduce</span><span class="p">(</span><span class="n">operator</span><span class="o">.</span><span class="n">mul</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">_calc_down_right</span><span class="p">(</span><span class="n">row_index</span><span class="p">,</span> <span class="n">col_index</span><span class="p">):</span>
+</span><span class='line'>    <span class="err">“</span><span class="s">&quot;”Calculate the product of the sequence going down and to the right from (&lt;code&gt;row_index&lt;/code&gt;, &lt;code&gt;col_index&lt;/code&gt;).”””</span>
+</span><span class='line'>    <span class="n">last_row</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">row_index</span> <span class="o">+</span> <span class="n">OFFSET</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">GRID</span><span class="p">))</span>
+</span><span class='line'>    <span class="n">last_col</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">col_index</span> <span class="o">+</span> <span class="n">OFFSET</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">GRID</span><span class="p">[</span><span class="n">row_index</span><span class="p">]))</span>
+</span><span class='line'>    <span class="n">coords</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">xrange</span><span class="p">(</span><span class="n">row_index</span><span class="p">,</span> <span class="n">last_row</span><span class="p">),</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">col_index</span><span class="p">,</span> <span class="n">last_col</span><span class="p">))</span>
+</span><span class='line'>    <span class="n">values</span> <span class="o">=</span> <span class="p">(</span><span class="n">GRID</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">coords</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nb">reduce</span><span class="p">(</span><span class="n">operator</span><span class="o">.</span><span class="n">mul</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">_get_max_product_for_coordinate</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span>
+</span><span class='line'>    <span class="err">“</span><span class="s">&quot;”Find the maximum product achievable from (&lt;code&gt;row&lt;/code&gt;, &lt;code&gt;col&lt;/code&gt;).”””</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">_calc_up_right</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">),</span> <span class="n">_calc_right</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">),</span> <span class="n">_calc_down_right</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">),</span> <span class="n">_calc_down</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">))</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">problem_11</span><span class="p">():</span>
+</span><span class='line'>    <span class="err">“</span><span class="s">&quot;”Find the largest product of four adjacent elements.”””</span>
+</span><span class='line'>    <span class="n">products</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+</span><span class='line'>    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">GRID</span><span class="p">)):</span>
+</span><span class='line'>        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">GRID</span><span class="p">[</span><span class="n">row</span><span class="p">])):</span>
+</span><span class='line'>            <span class="n">products</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">_get_max_product_for_coordinate</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">))</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">products</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">if</span> <span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">name</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span> <span class="o">==</span> <span class="err">‘</span><span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">main</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span><span class="err">’</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">print</span> <span class="n">problem_11</span><span class="p">()</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Project Euler: Problem 17]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/04/13/project-euler-problem-17/"/>
+    <updated>2009-04-13T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/04/13/project-euler-problem-17</id>
+    <content type="html"><![CDATA[<p>I recently finished up <a href="http://projecteuler.net/index.php?section=problems&amp;id=17">Problem 17</a>, and since the problem was
+fairly straightforward, I used it as an opportunity to explore some of
+Python’s language features that I’ve been meaning to look into.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'>    <span class="c"># problem17.py</span>
+</span><span class='line'>    <span class="err">“””</span>
+</span><span class='line'>    <span class="n">Find</span> <span class="n">the</span> <span class="n">solution</span> <span class="n">to</span> <span class="o">&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">Problem</span> <span class="mi">17</span><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;</span><span class="n">_</span> <span class="n">at</span> <span class="o">&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">Project</span> <span class="n">Euler</span><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;</span><span class="n">_</span><span class="o">.&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;..</span> <span class="n">_Problem</span> <span class="mi">17</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">projecteuler</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">php</span><span class="err">?</span><span class="n">section</span><span class="o">=</span><span class="n">problems</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="nb">id</span><span class="p">;</span><span class="o">=</span><span class="mi">17</span>
+</span><span class='line'><span class="o">..</span> <span class="n">_Project</span> <span class="n">Euler</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">projecteuler</span><span class="o">.</span><span class="n">net</span><span class="o">/</span>
+</span><span class='line'><span class="sd">&quot;&quot;&quot;</span>
+</span><span class='line'><span class="sd">__docformat__ = &quot;restructuredtext en&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">import re</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">_NUMBER_NAMES = {1: &quot;one&quot;, 2: &quot;two&quot;, 3: &quot;three&quot;, 4: &quot;four&quot;, 5: &quot;five&quot;,</span>
+</span><span class='line'><span class="sd">                6: &quot;six&quot;, 7: &quot;seven&quot;, 8: &quot;eight&quot;, 9: &quot;nine&quot;, 10: &quot;ten&quot;,</span>
+</span><span class='line'><span class="sd">                11: &quot;eleven&quot;, 12: &quot;twelve&quot;, 13: &quot;thirteen&quot;, 14: &quot;fourteen&quot;,</span>
+</span><span class='line'><span class="sd">                15: &quot;fifteen&quot;, 16: &quot;sixteen&quot;, 17: &quot;seventeen&quot;,</span>
+</span><span class='line'><span class="sd">                18: &quot;eighteen&quot;, 19: &quot;nineteen&quot;, 20: &quot;twenty&quot;,</span>
+</span><span class='line'><span class="sd">                21: &quot;twenty-one&quot;, 22: &quot;twenty-two&quot;, 23: &quot;twenty-three&quot;,</span>
+</span><span class='line'><span class="sd">                24: &quot;twenty-four&quot;, 25: &quot;twenty-five&quot;, 26: &quot;twenty-six&quot;,</span>
+</span><span class='line'><span class="sd">                27: &quot;twenty-seven&quot;, 28: &quot;twenty-eight&quot;, 29: &quot;twenty-nine&quot;,</span>
+</span><span class='line'><span class="sd">                30: &quot;thirty&quot;, 31: &quot;thirty-one&quot;, 32: &quot;thirty-two&quot;,</span>
+</span><span class='line'><span class="sd">                33: &quot;thirty-three&quot;, 34: &quot;thirty-four&quot;, 35: &quot;thirty-five&quot;,</span>
+</span><span class='line'><span class="sd">                36: &quot;thirty-six&quot;, 37: &quot;thirty-seven&quot;, 38: &quot;thirty-eight&quot;,</span>
+</span><span class='line'><span class="sd">                39: &quot;thirty-nine&quot;, 40: &quot;forty&quot;, 41: &quot;forty-one&quot;,</span>
+</span><span class='line'><span class="sd">                42: &quot;forty-two&quot;, 43: &quot;forty-three&quot;, 44: &quot;forty-four&quot;,</span>
+</span><span class='line'><span class="sd">                45: &quot;forty-five&quot;, 46: &quot;forty-six&quot;, 47: &quot;forty-seven&quot;,</span>
+</span><span class='line'><span class="sd">                48: &quot;forty-eight&quot;, 49: &quot;forty-nine&quot;, 50: &quot;fifty&quot;,</span>
+</span><span class='line'><span class="sd">                51: &quot;fifty-one&quot;, 52: &quot;fifty-two&quot;, 53: &quot;fifty-three&quot;,</span>
+</span><span class='line'><span class="sd">                54: &quot;fifty-four&quot;, 55: &quot;fifty-five&quot;, 56: &quot;fifty-six&quot;,</span>
+</span><span class='line'><span class="sd">                57: &quot;fifty-seven&quot;, 58: &quot;fifty-eight&quot;, 59: &quot;fifty-nine&quot;,</span>
+</span><span class='line'><span class="sd">                60: &quot;sixty&quot;, 61: &quot;sixty-one&quot;, 62: &quot;sixty-two&quot;,</span>
+</span><span class='line'><span class="sd">                63: &quot;sixty-three&quot;, 64: &quot;sixty-four&quot;, 65: &quot;sixty-five&quot;,</span>
+</span><span class='line'><span class="sd">                66: &quot;sixty-six&quot;, 67: &quot;sixty-seven&quot;, 68: &quot;sixty-eight&quot;,</span>
+</span><span class='line'><span class="sd">                69: &quot;sixty-nine&quot;, 70: &quot;seventy&quot;, 71: &quot;seventy-one&quot;,</span>
+</span><span class='line'><span class="sd">                72: &quot;seventy-two&quot;, 73: &quot;seventy-three&quot;, 74: &quot;seventy-four&quot;,</span>
+</span><span class='line'><span class="sd">                75: &quot;seventy-five&quot;, 76: &quot;seventy-six&quot;, 77: &quot;seventy-seven&quot;,</span>
+</span><span class='line'><span class="sd">                78: &quot;seventy-eight&quot;, 79: &quot;seventy-nine&quot;, 80: &quot;eighty&quot;,</span>
+</span><span class='line'><span class="sd">                81: &quot;eighty-one&quot;, 82: &quot;eighty-two&quot;, 83: &quot;eighty-three&quot;,</span>
+</span><span class='line'><span class="sd">                84: &quot;eighty-four&quot;, 85: &quot;eighty-five&quot;, 86: &quot;eighty-six&quot;,</span>
+</span><span class='line'><span class="sd">                87: &quot;eighty-seven&quot;, 88: &quot;eighty-eight&quot;, 89: &quot;eighty-nine&quot;,</span>
+</span><span class='line'><span class="sd">                90: &quot;ninety&quot;, 91: &quot;ninety-one&quot;, 92: &quot;ninety-two&quot;,</span>
+</span><span class='line'><span class="sd">                93: &quot;ninety-three&quot;, 94: &quot;ninety-four&quot;, 95: &quot;ninety-five&quot;,</span>
+</span><span class='line'><span class="sd">                96: &quot;ninety-six&quot;, 97: &quot;ninety-seven&quot;, 98: &quot;ninety-eight&quot;,</span>
+</span><span class='line'><span class="sd">                99: &quot;ninety-nine&quot;}</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">_CHARACTERS_WE_CARE_ABOUT = re.compile(&quot;\w&quot;)</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">def _words_from_num(num):</span>
+</span><span class='line'><span class="sd">    &quot;&quot;&quot;</span>
+</span><span class='line'>    <span class="n">Convert</span> <span class="sb">``</span><span class="n">num</span><span class="sb">``</span> <span class="n">to</span> <span class="n">its</span> <span class="p">(</span><span class="n">British</span><span class="p">)</span> <span class="n">English</span> <span class="n">phrase</span> <span class="n">equivalent</span><span class="o">.</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">If</span> <span class="sb">``</span><span class="n">num</span><span class="sb">``</span> <span class="ow">is</span> <span class="n">greater</span> <span class="n">than</span> <span class="mi">9</span><span class="p">,</span><span class="mi">999</span> <span class="n">then</span> <span class="k">raise</span> <span class="n">an</span> <span class="sb">``</span><span class="ne">Exception</span><span class="sb">``</span><span class="o">.</span>
+</span><span class='line'>    <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">_words_from_num</span><span class="p">(</span><span class="mi">115</span><span class="p">)</span>
+</span><span class='line'>    <span class="s">&#39;one hundred and fifteen&#39;</span>
+</span><span class='line'>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span class='line'><span class="sd">    if num &amp;gt;= 10000:</span>
+</span><span class='line'><span class="sd">        raise Exception, &#39;This function only supports numbers less than 10000.&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">    parts_list = []</span>
+</span><span class='line'><span class="sd">    if num &amp;gt;= 1000:</span>
+</span><span class='line'><span class="sd">        thousands = num // 1000</span>
+</span><span class='line'><span class="sd">        parts_list.append(_NUMBER_NAMES[thousands])</span>
+</span><span class='line'><span class="sd">        parts_list.append(&quot; thousand&quot;)</span>
+</span><span class='line'><span class="sd">        num -= thousands * 1000</span>
+</span><span class='line'><span class="sd">    if num &amp;gt;= 100:</span>
+</span><span class='line'><span class="sd">        hundreds = num // 100</span>
+</span><span class='line'><span class="sd">        parts_list.append(_NUMBER_NAMES[hundreds])</span>
+</span><span class='line'><span class="sd">        parts_list.append(&quot; hundred&quot;)</span>
+</span><span class='line'><span class="sd">        num -= hundreds * 100</span>
+</span><span class='line'><span class="sd">    if num:</span>
+</span><span class='line'><span class="sd">        if parts_list:</span>
+</span><span class='line'><span class="sd">            parts_list.append(&quot; and&quot;)</span>
+</span><span class='line'><span class="sd">        parts_list.extend([&quot; &quot;, _NUMBER_NAMES[num]])</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">    return &quot;&quot;.join(parts_list)</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">def _count_characters_we_care_about(string_to_count):</span>
+</span><span class='line'><span class="sd">    &quot;&quot;&quot;</span>
+</span><span class='line'>    <span class="n">Count</span> <span class="n">the</span> <span class="n">characters</span> <span class="ow">in</span> <span class="sb">``</span><span class="n">string_to_count</span><span class="sb">``</span><span class="p">,</span> <span class="n">excluding</span> <span class="n">things</span> <span class="n">like</span> <span class="n">hyphens</span> <span class="ow">and</span> <span class="n">spaces</span><span class="o">.</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">_count_characters_we_care_about</span><span class="p">(</span><span class="s">&quot;one hundred and twenty-three&quot;</span><span class="p">)</span>
+</span><span class='line'>    <span class="mi">24</span>
+</span><span class='line'>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span class='line'><span class="sd">    return len(_CHARACTERS_WE_CARE_ABOUT.findall(string_to_count))</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">def problem_17(upper_bound = 1000):</span>
+</span><span class='line'><span class="sd">    &quot;&quot;&quot;</span>
+</span><span class='line'>    <span class="n">Find</span> <span class="n">the</span> <span class="n">solution</span> <span class="n">to</span> <span class="sb">`Problem 17`</span><span class="n">_</span> <span class="n">at</span> <span class="sb">`Project Euler`</span><span class="n">_</span><span class="o">.</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="o">..</span> <span class="n">_Problem</span> <span class="mi">17</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">projecteuler</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">php</span><span class="err">?</span><span class="n">section</span><span class="o">=</span><span class="n">problems</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="nb">id</span><span class="p">;</span><span class="o">=</span><span class="mi">17</span>
+</span><span class='line'>    <span class="o">..</span> <span class="n">_Project</span> <span class="n">Euler</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">projecteuler</span><span class="o">.</span><span class="n">net</span><span class="o">/</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">problem_17</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</span><span class='line'>    <span class="mi">6</span>
+</span><span class='line'>    <span class="s">&quot;&quot;&quot;</span>
+</span><span class='line'><span class="s">    converted_nums = (_words_from_num(num) for num in xrange(1, upper_bound + 1))</span>
+</span><span class='line'><span class="s">    lengths = (_count_characters_we_care_about(phrase) for phrase in converted_nums)</span>
+</span><span class='line'><span class="s">    return sum(lengths)</span>
+</span><span class='line'>
+</span><span class='line'><span class="s">if __name__ == &#39;__main__&#39;:</span>
+</span><span class='line'><span class="s">    print problem_17() </span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+</code></pre>
+
+<h4 id="generator-expressions">Generator Expressions</h4>
+
+<p>The quick version: They’re like list comprehensions, only lazy. The
+longer version resides in <a href="http://www.python.org/dev/peps/pep-0289">PEP 289</a>. The verdict: They rock. It
+didn’t make a big difference in this problem, but in general, it’s nice
+that you don’t have to allocate enough memory to contain an entire list.
+One problem with them is that once you’ve consumed an element of the
+generator expression, you can’t get it back, so they aren’t well-suited
+for problems where you need to iterate across the data more than once.</p>
+
+<h4 id="regexes">Regexes</h4>
+
+<p>Regexes are hardly unique to Python, but this is the first time I’ve
+ever used them in Python. One feature I was excited to try—and that
+Python pioneered—is <a href="http://www.regular-expressions.info/named.html">named capturing groups</a>
+but the regex I used in this example didn’t need them.</p>
+
+<h4 id="docstrings">Docstrings</h4>
+
+<p>I’ve written docstrings before, but this is the first time I’ve tried
+to generate stand-alone documentation from them. To do the generation,
+I used <a href="http://epydoc.sourceforge.net/">epydoc</a>. The original <a href="http://www.python.org/dev/peps/pep-0257">PEP 257</a> defines
+docstrings in terms of plaintext, but <a href="http://www.python.org/dev/peps/pep-0287">PEP 287</a> establishes
+<a href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> as a richer alternative. Since I was
+generating documentation from the docstrings, I decided to go with
+reStructuredText. To avoid typing <code>--docformat restructuredtext</code> every
+time I invoked <code>epydoc</code> again:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'>    <span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">docformat</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span> <span class="o">=</span> <span class="err">“</span><span class="n">restructuredtext</span> <span class="n">en</span><span class="err">”</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>While it took a while to get used to it (I’ve gotten pretty set in my
+<a href="http://daringfireball.net/projects/markdown/">Markdown</a> ways), I really like it so far. In fact, I
+liked it enough to write this entire blog post in it and simply post the
+generated HTML into Blogger.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

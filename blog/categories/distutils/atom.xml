@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: distutils | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/distutils/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Getting Started with distutils]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/11/27/getting-started-with-distutils/"/>
+    <updated>2009-11-27T00:00:00-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/11/27/getting-started-with-distutils</id>
+    <content type="html"><![CDATA[<p>If you’ve seen some of the discussions surrounding
+<a href="http://pypi.python.org/pypi/distribute"><code>Distribute</code></a> (a fork of PJE’s
+<a href="http://pypi.python.org/pypi/setuptools"><code>Setuptools</code></a>), you may be wondering
+about <code>distutils</code>, the backbone of both <code>Distribute</code> and <code>Setuptools</code>. If you
+are, then you may have noticed that it’s easier to find details on the various
+tools built on top of it than it is to find info on the basics, even though
+<code>distutils</code> is in the standard library.</p>
+
+<h4 id="helpful-resources">Helpful Resources</h4>
+
+<p>Here are some of the resources I found useful:</p>
+
+<ul>
+  <li>the <a href="http://docs.python.org/distutils/introduction.html">standard docs for distutils</a>. These are a good start, as they outlines the basics of <code>distutils</code> as it currently stands, without any of the various PEPs that have been discussed/proposed.</li>
+  <li>the <a href="http://docs.python.org/distutils/apiref.html">API reference</a>, since it helps cover the <em>numerous</em> keyword arguments to the <a href="http://docs.python.org/distutils/apiref.html#distutils.core.setup"><code>setup</code></a> function.</li>
+  <li>the <a href="http://pypi.python.org/pypi?:action=list_classifiers">list of classifiers</a> at PyPI; this is handy to make sure you’re using actual classifiers that other Python developers are likely to understand instead of ones you just make up</li>
+  <li>this <a href="http://wiki.python.org/moin/Distutils/Tutorial"><code>distutils</code> tutorial</a> on the Python wiki</li>
+  <li>the <a href="http://wiki.python.org/moin/Distutils/Cookbook">Distutils Cookbook</a>; I particularly enjoy the <a href="http://wiki.python.org/moin/Distutils/Cookbook/AutoPackageDiscovery">AutoPackageDiscovery recipe</a></li>
+</ul>
+
+<h4 id="miscellaneous">Miscellaneous</h4>
+
+<p>One thing to remember: the <code>package_data</code> and <code>data_files</code> keyword arguments
+to <code>setup</code> in setup.py tell the installer what to install, MANIFEST.in tells
+the packager what to include in the distribution file. Even if it seems
+duplicative, you need to make sure your resources show up in both places if
+you want to be able to use python setup.py install using the distribution you
+build using python setup.py sdist.</p>
+
+<h4 id="testing-it-all-out">Testing It All Out</h4>
+
+<p>After you package up your program, you can see if your setup.py is correct by
+doing a test install in a
+<a href="http://pypi.python.org/pypi/virtualenv"><code>virtualenv</code></a>. This let’s you make
+sure you can python setup.py install etc. without contaminating your global
+site packages. If you haven’t heard about <code>virtualenv</code>, I recommend reading up
+on it; it’s really handy. The
+<a href="http://www.google.com/search?q=virtualenv">first page of Google results</a>
+is a good starting point.</p>
+
+<p>Back to flipping out…</p>
+
+<ul>
+  <li></li>
+  <li></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Java | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/java/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: Functional Java]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/09/28/sneak-attack-functional-java/"/>
+    <updated>2009-09-28T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/09/28/sneak-attack-functional-java</id>
+    <content type="html"><![CDATA[<p>How is this the first time I’ve heard of
+<a href="http://functionaljava.org/">Functional Java</a>?</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: Python is not Java]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/09/22/sneak-attack-python-is-not-java/"/>
+    <updated>2009-09-22T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/09/22/sneak-attack-python-is-not-java</id>
+    <content type="html"><![CDATA[<p>One of the (in Internet time, at least)
+<a href="http://dirtsimple.org/2004/12/python-is-not-java.html">golden oldies</a>.
+Re-reading this makes me cringe when I think back.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: Building Simple Jersey Web App With Maven]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/06/11/sneak-attack-building-simple-jersey-web/"/>
+    <updated>2009-06-11T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/06/11/sneak-attack-building-simple-jersey-web</id>
+    <content type="html"><![CDATA[<p>Short, easy-to-follow
+<a href="http://blogs.sun.com/japod/entry/building_simple_jersey_web_app">tutorial for Jersey, the Java <abbr title="Reference Implementation">RI</abbr> for RESTful web services</a>.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Five Things I Hate About Java]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/06/01/five-things-i-hate-about-java/"/>
+    <updated>2009-06-01T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/06/01/five-things-i-hate-about-java</id>
+    <content type="html"><![CDATA[<p>I’m sure you’ve all seen the
+<a href="http://use.perl.org/~brian_d_foy/journal/32556">Five Things</a> meme.
+Here’s the five things I hate about Java.</p>
+
+<h4 id="lack-of-type-inferencing">1. Lack of Type Inferencing</h4>
+
+<p>There’s just enough generics-related type inferencing to leave me
+wanting more.</p>
+
+<h4 id="no-first-class-functions">2. No First-class Functions</h4>
+
+<p>I don’t care if there are
+<a href="http://en.wikipedia.org/wiki/Function_object#In_Java">patterns</a> for
+doing this, it’s not very idiomatic, and the boilerplate obscures the
+intent of the code, which largely defeats the purpose.</p>
+
+<h4 id="no-read-eval-print-loop-abbr-titleread-eval-print-loopreplabbr">3. No Read-Eval-Print Loop (<abbr title="Read-Eval-Print-Loop">REPL</abbr>)</h4>
+
+<p>I can’t praise the <abbr title="Read-Eval-Print-Loop">REPL</abbr>
+enough. Java should have had one of these in the JDK in 1.0.</p>
+
+<h4 id="checked-exceptions">4. Checked Exceptions</h4>
+
+<p>The standard library is riddled with
+<a href="http://en.wikipedia.org/wiki/Exception_handling#Checked_exceptions">checked exceptions</a> that really should have
+been unchecked, and third-party libraries have followed suit. In
+fact, <a href="http://java.sun.com/javase/6/docs/api/index.html?java/lang/Exception.html">Exception</a> should have been unchecked
+and we should have <code>CheckedException</code> as a subclass instead of
+<a href="http://java.sun.com/javase/6/docs/api/index.html?java/lang/RuntimeException.html">RuntimeException</a>.</p>
+
+<h4 id="array-covariance">5. Array Covariance</h4>
+
+<p>It’s broken. Especially now that Java has
+<a href="http://www.java-tips.org/java-se-tips/java.lang/covariant-return-types.html">covariant returns</a> (thanks Java 5!),
+this bothers me just often enough that I’ve forgotten how broken it is
+right before I need/want it.</p>
+
+<h4 id="honorable-mention-no-tail-call-eliminationtco">Honorable Mention: No <a href="http://c2.com/cgi/wiki?TailCallOptimization">Tail-call Elimination</a></h4>
+
+<p>This very nearly bumped Array Covariance. I <em>really</em> wish tail-call
+elimination would catch on in mainstream languages.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Flexjson Hijinks]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2008/11/01/flexjson-hijinks/"/>
+    <updated>2008-11-01T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2008/11/01/flexjson-hijinks</id>
+    <content type="html"><![CDATA[<p><a href="http://flexjson.sourceforge.net/">Flexjson</a> has been good to me, but
+every once in a while it jumps up and surprises me. Here’s an example.</p>
+
+<h4 id="abstractfoojava">AbstractFoo.java</h4>
+
+<pre><code>abstract class AbstractFoo {
+    private Float a = 1.1f;
+    private Float b = 2.2f;
+    private Float c = 3.3f;
+
+    public Float getA() {
+        return a;
+    }
+
+    public Float getB() {
+        return b;
+    }
+
+    public Float getC() {
+        return c;
+    }
+}
+</code></pre>
+
+<h4 id="foojava">Foo.java</h4>
+
+<pre><code>import flexjson.JSONSerializer;
+
+public final class Foo extends AbstractFoo {
+        public static void main(final String[] args) {
+                final Foo myFoo = new Foo();
+                final JSONSerializer serializer = new JSONSerializer();
+                System.out.println(serializer.serialize(myFoo));
+        }
+}
+</code></pre>
+
+<p>Can you guess what you’re going to get when you compile this and run
+java Foo? If you guessed:</p>
+
+<pre><code>{"a":1.1,"b":2.2,"c":3.3,"class":"Foo"}
+</code></pre>
+
+<p>you were wrong. You really get:</p>
+
+<pre><code>Exception in thread "main" flexjson.JSONException: Error trying to serialize path: [ a ]
+        at flexjson.JSONSerializer$ObjectVisitor.bean(JSONSerializer.java:603)
+        at flexjson.JSONSerializer$ObjectVisitor.json(JSONSerializer.java:471)
+        at flexjson.JSONSerializer$ObjectVisitor.visit(JSONSerializer.java:435)
+        at flexjson.JSONSerializer.serialize(JSONSerializer.java:222)
+        at Foo.main(Foo.java:7)
+Caused by: java.lang.IllegalAccessException: Class flexjson.JSONSerializer$ObjectVisitor can not access a member of class AbstractFoo with modifiers "public"
+        at sun.reflect.Reflection.ensureMemberAccess(Reflection.java:65)
+        at java.lang.reflect.Method.invoke(Method.java:578)
+        at flexjson.JSONSerializer$ObjectVisitor.bean(JSONSerializer.java:579)
+        ... 4 more
+</code></pre>
+
+<p>It appears that Flexjson’s serialization algorithm can’t handle a
+package- visible, <code>abstract</code> super class. Changing it to <code>public</code> fixes
+the problem and you can continue on your merry way.</p>
+
+<p>Back to flipping out…</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: PyATL | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/pyatl/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Notes from PyATL 2014-07-10]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2014/07/10/notes-from-pyatl-2014-07-10/"/>
+    <updated>2014-07-10T19:32:55-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2014/07/10/notes-from-pyatl-2014-07-10</id>
+    <content type="html"><![CDATA[<h2 id="announcements">Announcements</h2>
+
+<ul>
+  <li>The Weather Channel is hiring</li>
+  <li>So is AirSage (sp?)</li>
+</ul>
+
+<h2 id="functional-programming-in-python---a-sampler-cliff">Functional Programming in Python - A Sampler (Cliff)</h2>
+
+<h3 id="functional-programming-languages-make-big-promises">Functional programming languages make big promises</h3>
+
+<ul>
+  <li>Makes it easy to write robust, modular, decoupled code</li>
+  <li>They’re easy to test (since output is solely dependent on input)</li>
+  <li>They make programming fun</li>
+</ul>
+
+<h3 id="do-they-deliver">Do they deliver?</h3>
+
+<ul>
+  <li>Didn’t find it worth the switching costs, personally.</li>
+  <li>Has a problem with the no I/O thing</li>
+  <li>I don’t think he gets the “no state” thing; there’s no mutable, shared state,
+not no state at all.</li>
+</ul>
+
+<h3 id="hallmarks-of-functional-code">Hallmarks of Functional Code</h3>
+
+<ul>
+  <li>Functions are first-class objects</li>
+  <li>Functions are typically very small</li>
+  <li>Closures</li>
+  <li>Partials/curried functions</li>
+  <li>Recursion</li>
+  <li>Immutable</li>
+</ul>
+
+<h3 id="various-places-that-functional-idioms-can-be-useful">Various Places that Functional Idioms Can Be Useful</h3>
+
+<ul>
+  <li>He’s using templating as an example of how to use partials; that’s
+interesting. I’m going to have to look into this.</li>
+  <li>Interesting point about Python 3’s crazy argument ordering options and
+partials (how does partial application work with some of the wilder ones?)</li>
+</ul>
+
+<h3 id="takeaways">Takeaways</h3>
+
+<ul>
+  <li>Maybe use Python in a more functional style</li>
+  <li>Admits he doesn’t do this currently, so it’s aspirational</li>
+  <li>Use list comprehensions more</li>
+  <li>Isolating I/O looks like a good idea</li>
+  <li>Closures, decorators, and partials are a yes</li>
+  <li>Still doesn’t like recursion</li>
+</ul>
+
+<h3 id="random-observations-by-me">Random observations by me</h3>
+
+<ul>
+  <li>I didn’t realize iPython Notebook had presentation capabilities; I’m going to
+have to play with that.</li>
+</ul>
+
+<h2 id="gnu-radio-and-python-andrew-henshaw">GNU Radio and Python (Andrew Henshaw)</h2>
+
+<ul>
+  <li>According to Andrew, it’s more him showing off instead of demonstrating
+programming techniques.</li>
+  <li>GNU Radio is for signal processing</li>
+  <li>It’s a C++ kernel wrapped in beautiful Python goodness</li>
+  <li>It’s dataflow-oriented</li>
+  <li>Software-defined radio is apparently a big thing, lately</li>
+  <li>Apparently, hardware has gotten fast enough that software Digital
+Signal Processing (<abbr title="Digital Signal Processing">DSP</abbr>)
+is fast enough to replace dedicated hardware, which brings all the
+standard flexibility wins that software tends to provide over dedicated
+hardware.</li>
+  <li>There’s some crazy $20 dongle that can work as a receiver for just about
+every frequency band you could want, and feed it into software-defined radio</li>
+  <li>Fancy: you can draw a dataflow diagram to define your
+<abbr title="Digital Signal Processing">DSP</abbr> pipeline.</li>
+  <li>That’s pretty awesome: assuming I didn’t miss anything, he just ran
+a touch-tone dialer program, in Python, generated from his fancy-pants
+dataflow diagram. It was a 7.</li>
+  <li>The gremlins are out in full force (technical presentations are like crack
+for these things); his GUI example with a volume slider suddenly stopped
+working despite working earlier.</li>
+  <li>My computer’s battery is now toast, so you’ll have to talk to him if you want
+the details of the presentation/demo.</li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Notes from PyATL 2014-01-09]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2014/01/09/notes-from-pyatl-2014-01-09/"/>
+    <updated>2014-01-09T19:42:34-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2014/01/09/notes-from-pyatl-2014-01-09</id>
+    <content type="html"><![CDATA[<h2 id="announcements">Announcements</h2>
+
+<ul>
+  <li>John is hiring</li>
+  <li>The Unix usergroup is looking for speakers</li>
+  <li>So are we</li>
+  <li>I missed a couple of other hiring announcements because RVM was taking
+its own sweet time upgrading stuff so I could actually start the blog
+post.</li>
+</ul>
+
+<h2 id="introduction-to-vagrant-daniel-rocco">Introduction to Vagrant (Daniel Rocco)</h2>
+
+<p>Basically a 60,000-foot view of <a href="http://www.vagrantup.com/">Vagrant</a>.</p>
+
+<h2 id="everything-ive-ever-done-was-completely-wrong-and-thats-okay-shawn-boyette">Everything I’ve Ever Done Was Completely Wrong, And That’s Okay (Shawn Boyette)</h2>
+
+<p>This is about culture, not tech, and I don’t think it’s really something
+I could do a good job of bullet-pointing.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Notes from PyATL 2013-12-12]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2013/12/12/notes-from-pyatl-2013-12-12/"/>
+    <updated>2013-12-12T00:00:00-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2013/12/12/notes-from-pyatl-2013-12-12</id>
+    <content type="html"><![CDATA[<h2 id="announcements">Announcements</h2>
+
+<ul>
+  <li><a href="https://www.rescuetime.com">RescueTime</a> is hiring</li>
+  <li>John is hiring</li>
+</ul>
+
+<h2 id="database-versioning-with-alembic-ryan-">Database Versioning with Alembic (Ryan )</h2>
+
+<ul>
+  <li><a href="http://alembic.readthedocs.org/en/latest/">alembic</a> is <strong>THE</strong> migrations tool for
+<a href="http://www.sqlalchemy.org">SQLAlchemy</a></li>
+  <li>Pretty nice overview</li>
+</ul>
+
+<h2 id="xpresser-gui-automation-the-easy-way">Xpresser: GUI automation “the easy way”</h2>
+
+<ul>
+  <li><a href="http://xpresser.com">XPresser</a> is a tool for
+<abbr title="Graphical User Interface">GUI</abbr> automation</li>
+  <li>Wow, they have to use computer vision (<a href="http://simplecv.org">SimpleCV</a>, built on top
+of <a href="http://opencv.org">OpenCV</a>) to test some things.</li>
+  <li>How is it translating those strings into what it sees? Enquiring minds want
+to know.</li>
+  <li>Some sort of data setup (the answer to the above question).</li>
+  <li>Huh. It’s effectively Ubuntu-only due to accuracy concerns. Wonder what the
+story is behind <em>that</em>.</li>
+</ul>
+
+<h2 id="faces-project-management-with-python-andy-henshaw">Faces: Project Management with Python (Andy Henshaw)</h2>
+
+<ul>
+  <li>What the… ? <a href="http://faces.homeip.net">Faces</a> lets you do project management by writing
+Python? Can I have a PM that uses this?</li>
+  <li>Seems fairly straightforward.</li>
+  <li>…and development is totally stalled. Abandoned since 2007.</li>
+</ul>
+
+<h2 id="using-python-to-break-simple-cryptograms-john">Using Python to Break Simple Cryptograms (John)</h2>
+
+<ul>
+  <li>I kinda hope he shows us a GitHub repo at the end of all this, because
+I’d like to actually see this in action.</li>
+  <li>Go play with the Practical Cryptography site (see his slides when published)</li>
+</ul>
+
+<h2 id="curling-bill">Curling (Bill)</h2>
+
+<ul>
+  <li>Intro <abbr title="Universal Resource Locator">URL</abbr> stuff</li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Notes from PyATL 2013-06-13]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2013/06/13/notes-from-pyatl-2013-06-13/"/>
+    <updated>2013-06-13T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2013/06/13/notes-from-pyatl-2013-06-13</id>
+    <content type="html"><![CDATA[<h2 id="announcements">Announcements</h2>
+
+<ul>
+  <li>distribute and setuptools have finally merged (see also:
+<a href="http://mail.python.org/pipermail/distutils-sig/2013-March/020126.html">the announcement</a>).</li>
+  <li>The Atlanta chapter of PyLadies will be giving the presentations on their
+1-year anniversary (or the closest night to their 1-year anniversary).</li>
+  <li>J.R. is starting a Smyrna tech group.</li>
+</ul>
+
+<h2 id="one-liner-fizz-buzz-doug-hellmann">One-liner fizz-buzz (Doug Hellmann)</h2>
+
+<ul>
+  <li>I’m excited; I don’t think I’ve ever seen Doug golfing code before.</li>
+  <li>He starts by discussing somebody else’s golfed version; I has a sad.</li>
+  <li>But here’s <em>his</em> solution. I dig it.</li>
+</ul>
+
+<h2 id="pandas-python-data-analysis-library-andy-henshaw">PANDAS: Python Data Analysis Library (Andy Henshaw)</h2>
+
+<ul>
+  <li>Interesting; why do a custom thing to drive PowerPoint from iPython. Isn’t that a pretty close parallel to iPython Notebook?</li>
+  <li>First primitive: a <code>Series</code>
+    <ul>
+      <li>It’s an array-like that contains data and labels (or indices).</li>
+      <li>The data must be of the same type.</li>
+      <li>Asking for multiple labels gives you a view into the series; providing a single label gives you the value for that label.</li>
+      <li>Labels don’t have to be unique; if you have multiple values for a single
+label, then requesting that label’s value gives you a view, much like
+asking for multiple labels’ values.</li>
+      <li>Can accommodate incomplete data; labels without values represent the value
+as NaN.</li>
+      <li>NaN is used even for a <code>Series</code> of strings.</li>
+      <li>Data is automatically aligned (that’s pretty sweet).</li>
+    </ul>
+  </li>
+  <li>Second primitive: a <code>Dataframe</code>
+    <ul>
+      <li>It’s tabular data, a la a spreadsheet.</li>
+      <li>Easy to create one from a <code>dict</code> of equal-length <code>list</code>s.</li>
+      <li>Or you could pass a <code>dict</code> of <code>dict</code>s.</li>
+      <li>You can add new columns to existing <code>Dataframes</code> using either direct assignment or calculation.</li>
+      <li>You can re-index.</li>
+    </ul>
+  </li>
+  <li>Bring on the stats!
+    <ul>
+      <li>It’s smart about figuring out how to apply descriptive stats like <code>sum</code> to columns/rows.</li>
+    </ul>
+  </li>
+  <li>All sorts of useful import functionality for structured data, e.g., <abbr title="JavaScript Object Notation">JSON</abbr>, <abbr title="Comma-Separated Values">CSV</abbr>, et al.</li>
+  <li>OK, once he started talking about crosstabs, I was in the territory where I have a hard time keeping up during a talk.</li>
+  <li>Plotting w/ <code>matplotlib</code> is just cool. I <strong>need</strong> to get better at this sort of stuff.</li>
+  <li><code>TimeSeries</code> sounds totally awesome.</li>
+</ul>
+
+<h2 id="none-true-or-false-cliff-kachinske"><code>[None]</code>: <code>True</code> or <code>False</code>? (Cliff Kachinske)</h2>
+
+<ul>
+  <li>I wonder how you’d address this in a general way.</li>
+  <li>The consensus in the room seems to be that <code>any</code> and <code>all</code> are the best way
+to go.</li>
+</ul>
+
+<h2 id="creating-python-bindings-for-c-using-boostpython-aleksey-vitebskiy">Creating Python Bindings for C++ using boost::python (Aleksey Vitebskiy)</h2>
+
+<ul>
+  <li>A dig at <abbr title="Java Native Interface">JNI</abbr>? I like this guy already.</li>
+  <li>C++ wrappers for the major Python objects</li>
+  <li>Declarative-style <a href="http://www.python.org/download/releases/2.3/mro/"><abbr title="Application Programming Interface">API</abbr></a></li>
+  <li>Man, C++ is so alien to me, now. It took me a while to really <em>read</em> a few of
+those lines.</li>
+  <li>It allows extensive interop: you can extend Python classes, Python classes
+can extend C++ classes… pretty hardcore.</li>
+  <li>It does full-on <abbr title="Method Resolution Order">MRO<abbr> stuff, so it
+fully supports multiple inheritance (color me impressed); no metaclasses,
+though :-(</abbr></abbr></li>
+  <li>Haha! You don’t see duck-typing in conjunction with C++ all that often.</li>
+  <li>This slide of pros and cons vs.
+<a href="http://www.swig.org"><abbr title="Simplified Wrapper and Interface Generator">SWIG</abbr></a>
+is gold if you need this functionality.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Notes from PyATL 2013-04-11]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2013/04/11/notes-from-pyatl-2013-04-11/"/>
+    <updated>2013-04-11T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2013/04/11/notes-from-pyatl-2013-04-11</id>
+    <content type="html"><![CDATA[<h2 id="announcements">Announcements</h2>
+
+<ul>
+  <li>Google I/O is having baby conferences; there’s one here in Atlanta in
+May (via JR).</li>
+  <li>The Jam Sessions are probably moving; contact JR with suggestions.</li>
+  <li>Doug reminds us about the upcoming List of Consultants.</li>
+  <li>Rick has coupons for his book; I wonder if I should get one just in
+case I need to do MongoDB stuff in the future.</li>
+  <li>GTRI is hiring; Brighton Technologies (sp? where Dan Rocco is working,
+at any rate) is hiring, too.</li>
+</ul>
+
+<h2 id="the-tax-man-cometh-daniel-rocco">The Tax Man Cometh (Daniel Rocco)</h2>
+
+<ul>
+  <li>I’m a big fan of the <a href="http://docs.python.org/2/library/csv.html"><code>csv</code></a> module, too.</li>
+  <li>But not as big of fan of it as I am of <a href="http://docs.python.org/2/library/collections.html#collections.namedtuple"><code>namedtuple</code></a>.</li>
+  <li><abbr title="Today I Learned">TIL</abbr> about <a href="http://docs.python.org/2/library/collections.html#collections.somenamedtuple._make"><code>._make</code></a>.</li>
+  <li>I have to admit, even my feeble attempts at an NCAA bracket this year
+are better than tax brackets. Taxes just suck.</li>
+  <li>I like the functional flavor, here. Data processing pipelines are so
+awesome.</li>
+  <li>I feel a mod operator coming on.</li>
+  <li>I didn’t mention it before, but the <a href="http://docs.python.org/2/library/decimal.html?highlight=decimal#decimal.Decimal"><code>Decimal</code></a> usage
+is probably super awesome for people who are new to Python.</li>
+  <li><a href="http://csvkit.readthedocs.org/en/latest/">csvkit</a> you say? That sounds <em>extremely</em> cool.</li>
+  <li>Good Question: what about <a href="http://docs.python.org/2/library/csv.html#csv.DictReader"><code>DictReader</code></a>?</li>
+</ul>
+
+<h2 id="the-trouble-with-commas-cliff-kachinske">The Trouble with Commas (Cliff Kachinske)</h2>
+
+<ul>
+  <li>Fun gotcha: A trailing <code>,</code> will often create you a tuple, usually when
+you really don’t want one. If you start seeing complaints about
+mismatches in the number of arguments, it’s a good idea to look for
+trailing commas.</li>
+  <li>What really frustrates me is when I try to get clever and do something
+like this only to find out that Python <em>isn’t</em> creating me a tuple in
+this particular instance (for whatever reason).</li>
+</ul>
+
+<h2 id="ab-testing-with-cleaver-ryan-petrello">A/B Testing with Cleaver (Ryan Petrello)</h2>
+
+<ul>
+  <li>Didn’t use Visual Website Optimizer, Google Analytics, Optimizely, etc.
+because they wanted a Python-based solution that targeted developers,
+not marketers.</li>
+  <li>Found plenty of solutions, but they were all opinionated (to the point
+of requiring specific frameworks). This might not be a show-stopper
+for me, because tight integration usually means less config to mess
+with.</li>
+  <li>They wound up creating <a href="https://github.com/ryanpetrello/cleaver">Cleaver</a> (MIT licensed?), which
+only requires <a href="https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface">WSGI</a>, basically.</li>
+  <li>Basically, you use WSGI middleware to add tracking.</li>
+  <li>It has a number of pluggable backends to store the experiment data.</li>
+  <li>You can add a weight to the tuple, easy-peasy. Does not currently
+support functions, but he seems confident it can be extended fairly
+easily.</li>
+  <li>Comes bundled with a lightweight web UI for viewing the results.</li>
+  <li>It’s cool. I wonder how much of the statistical heavy lifting it does
+(statistical power, significance, correlation with other changes, etc.)</li>
+  <li>Ryan says: They don’t do power, but it does do significance.</li>
+  <li>I missed this discussion while I was reading the <code>README</code> (curses!),
+but I believe the control is just the first option.</li>
+</ul>
+
+<p>Back to flipping out…</p>
+]]></content>
+  </entry>
+  
+</feed>

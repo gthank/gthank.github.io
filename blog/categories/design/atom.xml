@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: design | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/design/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: 10 Useful Usability Findings and Guidelines]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/09/24/sneak-attack-10-useful-usability/"/>
+    <updated>2009-09-24T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/09/24/sneak-attack-10-useful-usability</id>
+    <content type="html"><![CDATA[<p>I wish more people would pay attention to things like
+<a href="http://www.smashingmagazine.com/2009/09/24/10-useful-usability-findings-and-guidelines/">this</a>.
+It’s not like most of that information is new, but it still gets ignored far
+too often.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

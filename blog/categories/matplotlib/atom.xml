@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: matplotlib | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/matplotlib/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Notes from PyATL 2011-07-14]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2011/07/14/pyatl-notes/"/>
+    <updated>2011-07-14T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2011/07/14/pyatl-notes</id>
+    <content type="html"><![CDATA[<h2 id="python-for-data-mining">Python for Data Mining</h2>
+
+<p>Ad-hoc analysis typically requires 3 layers:</p>
+
+<ul>
+  <li>Date Extraction (SQL or a query builder)</li>
+  <li>Transformation &amp; Analysis (scripting language)</li>
+  <li>Presentation (Excel, Powerpoint, Access (I wonder what this is for?))</li>
+</ul>
+
+<p>Python is a great fit for the middle layer. This is for all the usual
+reasons: succinct, expressive, std lib is big, PyPI is bigger, readable.
+There is also another one: easy access to high-speed options: JIT,
+Cython, Numpy, etc.</p>
+
+<p>PROTIP: Take snapshots from time-to-time, because the data <em>will</em> change
+on you.</p>
+
+<p>One reason Python is a win is because you can do the analysis on your
+desktop, and IT is touchy about giving people rights to run PL/SQL on
+the DB.</p>
+
+<p>You do a lot of templating on the queries, because they’re so verbose
+and repetitive.</p>
+
+<p>The standard library will get you a lot farther than you think; you
+don’t always need to jump straight to Numpy.</p>
+
+<p>YES! <code>itertools</code> FTW, baby.</p>
+
+<p>Wow, the first example really demonstrates how dense your code can get
+with list comprehensions and other standard library stuff. The <code>dataset</code>
+initialization was doing an awful lot in essentially one line.</p>
+
+<h3 id="numpy">Numpy</h3>
+
+<p>The classic Numpy array requires you to define your datatypes, and you
+only get one in a given array.</p>
+
+<p>Structured array lets you name columns and have different datatypes for
+each column.</p>
+
+<h3 id="manipulating-data-matplotlib">Manipulating Data: Matplotlib</h3>
+
+<p>As the heading indicates, you can do more than just plot things with it; you
+can do some serious manipulation, too.</p>
+
+<h2 id="rapid-scalable-web-development-with-mongodb-ming-and-python">Rapid, Scalable Web Development with MongoDB, Ming, and Python</h2>
+
+<p>FossFor.us (the SourceForge black ops project to be more web 2.0) was
+built on <a href="http://couchdb.apache.org/">CouchDB</a>.</p>
+
+<p>It didn’t scale the way they needed for SF.net; <a href="http://www.mongodb.org/">MongoDB</a>
+came into play because of that.</p>
+
+<p>TIL: Documents in MongoDB are limited to 4MB (now 16MB). SF.net had to
+rethink their initial design because of this fact.</p>
+
+<h3 id="ming">Ming</h3>
+
+<p>They eventually decided they needed an “Object-Document Mapper”
+(hehe, they still call it an <abbr title="Object-Relational Mapper">ORM</abbr>): Enter <a href="http://merciless.sourceforge.net/index.html">Ming</a>.</p>
+
+<p>Ming allows them to define their schema and enforce it.</p>
+
+<p>They also handle migrations with Ming, and they can be eager or lazy.</p>
+
+<p>They have the concept of a “unit of work”, which basically allows them
+to log all the updates against an object, then distill down into a
+single update (or close to it). This can be especially handy because you
+don’t have multi-statement transactions in MongoDB.</p>
+
+<p>You can drop out of Ming if you need to, to get better performance.</p>
+
+<h3 id="allura">Allura</h3>
+
+<p>SF.net is trying to give back to the Open Source community with
+<a href="http://sourceforge.net/p/allura/">Allura</a>. It’s essentially their codebase.</p>
+
+<h3 id="zarkov">Zarkov</h3>
+
+<p><a href="http://sourceforge.net/p/zarkov/">Zarkov</a> an asynchronous TCP server for event logging
+with <a href="http://www.gevent.org/"><code>gevent</code></a>, which they built on top of Ming.</p>
+
+<h2 id="procedures-objects-reusability-httplib-and-its-discontents">Procedures, Objects, Reusability: <code>httplib</code> and its discontents</h2>
+
+<p>This is a deep-dive into how Python’s
+<a href="http://docs.python.org/library/simplehttpserver.html"><code>SimpleHTTPServer</code></a> handles HTTP requests, which
+is a build-up to a rant about how the HTTP parsing code is not reusable
+because it’s attached to a class that is designed to be extended, not
+used as a utility module.</p>
+
+<p>OK, wow, Brandon is <em>stubborn</em>. He got medieval on the standard lib. Also, he
+is some kind of riled up about all the hoops he jumped through.</p>
+
+<p>It’s entirely possible Brandon might not ever write another class again.</p>
+
+<p>Back to flipping out…</p>
+]]></content>
+  </entry>
+  
+</feed>

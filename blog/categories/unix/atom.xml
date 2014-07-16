@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: unix | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/unix/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Note to Self: apropos finds man entries]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/10/14/note-to-self-apropos-finds-man-entries/"/>
+    <updated>2009-10-14T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/10/14/note-to-self-apropos-finds-man-entries</id>
+    <content type="html"><![CDATA[<p>Ever get that feeling that there just <em>has</em> to be something built right
+into the shell that will solve the problem you’re facing, but have no
+idea what that something might be? Enter <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?apropos"><code>apropos</code></a>. It
+searches the man page blurbs for entries that match your keywords, which
+can be regular expressions. How is it that more people don’t talk about
+features like this?</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

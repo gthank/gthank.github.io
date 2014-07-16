@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: spring_security | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/spring-security/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Follow-up to Grails, The Acegi Plugin, and HTTP Basic]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/05/30/follow-up-to-grails-acegi-plugin-and/"/>
+    <updated>2009-05-30T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/05/30/follow-up-to-grails-acegi-plugin-and</id>
+    <content type="html"><![CDATA[<p>In <a href="http://realultimateprogramming.blogspot.com/2008/08/grails-acegi-plugin-and-http-basic.html">Grails, The Acegi Plugin, and HTTP Basic</a>, I blogged
+about some unexpected behavior in the
+<a href="http://grails.org/AcegiSecurity+Plugin">Grails Acegi plugin (now Spring Security plugin)</a>.
+Good news: the behavior has been changed on trunk and is scheduled for
+version 0.6. Thanks for letting me know, Burt.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

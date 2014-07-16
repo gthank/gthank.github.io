@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: tuscany | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/tuscany/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: Maven Archetypes for Apache Tuscany]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/06/24/sneak-attack-maven-archetypes-for/"/>
+    <updated>2009-06-24T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/06/24/sneak-attack-maven-archetypes-for</id>
+    <content type="html"><![CDATA[<p>The Tuscany community has put together a wiki that, among other things,
+describes <a href="http://cwiki.apache.org/confluence/display/TUSCANYWIKI/Tuscany+Maven+Archetypes">some Maven archetypes for getting started</a>.
+Trust me, this is a real win.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

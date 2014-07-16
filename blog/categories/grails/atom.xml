@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Grails | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/grails/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Follow-up to Grails, The Acegi Plugin, and HTTP Basic]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/05/30/follow-up-to-grails-acegi-plugin-and/"/>
+    <updated>2009-05-30T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/05/30/follow-up-to-grails-acegi-plugin-and</id>
+    <content type="html"><![CDATA[<p>In <a href="http://realultimateprogramming.blogspot.com/2008/08/grails-acegi-plugin-and-http-basic.html">Grails, The Acegi Plugin, and HTTP Basic</a>, I blogged
+about some unexpected behavior in the
+<a href="http://grails.org/AcegiSecurity+Plugin">Grails Acegi plugin (now Spring Security plugin)</a>.
+Good news: the behavior has been changed on trunk and is scheduled for
+version 0.6. Thanks for letting me know, Burt.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Grails, The Acegi Plugin, and HTTP Basic]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2008/08/12/grails-acegi-plugin-and-http-basic/"/>
+    <updated>2008-08-12T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2008/08/12/grails-acegi-plugin-and-http-basic</id>
+    <content type="html"><![CDATA[<p>If you’ve heard of <a href="http://www.rubyonrails.org/">Rails</a> but
+can’t use it for whatever reason–my reason was an incompatible
+legacy schema–maybe <a href="http://grails.org/">Grails</a> will work
+for you. Unashamedly inspired by Rails, Grails is written in
+<a href="http://groovy.codehaus.org/">Groovy</a> and aims to provide the
+convenience of Rails while adding configurability and leveraging the
+power of the massive number of libraries written in Java and the other
+JVM languages (including <a href="http://www.ruby-lang.org/en/">Ruby</a>, thanks to
+projects like <a href="http://jruby.codehaus.org/">JRuby</a>). Between what comes
+with Grails out of the box and the available plugins, it can really take
+a big chunk of the grunt-work out of webapp development.</p>
+
+<p>One of my favorite plugins so far is the
+<a href="http://grails.org/AcegiSecurity+Plugin">Acegi plugin</a>. It bolts
+<a href="http://static.springframework.org/spring-security/site/">Spring Security</a>
+onto your Grails project and provides for configuration using the
+concise Groovy DSL for <a href="http://www.springframework.org/">Spring</a>. Just
+type <code>grails install-plugin acegi</code> to install the plugin, and start
+leveraging Spring Security.</p>
+
+<p>One of the nice things about Spring Security is its built-in support for
+<a href="http://en.wikipedia.org/wiki/Basic_access_authentication">HTTP Basic</a>
+authentication. Just change <code>basicProcessingFilter</code> from <code>false</code>
+to <code>true</code> in your <code>SecurityConfig.groovy</code> file and your application
+will now look for user credentials in the
+<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.8">HTTP Authorization header</a>.
+The only problem is that if no <code>Authorization</code> is sent, the server sends
+a
+<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.3">302 Found</a>
+response to send the client to a login page. To be
+fully compliant with the HTTP Basic spec, it should
+be sending a
+<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.2">401 Unauthorized</a>
+response with details on the supported authentication
+mechanisms. If you’ve read the documentation for the
+<a href="http://static.springframework.org/spring-security/site/apidocs/index.html?org/springframework/security/ui/basicauth/BasicProcess ingFilter.html">HttpBasicProcessingFilter</a>—which
+you enabled by setting <code>basicProcessingFilter = true</code> earlier—you
+might expect Grails to be using
+<a href="http://static.springframework.org/spring-security/site/apidocs/index.html?org/springframework/security/ui/basic auth/BasicProcessingFilterEntryPoint.html">HttpBasicProcessingFilterEntryPoint</a>,
+but you’d be wrong. In an effort to be user-friendly for human users, it is instead using an
+<a href="http://static.springframework.org/spring-security/site/apidocs/index.html?org/springframework/security/ui/AuthenticationEntryPoint.html">AuthenticationEntryPoint</a>
+that sends the 302. To change to the strict HTTP Basic mechanism, you’ll
+need to rewire the <code>AuthenticationEntryPoint</code> Grails is using by adding
+the following to your resources.groovy file:</p>
+
+<pre><code>authenticationEntryPoint(org.springframework.security.ui.basicauth.BasicProcessingFilterEntryPoint) {
+    realmName = 'YOUR REALM GOES HERE'
+}
+</code></pre>
+
+<p>Back to flipping out….</p>
+]]></content>
+  </entry>
+  
+</feed>

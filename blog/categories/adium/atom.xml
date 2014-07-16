@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: adium | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/adium/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack—Send IMs from Quicksilver]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/01/30/sneak-attacksend-ims-from-quicksilver/"/>
+    <updated>2009-01-30T00:00:00-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/01/30/sneak-attacksend-ims-from-quicksilver</id>
+    <content type="html"><![CDATA[<p>If you’re using Adium and Quicksilver, and you hate having
+to mouse over to the contacts list and double-click,
+<a href="http://dcortesi.com/2008/01/12/adium-quicksilver-script/">this one</a>
+is for you.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: vim | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/vim/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using bcvi from OS X]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2013/04/18/using-bcvi-from-os-x/"/>
+    <updated>2013-04-18T22:34:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2013/04/18/using-bcvi-from-os-x</id>
+    <content type="html"><![CDATA[<p>When it comes to text editing, it doesn’t get much better than
+<a href="http://en.wikipedia.org/wiki/Vim_(text_editor)"><code>vim</code></a>—and by extension, <a href="http://code.google.com/p/macvim/">MacVim</a>. If this
+is the first time you’ve heard of <code>vim</code>, or the first time you’ve
+seriously considered using it, please stop now and go read
+<a href="http://stevelosh.com/blog/2010/09/coming-home-to-vim/">Coming Home to Vim</a>, by Steve Losh<sup id="fnref:sjl_footnote"><a href="#fn:sjl_footnote" rel="footnote">1</a></sup>. That
+captures the Zen of Vim better than anything else I’ve read.</p>
+
+<p>If you’re still around (or back), then congratulations: you have great
+taste in editors. Now on to one of the most irritating things about
+<code>vim</code>: getting your <code>vim</code> all tricked out with just the right set of
+plugins, color schemes, and keybindings, then getting stuck on a remote
+server somewhere with a vanilla version of <code>vim</code>, or maybe even a
+different <code>vi</code> clone, like <code>nvi</code>. Enter <a href="http://search.cpan.org/~grantm/App-BCVI-3.08/lib/App/BCVI.pm"><code>bcvi</code></a>.</p>
+
+<p><code>bcvi</code> is a clever little tool that basically copies the file you want
+to edit to your machine, invokes <code>gvim</code> on it, then copies it back when
+you are done. Presto: you get to edit in the comforts of your own,
+highly optimized <code>vim</code> environment.</p>
+
+<p>All you need to do to get <code>bcvi</code> is install it via <a href="http://en.wikipedia.org/wiki/CPAN">CPAN</a>;
+it even comes with a couple of helper commands to give you handy shell
+aliases, etc. But if you’re running OSX , <a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a>
+(if you’re not, go read Steve’s <a href="http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/">My Extravagant Zsh Prompt</a>
+for a good explanation of just how awesome it can be), and MacVim, then
+there are a couple of things that you’ll probably want to do.</p>
+
+<p>As an aside, you might want to update CPAN so it stops nagging you every
+time you try to install something. The default <code>perl</code> that ships with
+OSX is under <code>/usr/bin</code>, so upgrading CPAN is going to require <code>sudo</code>.
+It’s also rather old. If you’d rather, you can simply install a current
+<code>perl</code> via <a href="http://mxcl.github.io/homebrew/">Homebrew</a>. This will get you up-to-date and allow
+you to upgrade CPAN without needing sudo. You could also look into
+<a href="http://search.cpan.org/~apeiron/local-lib-1.008009/lib/local/lib.pm"><code>local::lib</code></a>, which I’ve used with success on servers.
+The instructions I used (NOTE: some of these are probably unique to my
+box, but I don’t have a spare handy to test) are:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>brew tap homebrew/dupes
+</span><span class='line'><span class="nv">$ </span>brew install perl
+</span><span class='line'><span class="nv">$ </span>brew link –overwrite perl
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>With that out of the way, here’s how to get started with <code>bcvi</code> on a Mac:</p>
+
+<ol>
+  <li>Install <code>bcvi</code>. This is as simple as <code>install App::BCVI</code> from the
+CPAN prompt.</li>
+  <li>To make <code>bcvi</code> use MacVim (or possibly even work, if you don’t have
+an X-based version of <code>vim</code>), you need to symlink <code>gvim</code> to <code>mvim</code>.
+Since I have my <code>mvim</code> situated in <code>/usr/local/bin</code>, that’s where I
+put the <code>gvim</code> symlink to it, as well.</li>
+  <li>Get those lovely aliases. Execute <code>bcvi --add-aliases</code>. NOTE: This
+only adds them to <code>.bashrc</code>, so if you’re using ZSH, you need to copy
+and paste them to your <code>.zshrc</code>.</li>
+  <li>Start the listener process. This is as simple as
+<code>bcvi --listener &amp;</code>, but I would never remember to type this until
+the first time I tried to use <code>bcvi</code> and it errored out. Instead, I
+use a <a href="http://en.wikipedia.org/wiki/Launchd"><code>launchd</code></a> job. You can get it from
+<a href="https://bitbucket.org/gthank/launch-agents/src">this BitBucket repo</a>. If you’ve never used
+<code>launchd</code> jobs before, instructions are included in the README.</li>
+  <li>Install <code>bcvi</code> on the remote servers where you’d like to use it using
+<code>bcvi --install hostname</code>. This will install <code>bcvi</code> in <code>$HOME/bin</code>, so
+permissions <em>shouldn’t</em> be a problem.</li>
+  <li>Finally, I like to add an alias so I don’t have to type
+<code>bcvi --wrap-ssh -- hostname</code> every time I connect to a server and
+want to have access to <code>bcvi</code>. I added the following to my <code>.zshrc</code>:</li>
+</ol>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">alias </span>ssh-bcvi<span class="o">=</span>’bcvi –wrap-ssh –’
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>At this point, you should be able to <code>ssh-bcvi</code> to your remote server,
+find the file you need to edit, and <code>vi filename</code> to edit it in the
+comfort of your own <code>vim</code>.</p>
+
+<p>Back to flipping out…</p>
+<div class="footnotes">
+  <ol>
+    <li id="fn:sjl_footnote">
+      <p>As a matter of fact, just go read everything Steve writes. I steal ideas from him all the time.<a href="#fnref:sjl_footnote" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: Oops, I forgot to sudo in Vim]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2010/08/05/sneak-attack-oops-i-forgot-to-sudo-in/"/>
+    <updated>2010-08-05T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2010/08/05/sneak-attack-oops-i-forgot-to-sudo-in</id>
+    <content type="html"><![CDATA[<p>Ever forget to <code>sudo</code> before you started editing that file in vim? Here’s a
+<a href="http://al3k.net/2010/08/vim-forget-sud/">nifty, tee-based trick</a> to save you
+some hassle.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

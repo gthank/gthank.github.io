@@ -1,0 +1,798 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Real Ultimate Programming</title>
+  <meta name="author" content="Hank">
+
+  
+  <meta name="description" content="Do you use MacPorts? Ever switch from one version of PostgreSQL to another,
+e.g., 8.4 to 9.0? Did you notice that it started complaining about a non &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.realultimateprogramming.com//blog/page/4">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Real Ultimate Programming" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Real Ultimate Programming</a></h1>
+  
+    <h2>The Home for People Who Like to Flip Out and Write Code</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.realultimateprogramming.com/" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/colophon">Colophon</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/22/note-to-self-changing-info-for-postgres/">Note to Self: Changing Info for the Postgres System User</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-22T00:00:00-05:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Do you use MacPorts? Ever switch from one version of PostgreSQL to another,
+e.g., 8.4 to 9.0? Did you notice that it started complaining about a non-
+existent home directory for the <code>postgres</code> system user? Me, too.</p>
+
+<p>My first instinct was to edit the user, but there is no entry for <code>postgres</code> in
+<code>/etc/passwd</code>. That led me to this
+<a href="http://girders.org/changing-postgres-user-info-on-os-x-106">excellent article</a>.
+Using that info, I cooked up the following command:</p>
+
+<pre><code>sudo dscl localhost change /Local/Default/Users/postgres NFSHomeDirectory /opt/local/var/db/postgresql84 /opt/local/var/db/postgresql90
+</code></pre>
+
+<p>Back to flipping out…</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/08/11/sneak-attack-smell-of-hell/">Sneak Attack: The Smell of Hell</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-08-11T00:00:00-04:00" pubdate data-updated="true">Aug 11<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Excellent <a href="http://www.dadhacker.com/blog/?p=1274">article on code smells</a>.</p>
+
+<p>Back to flipping out…</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/08/05/sneak-attack-oops-i-forgot-to-sudo-in/">Sneak Attack: Oops, I Forgot to Sudo in Vim</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-08-05T00:00:00-04:00" pubdate data-updated="true">Aug 5<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Ever forget to <code>sudo</code> before you started editing that file in vim? Here’s a
+<a href="http://al3k.net/2010/08/vim-forget-sud/">nifty, tee-based trick</a> to save you
+some hassle.</p>
+
+<p>Back to flipping out…</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/07/23/sneak-attack-will-it-optimize/">Sneak Attack: Will It Optimize?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-07-23T00:00:00-04:00" pubdate data-updated="true">Jul 23<span>rd</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://ridiculousfish.com/blog/archives/2010/07/23/will-it-optimize/">Fun with optimizing compilers</a>.</p>
+
+<p>Back to flipping out…</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/07/20/sneak-attack-temporary-tablespace/">Sneak Attack: TEMPORARY (Tablespace) Insanity</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-07-20T00:00:00-04:00" pubdate data-updated="true">Jul 20<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you ever find yourself cursing about an
+<code>ORA-01652: unable to extend temp segment by 128 in tablespace TEMP</code> at 11 PM
+on your birthday, this
+<a href="http://oratips-ddf.blogspot.com/2008/02/temporary-tablespace-insanity.html">article</a>
+might be just the thing for you.</p>
+
+<p>Back to flipping out…</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/07/19/sneak-attack-gnu-screen-and-scrollback/">Sneak Attack: GNU Screen and the Scrollback</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-07-19T00:00:00-04:00" pubdate data-updated="true">Jul 19<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Handy <a href="http://www.samsarin.com/blog/2007/03/11/gnu-screen-working-with-the-scrollback-buffer/">article on scrolling with screen</a>,
+which I use rarely enough that I always need to look this up.</p>
+
+<p>Back to flipping out…</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/12/09/sneak-attack-fixing-django-management/">Sneak Attack: Fixing Django Management Commands</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-09T00:00:00-05:00" pubdate data-updated="true">Dec 9<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Nifty post on
+<a href="http://blog.zacharyvoase.com/post/275566873">reducing boilerplate and improving argument parsing in Django management commands</a>.</p>
+
+<p>Back to flipping out…</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/11/27/getting-started-with-distutils/">Getting Started With Distutils</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-27T00:00:00-05:00" pubdate data-updated="true">Nov 27<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you’ve seen some of the discussions surrounding
+<a href="http://pypi.python.org/pypi/distribute"><code>Distribute</code></a> (a fork of PJE’s
+<a href="http://pypi.python.org/pypi/setuptools"><code>Setuptools</code></a>), you may be wondering
+about <code>distutils</code>, the backbone of both <code>Distribute</code> and <code>Setuptools</code>. If you
+are, then you may have noticed that it’s easier to find details on the various
+tools built on top of it than it is to find info on the basics, even though
+<code>distutils</code> is in the standard library.</p>
+
+<h4 id="helpful-resources">Helpful Resources</h4>
+
+<p>Here are some of the resources I found useful:</p>
+
+<ul>
+  <li>the <a href="http://docs.python.org/distutils/introduction.html">standard docs for distutils</a>. These are a good start, as they outlines the basics of <code>distutils</code> as it currently stands, without any of the various PEPs that have been discussed/proposed.</li>
+  <li>the <a href="http://docs.python.org/distutils/apiref.html">API reference</a>, since it helps cover the <em>numerous</em> keyword arguments to the <a href="http://docs.python.org/distutils/apiref.html#distutils.core.setup"><code>setup</code></a> function.</li>
+  <li>the <a href="http://pypi.python.org/pypi?:action=list_classifiers">list of classifiers</a> at PyPI; this is handy to make sure you’re using actual classifiers that other Python developers are likely to understand instead of ones you just make up</li>
+  <li>this <a href="http://wiki.python.org/moin/Distutils/Tutorial"><code>distutils</code> tutorial</a> on the Python wiki</li>
+  <li>the <a href="http://wiki.python.org/moin/Distutils/Cookbook">Distutils Cookbook</a>; I particularly enjoy the <a href="http://wiki.python.org/moin/Distutils/Cookbook/AutoPackageDiscovery">AutoPackageDiscovery recipe</a></li>
+</ul>
+
+<h4 id="miscellaneous">Miscellaneous</h4>
+
+<p>One thing to remember: the <code>package_data</code> and <code>data_files</code> keyword arguments
+to <code>setup</code> in setup.py tell the installer what to install, MANIFEST.in tells
+the packager what to include in the distribution file. Even if it seems
+duplicative, you need to make sure your resources show up in both places if
+you want to be able to use python setup.py install using the distribution you
+build using python setup.py sdist.</p>
+
+<h4 id="testing-it-all-out">Testing It All Out</h4>
+
+<p>After you package up your program, you can see if your setup.py is correct by
+doing a test install in a
+<a href="http://pypi.python.org/pypi/virtualenv"><code>virtualenv</code></a>. This let’s you make
+sure you can python setup.py install etc. without contaminating your global
+site packages. If you haven’t heard about <code>virtualenv</code>, I recommend reading up
+on it; it’s really handy. The
+<a href="http://www.google.com/search?q=virtualenv">first page of Google results</a>
+is a good starting point.</p>
+
+<p>Back to flipping out…</p>
+
+<ul>
+  <li></li>
+  <li></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/11/18/sneak-attack-debugging-in-python/">Sneak Attack: Debugging in Python</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-18T00:00:00-05:00" pubdate data-updated="true">Nov 18<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Nice <a href="http://pythonconquerstheuniverse.wordpress.com/2009/09/10/debugging-in-python/">intro to debugging in Python using pdb</a>.</p>
+
+<p>Back to flipping out…</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/11/03/setting-up-gitosis-on-os-x/">Setting Up Gitosis on OS X</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-03T00:00:00-05:00" pubdate data-updated="true">Nov 3<span>rd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4 id="what-is-gitosis">What is gitosis?</h4>
+
+<p>gitosis is a wrapper around git that makes it easier share repositories,
+especially as it relates to managing access rights.</p>
+
+<h4 id="why-should-i-care">Why Should I Care?</h4>
+
+<p>The benefit that made me check it out is that I don’t have to create an
+account on my dev machine for every single developer to whom I’d like to give
+access to some of my git repos.</p>
+
+<h4 id="assumptions">Assumptions</h4>
+
+<ul>
+  <li>You installed git and python from <a href="http://www.macports.org/">MacPorts</a>. </li>
+  <li>You have enabled “Remote Login” in the “Sharing” Preferences pane. </li>
+  <li>You have a public key (typically generated via ssh-keygen); see the <a href="http://developer.apple.com/mac/library/documentation/Darwin/Reference/ManPages/man1/ssh-keygen.1.html">man pages</a> for more details. </li>
+</ul>
+
+<h4 id="installation">Installation</h4>
+
+<h5 id="preliminary-steps">Preliminary Steps</h5>
+
+<ol>
+  <li>Create a git user </li>
+  <li>Add git to the list of users who can ssh in </li>
+  <li>
+    <p>Configure git’s .bashrc (<strong>NOT</strong> .bash_profile) so port-installed apps are on the PATH. Mine looks like </p>
+
+    <p>export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/Library/Frameworks/Python.framework/Versions/Current/bin/:$PATH
+   export MANPATH=/opt/local/share/man:$MANPATH</p>
+  </li>
+</ol>
+
+<h5 id="installing-gitosis">Installing gitosis</h5>
+
+<ol>
+  <li>cd /tmp</li>
+  <li>mkdir src</li>
+  <li>cd src</li>
+  <li>git clone git://eagain.net/gitosis.git</li>
+  <li>cd gitosis</li>
+  <li>python setup.py install</li>
+  <li>sudo chmod 755 /Users/git/repositories/gitosis-admin.git/hooks/post-update</li>
+</ol>
+
+<h4 id="configuration">Configuration</h4>
+
+<h5 id="setting-up-admin-access">Setting up Admin Access</h5>
+
+<p>Add yourself as an admin (member of the gitosis-admin group) by executing sudo
+-H -u git gitosis-init &lt; ~/.ssh/id_dsa.pub. This will use your public key as
+input into gitosis-init and set you up as an admin.</p>
+
+<h5 id="cloning-the-admin-repo">Cloning the Admin Repo</h5>
+
+<p>Try git clone git@<code>$HOST</code>:gitosis-admin.git. It should work. If it doesn’t,
+and complains about the other end unexpectedly hanging up, the $PATH for git
+is probably misconfigured. Make sure you configured .bashrc, because
+.bash_profile won’t stick around.</p>
+
+<h5 id="configuring-a-new-repo">Configuring a New Repo</h5>
+
+<p>You make configuration changes to gitosis by editing your local clone of
+gitosis-admin and FIXME kbd pushing them back. Let’s add a new repo.</p>
+
+<ol>
+  <li>Open up gitosis.conf in your editor of choice </li>
+  <li>Add an entry like the one below </li>
+  <li>Save </li>
+  <li>
+    <p>git push</p>
+
+    <p>[group fabfour]
+   members = john paul george ringo
+   writable = the_monkeys_are_hacks</p>
+  </li>
+</ol>
+
+<h6 id="breaking-it-down">Breaking It Down</h6>
+
+<pre><code>    [group fabfour]
+</code></pre>
+
+<p>We’re defining a new group, named fabfour.</p>
+
+<pre><code>    members = john paul george ringo
+</code></pre>
+
+<p>Adding john, paul, george, ringo as members of the fabfour group.</p>
+
+<pre><code>    writable = the_monkeys_are_hacks
+</code></pre>
+
+<p>Listing the_monkeys_are_hacks as the only writable repo for the fabfour group.
+In case you’re saying “Wait, I don’t have a the_monkeys_are_hacks repo!” don’t
+worry, that’s coming next. You have to do all of this <em>before</em> you try to push
+anything to gitosis.</p>
+
+<h5 id="populating-your-new-repo">Populating Your New Repo</h5>
+
+<ol>
+  <li>If the repo doesn’t exist, create it </li>
+</ol>
+
+<pre><code>1. mkdir the_monkeys_are_hacks
+2. cd the_monkeys_are_hacks
+3. git init
+4. Do Work Here and Commit It    2. Add your new gitosis-managed repo as a remote; inside your repo, execute git remote add origin git@`$HOST`:the_monkeys_are_hacks.git
+</code></pre>
+
+<ol>
+  <li>Push to it; inside your repo, execute git push origin master:refs/heads/master</li>
+</ol>
+
+<p>If the last step fails with an inscrutable error, there’s a good chance you
+forgot to chmod the post-update hook.</p>
+
+<h5 id="actually-letting-john-and-the-gang-access-the-repo">Actually Letting John and the Gang Access the Repo</h5>
+
+<p>Before john, paul, george, or ringo can actually get into the server, you need
+to add their public keys under gitosis-admin/keydir. I’m going to wave my
+hands concerning how you get the public keys, but they need to be added to
+gitosis-admin/keydir and they need to be named using the convention
+username.pub, so we’d have:</p>
+
+<ol>
+  <li>cd gitosis-admin</li>
+  <li>cp /tmp/john.pub keydir/</li>
+  <li>cp /tmp/paul.pub keydir/</li>
+  <li>cp /tmp/george.pub keydir/</li>
+  <li>cp /tmp/ringo.pub keydir/</li>
+  <li>git add keydir/john.pub keydir/paul.pub keydir/george.pub keydir/ringo.pub</li>
+  <li>git ci -m “Adding the keys for the Fab Four”</li>
+  <li>git push</li>
+</ol>
+
+<h4 id="want-more">Want More?</h4>
+
+<ul>
+  <li>Check out this extremely detailed (non-Mac-specific) <a href="http://scie.nti.st/2007/11/14/hosting-git-repositories-the-easy-and-secure-way">guide</a>. </li>
+</ul>
+
+<p>Back to flipping out…</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/5/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/3/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/07/10/notes-from-pyatl-2014-07-10/">Notes From PyATL 2014-07-10</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/09/notes-from-pyatl-2014-01-09/">Notes From PyATL 2014-01-09</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/14/sneak-attack-cant-verify-rubygems-on-os-x/">Sneak Attack: Can&#8217;t Verify RubyGems on OS X</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/12/notes-from-pyatl-2013-12-12/">Notes From PyATL 2013-12-12</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/13/notes-from-pyatl-2013-06-13/">Notes From PyATL 2013-06-13</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Popular Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2007/05/21/what-is-programmers-purpose-in-life/">What is a programmer&#8217;s purpose in life?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/05/31/picking-your-next-programming-language/">Picking Your Next Programming Language</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/05/31/speaking-of-debugging/">Speaking of Debugging…</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/06/04/education-of-programmer/">The Education of a Programmer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/06/10/g-client-and-special-sauce/">G-Client and Special Sauce</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Category Cloud</h1>
+    <span id="tag-cloud"><a href='/blog/categories/adium' style='font-size: 100.8955223880597%'>adium(1)</a> <a href='/blog/categories/amqp' style='font-size: 100.8955223880597%'>amqp(1)</a> <a href='/blog/categories/benchmarking' style='font-size: 100.8955223880597%'>benchmarking(1)</a> <a href='/blog/categories/blogger' style='font-size: 100.8955223880597%'>blogger(1)</a> <a href='/blog/categories/book-review' style='font-size: 105.3731343283582%'>book_review(6)</a> <a href='/blog/categories/compilers' style='font-size: 100.8955223880597%'>compilers(1)</a> <a href='/blog/categories/debugging' style='font-size: 100.8955223880597%'>debugging(1)</a> <a href='/blog/categories/design' style='font-size: 100.8955223880597%'>design(1)</a> <a href='/blog/categories/distutils' style='font-size: 100.8955223880597%'>distutils(1)</a> <a href='/blog/categories/django' style='font-size: 102.68656716417911%'>django(3)</a> <a href='/blog/categories/education-sicp' style='font-size: 103.58208955223881%'>Education:SICP(4)</a> <a href='/blog/categories/firefox' style='font-size: 100.8955223880597%'>firefox(1)</a> <a href='/blog/categories/five-things-i-hate' style='font-size: 101.7910447761194%'>five_things_I_hate(2)</a> <a href='/blog/categories/functional-programming' style='font-size: 100.8955223880597%'>functional_programming(1)</a> <a href='/blog/categories/git' style='font-size: 102.68656716417911%'>git(3)</a> <a href='/blog/categories/grails' style='font-size: 101.7910447761194%'>Grails(2)</a> <a href='/blog/categories/haskell' style='font-size: 100.8955223880597%'>Haskell(1)</a> <a href='/blog/categories/homebrew' style='font-size: 100.8955223880597%'>homebrew(1)</a> <a href='/blog/categories/http' style='font-size: 100.8955223880597%'>http(1)</a> <a href='/blog/categories/http-authentication' style='font-size: 100.8955223880597%'>http_authentication(1)</a> <a href='/blog/categories/humor' style='font-size: 100.8955223880597%'>humor(1)</a> <a href='/blog/categories/java' style='font-size: 104.4776119402985%'>Java(5)</a> <a href='/blog/categories/javascript' style='font-size: 101.7910447761194%'>JavaScript(2)</a> <a href='/blog/categories/man' style='font-size: 100.8955223880597%'>man(1)</a> <a href='/blog/categories/matplotlib' style='font-size: 100.8955223880597%'>matplotlib(1)</a> <a href='/blog/categories/maven' style='font-size: 100.8955223880597%'>maven(1)</a> <a href='/blog/categories/mongodb' style='font-size: 100.8955223880597%'>MongoDB(1)</a> <a href='/blog/categories/mongodb' style='font-size: 100.8955223880597%'>mongodb(1)</a> <a href='/blog/categories/netbsd' style='font-size: 100.8955223880597%'>NetBSD(1)</a> <a href='/blog/categories/non-programming' style='font-size: 101.7910447761194%'>non-programming(2)</a> <a href='/blog/categories/note-to-self' style='font-size: 108.95522388059702%'>note-to-self(10)</a> <a href='/blog/categories/note-to-self' style='font-size: 100.8955223880597%'>note_to_self(1)</a> <a href='/blog/categories/np-complete' style='font-size: 100.8955223880597%'>np-complete(1)</a> <a href='/blog/categories/open-source' style='font-size: 100.8955223880597%'>open-source(1)</a> <a href='/blog/categories/optimization' style='font-size: 100.8955223880597%'>optimization(1)</a> <a href='/blog/categories/oracle' style='font-size: 104.4776119402985%'>Oracle(5)</a> <a href='/blog/categories/osx' style='font-size: 106.26865671641791%'>osx(7)</a> <a href='/blog/categories/packaging' style='font-size: 100.8955223880597%'>packaging(1)</a> <a href='/blog/categories/postgresql' style='font-size: 101.7910447761194%'>postgresql(2)</a> <a href='/blog/categories/profiling' style='font-size: 100.8955223880597%'>profiling(1)</a> <a href='/blog/categories/project-euler' style='font-size: 119.70149253731343%'>project_euler(22)</a> <a href='/blog/categories/pyatl' style='font-size: 121.49253731343283%'>PyATL(24)</a> <a href='/blog/categories/pycon' style='font-size: 100.8955223880597%'>pycon(1)</a> <a href='/blog/categories/pygments' style='font-size: 100.8955223880597%'>pygments(1)</a> <a href='/blog/categories/python' style='font-size: 160.0%'>python(67)</a> <a href='/blog/categories/quicksilver' style='font-size: 100.8955223880597%'>quicksilver(1)</a> <a href='/blog/categories/r' style='font-size: 100.8955223880597%'>R(1)</a> <a href='/blog/categories/rails' style='font-size: 101.7910447761194%'>rails(2)</a> <a href='/blog/categories/rest' style='font-size: 100.8955223880597%'>REST(1)</a> <a href='/blog/categories/ruby' style='font-size: 100.8955223880597%'>ruby(1)</a> <a href='/blog/categories/screen' style='font-size: 100.8955223880597%'>screen(1)</a> <a href='/blog/categories/sneak-attack' style='font-size: 136.71641791044777%'>sneak_attack(41)</a> <a href='/blog/categories/solarized' style='font-size: 100.8955223880597%'>solarized(1)</a> <a href='/blog/categories/sphinx' style='font-size: 100.8955223880597%'>Sphinx(1)</a> <a href='/blog/categories/spring-security' style='font-size: 100.8955223880597%'>spring_security(1)</a> <a href='/blog/categories/sql' style='font-size: 100.8955223880597%'>sql(1)</a> <a href='/blog/categories/statistics' style='font-size: 101.7910447761194%'>statistics(2)</a> <a href='/blog/categories/subversion' style='font-size: 100.8955223880597%'>subversion(1)</a> <a href='/blog/categories/sudo' style='font-size: 100.8955223880597%'>sudo(1)</a> <a href='/blog/categories/tee' style='font-size: 100.8955223880597%'>tee(1)</a> <a href='/blog/categories/testing' style='font-size: 100.8955223880597%'>testing(1)</a> <a href='/blog/categories/tuscany' style='font-size: 100.8955223880597%'>tuscany(1)</a> <a href='/blog/categories/unix' style='font-size: 100.8955223880597%'>unix(1)</a> <a href='/blog/categories/usability' style='font-size: 100.8955223880597%'>usability(1)</a> <a href='/blog/categories/user-management' style='font-size: 100.8955223880597%'>user-management(1)</a> <a href='/blog/categories/version-control' style='font-size: 100.8955223880597%'>version-control(1)</a> <a href='/blog/categories/vim' style='font-size: 101.7910447761194%'>vim(2)</a> <a href='/blog/categories/virtualenv' style='font-size: 100.8955223880597%'>virtualenv(1)</a> <a href='/blog/categories/virtualenvwrapper' style='font-size: 100.8955223880597%'>virtualenvwrapper(1)</a> <a href='/blog/categories/windows' style='font-size: 100.8955223880597%'>Windows(1)</a> </span>
+</section>
+
+<section>
+  <h1>Stack Overflow</h1>
+  <a href="http://stackoverflow.com/users/4203/hank-gay"><img src="http://stackoverflow.com/users/flair/4203.png" width="208" height="58" alt="profile for hank-gay at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for hank-gay at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/gthank">@gthank</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'gthank',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Hank -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

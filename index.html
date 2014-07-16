@@ -1,1 +1,1129 @@
-My Octopress Page is coming soon &hellip;
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Real Ultimate Programming</title>
+  <meta name="author" content="Hank">
+
+  
+  <meta name="description" content="Announcements The Weather Channel is hiring So is AirSage (sp?) Functional Programming in Python - A Sampler (Cliff) Functional programming languages &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.realultimateprogramming.com/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Real Ultimate Programming" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Real Ultimate Programming</a></h1>
+  
+    <h2>The Home for People Who Like to Flip Out and Write Code</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.realultimateprogramming.com/" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/colophon">Colophon</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/07/10/notes-from-pyatl-2014-07-10/">Notes From PyATL 2014-07-10</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-10T19:32:55-04:00" pubdate data-updated="true">Jul 10<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2 id="announcements">Announcements</h2>
+
+<ul>
+  <li>The Weather Channel is hiring</li>
+  <li>So is AirSage (sp?)</li>
+</ul>
+
+<h2 id="functional-programming-in-python---a-sampler-cliff">Functional Programming in Python - A Sampler (Cliff)</h2>
+
+<h3 id="functional-programming-languages-make-big-promises">Functional programming languages make big promises</h3>
+
+<ul>
+  <li>Makes it easy to write robust, modular, decoupled code</li>
+  <li>They’re easy to test (since output is solely dependent on input)</li>
+  <li>They make programming fun</li>
+</ul>
+
+<h3 id="do-they-deliver">Do they deliver?</h3>
+
+<ul>
+  <li>Didn’t find it worth the switching costs, personally.</li>
+  <li>Has a problem with the no I/O thing</li>
+  <li>I don’t think he gets the “no state” thing; there’s no mutable, shared state,
+not no state at all.</li>
+</ul>
+
+<h3 id="hallmarks-of-functional-code">Hallmarks of Functional Code</h3>
+
+<ul>
+  <li>Functions are first-class objects</li>
+  <li>Functions are typically very small</li>
+  <li>Closures</li>
+  <li>Partials/curried functions</li>
+  <li>Recursion</li>
+  <li>Immutable</li>
+</ul>
+
+<h3 id="various-places-that-functional-idioms-can-be-useful">Various Places that Functional Idioms Can Be Useful</h3>
+
+<ul>
+  <li>He’s using templating as an example of how to use partials; that’s
+interesting. I’m going to have to look into this.</li>
+  <li>Interesting point about Python 3’s crazy argument ordering options and
+partials (how does partial application work with some of the wilder ones?)</li>
+</ul>
+
+<h3 id="takeaways">Takeaways</h3>
+
+<ul>
+  <li>Maybe use Python in a more functional style</li>
+  <li>Admits he doesn’t do this currently, so it’s aspirational</li>
+  <li>Use list comprehensions more</li>
+  <li>Isolating I/O looks like a good idea</li>
+  <li>Closures, decorators, and partials are a yes</li>
+  <li>Still doesn’t like recursion</li>
+</ul>
+
+<h3 id="random-observations-by-me">Random observations by me</h3>
+
+<ul>
+  <li>I didn’t realize iPython Notebook had presentation capabilities; I’m going to
+have to play with that.</li>
+</ul>
+
+<h2 id="gnu-radio-and-python-andrew-henshaw">GNU Radio and Python (Andrew Henshaw)</h2>
+
+<ul>
+  <li>According to Andrew, it’s more him showing off instead of demonstrating
+programming techniques.</li>
+  <li>GNU Radio is for signal processing</li>
+  <li>It’s a C++ kernel wrapped in beautiful Python goodness</li>
+  <li>It’s dataflow-oriented</li>
+  <li>Software-defined radio is apparently a big thing, lately</li>
+  <li>Apparently, hardware has gotten fast enough that software Digital
+Signal Processing (<abbr title="Digital Signal Processing">DSP</abbr>)
+is fast enough to replace dedicated hardware, which brings all the
+standard flexibility wins that software tends to provide over dedicated
+hardware.</li>
+  <li>There’s some crazy $20 dongle that can work as a receiver for just about
+every frequency band you could want, and feed it into software-defined radio</li>
+  <li>Fancy: you can draw a dataflow diagram to define your
+<abbr title="Digital Signal Processing">DSP</abbr> pipeline.</li>
+  <li>That’s pretty awesome: assuming I didn’t miss anything, he just ran
+a touch-tone dialer program, in Python, generated from his fancy-pants
+dataflow diagram. It was a 7.</li>
+  <li>The gremlins are out in full force (technical presentations are like crack
+for these things); his GUI example with a volume slider suddenly stopped
+working despite working earlier.</li>
+  <li>My computer’s battery is now toast, so you’ll have to talk to him if you want
+the details of the presentation/demo.</li>
+</ul>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/01/09/notes-from-pyatl-2014-01-09/">Notes From PyATL 2014-01-09</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-09T19:42:34-05:00" pubdate data-updated="true">Jan 9<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2 id="announcements">Announcements</h2>
+
+<ul>
+  <li>John is hiring</li>
+  <li>The Unix usergroup is looking for speakers</li>
+  <li>So are we</li>
+  <li>I missed a couple of other hiring announcements because RVM was taking
+its own sweet time upgrading stuff so I could actually start the blog
+post.</li>
+</ul>
+
+<h2 id="introduction-to-vagrant-daniel-rocco">Introduction to Vagrant (Daniel Rocco)</h2>
+
+<p>Basically a 60,000-foot view of <a href="http://www.vagrantup.com/">Vagrant</a>.</p>
+
+<h2 id="everything-ive-ever-done-was-completely-wrong-and-thats-okay-shawn-boyette">Everything I’ve Ever Done Was Completely Wrong, And That’s Okay (Shawn Boyette)</h2>
+
+<p>This is about culture, not tech, and I don’t think it’s really something
+I could do a good job of bullet-pointing.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/12/14/sneak-attack-cant-verify-rubygems-on-os-x/">Sneak Attack: Can&#8217;t Verify RubyGems on OS X</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-14T21:24:43-05:00" pubdate data-updated="true">Dec 14<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.jacopretorius.net/2013/10/could-not-verify-the-ssl-certificate-for-rubygems.html">Why Johnny Can’t Install Gems on OS X</a></p>
+
+<p>Back to flipping out…</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/12/12/notes-from-pyatl-2013-12-12/">Notes From PyATL 2013-12-12</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-12T00:00:00-05:00" pubdate data-updated="true">Dec 12<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2 id="announcements">Announcements</h2>
+
+<ul>
+  <li><a href="https://www.rescuetime.com">RescueTime</a> is hiring</li>
+  <li>John is hiring</li>
+</ul>
+
+<h2 id="database-versioning-with-alembic-ryan-">Database Versioning with Alembic (Ryan )</h2>
+
+<ul>
+  <li><a href="http://alembic.readthedocs.org/en/latest/">alembic</a> is <strong>THE</strong> migrations tool for
+<a href="http://www.sqlalchemy.org">SQLAlchemy</a></li>
+  <li>Pretty nice overview</li>
+</ul>
+
+<h2 id="xpresser-gui-automation-the-easy-way">Xpresser: GUI automation “the easy way”</h2>
+
+<ul>
+  <li><a href="http://xpresser.com">XPresser</a> is a tool for
+<abbr title="Graphical User Interface">GUI</abbr> automation</li>
+  <li>Wow, they have to use computer vision (<a href="http://simplecv.org">SimpleCV</a>, built on top
+of <a href="http://opencv.org">OpenCV</a>) to test some things.</li>
+  <li>How is it translating those strings into what it sees? Enquiring minds want
+to know.</li>
+  <li>Some sort of data setup (the answer to the above question).</li>
+  <li>Huh. It’s effectively Ubuntu-only due to accuracy concerns. Wonder what the
+story is behind <em>that</em>.</li>
+</ul>
+
+<h2 id="faces-project-management-with-python-andy-henshaw">Faces: Project Management with Python (Andy Henshaw)</h2>
+
+<ul>
+  <li>What the… ? <a href="http://faces.homeip.net">Faces</a> lets you do project management by writing
+Python? Can I have a PM that uses this?</li>
+  <li>Seems fairly straightforward.</li>
+  <li>…and development is totally stalled. Abandoned since 2007.</li>
+</ul>
+
+<h2 id="using-python-to-break-simple-cryptograms-john">Using Python to Break Simple Cryptograms (John)</h2>
+
+<ul>
+  <li>I kinda hope he shows us a GitHub repo at the end of all this, because
+I’d like to actually see this in action.</li>
+  <li>Go play with the Practical Cryptography site (see his slides when published)</li>
+</ul>
+
+<h2 id="curling-bill">Curling (Bill)</h2>
+
+<ul>
+  <li>Intro <abbr title="Universal Resource Locator">URL</abbr> stuff</li>
+</ul>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/06/13/notes-from-pyatl-2013-06-13/">Notes From PyATL 2013-06-13</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-13T00:00:00-04:00" pubdate data-updated="true">Jun 13<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2 id="announcements">Announcements</h2>
+
+<ul>
+  <li>distribute and setuptools have finally merged (see also:
+<a href="http://mail.python.org/pipermail/distutils-sig/2013-March/020126.html">the announcement</a>).</li>
+  <li>The Atlanta chapter of PyLadies will be giving the presentations on their
+1-year anniversary (or the closest night to their 1-year anniversary).</li>
+  <li>J.R. is starting a Smyrna tech group.</li>
+</ul>
+
+<h2 id="one-liner-fizz-buzz-doug-hellmann">One-liner fizz-buzz (Doug Hellmann)</h2>
+
+<ul>
+  <li>I’m excited; I don’t think I’ve ever seen Doug golfing code before.</li>
+  <li>He starts by discussing somebody else’s golfed version; I has a sad.</li>
+  <li>But here’s <em>his</em> solution. I dig it.</li>
+</ul>
+
+<h2 id="pandas-python-data-analysis-library-andy-henshaw">PANDAS: Python Data Analysis Library (Andy Henshaw)</h2>
+
+<ul>
+  <li>Interesting; why do a custom thing to drive PowerPoint from iPython. Isn’t that a pretty close parallel to iPython Notebook?</li>
+  <li>First primitive: a <code>Series</code>
+    <ul>
+      <li>It’s an array-like that contains data and labels (or indices).</li>
+      <li>The data must be of the same type.</li>
+      <li>Asking for multiple labels gives you a view into the series; providing a single label gives you the value for that label.</li>
+      <li>Labels don’t have to be unique; if you have multiple values for a single
+label, then requesting that label’s value gives you a view, much like
+asking for multiple labels’ values.</li>
+      <li>Can accommodate incomplete data; labels without values represent the value
+as NaN.</li>
+      <li>NaN is used even for a <code>Series</code> of strings.</li>
+      <li>Data is automatically aligned (that’s pretty sweet).</li>
+    </ul>
+  </li>
+  <li>Second primitive: a <code>Dataframe</code>
+    <ul>
+      <li>It’s tabular data, a la a spreadsheet.</li>
+      <li>Easy to create one from a <code>dict</code> of equal-length <code>list</code>s.</li>
+      <li>Or you could pass a <code>dict</code> of <code>dict</code>s.</li>
+      <li>You can add new columns to existing <code>Dataframes</code> using either direct assignment or calculation.</li>
+      <li>You can re-index.</li>
+    </ul>
+  </li>
+  <li>Bring on the stats!
+    <ul>
+      <li>It’s smart about figuring out how to apply descriptive stats like <code>sum</code> to columns/rows.</li>
+    </ul>
+  </li>
+  <li>All sorts of useful import functionality for structured data, e.g., <abbr title="JavaScript Object Notation">JSON</abbr>, <abbr title="Comma-Separated Values">CSV</abbr>, et al.</li>
+  <li>OK, once he started talking about crosstabs, I was in the territory where I have a hard time keeping up during a talk.</li>
+  <li>Plotting w/ <code>matplotlib</code> is just cool. I <strong>need</strong> to get better at this sort of stuff.</li>
+  <li><code>TimeSeries</code> sounds totally awesome.</li>
+</ul>
+
+<h2 id="none-true-or-false-cliff-kachinske"><code>[None]</code>: <code>True</code> or <code>False</code>? (Cliff Kachinske)</h2>
+
+<ul>
+  <li>I wonder how you’d address this in a general way.</li>
+  <li>The consensus in the room seems to be that <code>any</code> and <code>all</code> are the best way
+to go.</li>
+</ul>
+
+<h2 id="creating-python-bindings-for-c-using-boostpython-aleksey-vitebskiy">Creating Python Bindings for C++ using boost::python (Aleksey Vitebskiy)</h2>
+
+<ul>
+  <li>A dig at <abbr title="Java Native Interface">JNI</abbr>? I like this guy already.</li>
+  <li>C++ wrappers for the major Python objects</li>
+  <li>Declarative-style <a href="http://www.python.org/download/releases/2.3/mro/"><abbr title="Application Programming Interface">API</abbr></a></li>
+  <li>Man, C++ is so alien to me, now. It took me a while to really <em>read</em> a few of
+those lines.</li>
+  <li>It allows extensive interop: you can extend Python classes, Python classes
+can extend C++ classes… pretty hardcore.</li>
+  <li>It does full-on <abbr title="Method Resolution Order">MRO<abbr> stuff, so it
+fully supports multiple inheritance (color me impressed); no metaclasses,
+though :-(</abbr></abbr></li>
+  <li>Haha! You don’t see duck-typing in conjunction with C++ all that often.</li>
+  <li>This slide of pros and cons vs.
+<a href="http://www.swig.org"><abbr title="Simplified Wrapper and Interface Generator">SWIG</abbr></a>
+is gold if you need this functionality.</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/04/18/using-bcvi-from-os-x/">Using Bcvi From OS X</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-18T22:34:00-04:00" pubdate data-updated="true">Apr 18<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When it comes to text editing, it doesn’t get much better than
+<a href="http://en.wikipedia.org/wiki/Vim_(text_editor)"><code>vim</code></a>—and by extension, <a href="http://code.google.com/p/macvim/">MacVim</a>. If this
+is the first time you’ve heard of <code>vim</code>, or the first time you’ve
+seriously considered using it, please stop now and go read
+<a href="http://stevelosh.com/blog/2010/09/coming-home-to-vim/">Coming Home to Vim</a>, by Steve Losh<sup id="fnref:sjl_footnote"><a href="#fn:sjl_footnote" rel="footnote">1</a></sup>. That
+captures the Zen of Vim better than anything else I’ve read.</p>
+
+<p>If you’re still around (or back), then congratulations: you have great
+taste in editors. Now on to one of the most irritating things about
+<code>vim</code>: getting your <code>vim</code> all tricked out with just the right set of
+plugins, color schemes, and keybindings, then getting stuck on a remote
+server somewhere with a vanilla version of <code>vim</code>, or maybe even a
+different <code>vi</code> clone, like <code>nvi</code>. Enter <a href="http://search.cpan.org/~grantm/App-BCVI-3.08/lib/App/BCVI.pm"><code>bcvi</code></a>.</p>
+
+<p><code>bcvi</code> is a clever little tool that basically copies the file you want
+to edit to your machine, invokes <code>gvim</code> on it, then copies it back when
+you are done. Presto: you get to edit in the comforts of your own,
+highly optimized <code>vim</code> environment.</p>
+
+<p>All you need to do to get <code>bcvi</code> is install it via <a href="http://en.wikipedia.org/wiki/CPAN">CPAN</a>;
+it even comes with a couple of helper commands to give you handy shell
+aliases, etc. But if you’re running OSX , <a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a>
+(if you’re not, go read Steve’s <a href="http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/">My Extravagant Zsh Prompt</a>
+for a good explanation of just how awesome it can be), and MacVim, then
+there are a couple of things that you’ll probably want to do.</p>
+
+<p>As an aside, you might want to update CPAN so it stops nagging you every
+time you try to install something. The default <code>perl</code> that ships with
+OSX is under <code>/usr/bin</code>, so upgrading CPAN is going to require <code>sudo</code>.
+It’s also rather old. If you’d rather, you can simply install a current
+<code>perl</code> via <a href="http://mxcl.github.io/homebrew/">Homebrew</a>. This will get you up-to-date and allow
+you to upgrade CPAN without needing sudo. You could also look into
+<a href="http://search.cpan.org/~apeiron/local-lib-1.008009/lib/local/lib.pm"><code>local::lib</code></a>, which I’ve used with success on servers.
+The instructions I used (NOTE: some of these are probably unique to my
+box, but I don’t have a spare handy to test) are:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="nv">$ </span>brew tap homebrew/dupes
+</span><span class="line"><span class="nv">$ </span>brew install perl
+</span><span class="line"><span class="nv">$ </span>brew link --overwrite perl
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>With that out of the way, here’s how to get started with <code>bcvi</code> on a Mac:</p>
+
+<ol>
+  <li>Install <code>bcvi</code>. This is as simple as <code>install App::BCVI</code> from the
+CPAN prompt.</li>
+  <li>To make <code>bcvi</code> use MacVim (or possibly even work, if you don’t have
+an X-based version of <code>vim</code>), you need to symlink <code>gvim</code> to <code>mvim</code>.
+Since I have my <code>mvim</code> situated in <code>/usr/local/bin</code>, that’s where I
+put the <code>gvim</code> symlink to it, as well.</li>
+  <li>Get those lovely aliases. Execute <code>bcvi --add-aliases</code>. NOTE: This
+only adds them to <code>.bashrc</code>, so if you’re using ZSH, you need to copy
+and paste them to your <code>.zshrc</code>.</li>
+  <li>Start the listener process. This is as simple as
+<code>bcvi --listener &amp;</code>, but I would never remember to type this until
+the first time I tried to use <code>bcvi</code> and it errored out. Instead, I
+use a <a href="http://en.wikipedia.org/wiki/Launchd"><code>launchd</code></a> job. You can get it from
+<a href="https://bitbucket.org/gthank/launch-agents/src">this BitBucket repo</a>. If you’ve never used
+<code>launchd</code> jobs before, instructions are included in the README.</li>
+  <li>Install <code>bcvi</code> on the remote servers where you’d like to use it using
+<code>bcvi --install hostname</code>. This will install <code>bcvi</code> in <code>$HOME/bin</code>, so
+permissions <em>shouldn’t</em> be a problem.</li>
+  <li>Finally, I like to add an alias so I don’t have to type
+<code>bcvi --wrap-ssh -- hostname</code> every time I connect to a server and
+want to have access to <code>bcvi</code>. I added the following to my <code>.zshrc</code>:</li>
+</ol>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="nb">alias </span>ssh-bcvi<span class="o">=</span><span class="s1">&#39;bcvi --wrap-ssh --&#39;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>At this point, you should be able to <code>ssh-bcvi</code> to your remote server,
+find the file you need to edit, and <code>vi filename</code> to edit it in the
+comfort of your own <code>vim</code>.</p>
+
+<p>Back to flipping out…</p>
+<div class="footnotes">
+  <ol>
+    <li id="fn:sjl_footnote">
+      <p>As a matter of fact, just go read everything Steve writes. I steal ideas from him all the time.<a href="#fnref:sjl_footnote" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/04/11/notes-from-pyatl-2013-04-11/">Notes From PyATL 2013-04-11</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-11T00:00:00-04:00" pubdate data-updated="true">Apr 11<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2 id="announcements">Announcements</h2>
+
+<ul>
+  <li>Google I/O is having baby conferences; there’s one here in Atlanta in
+May (via JR).</li>
+  <li>The Jam Sessions are probably moving; contact JR with suggestions.</li>
+  <li>Doug reminds us about the upcoming List of Consultants.</li>
+  <li>Rick has coupons for his book; I wonder if I should get one just in
+case I need to do MongoDB stuff in the future.</li>
+  <li>GTRI is hiring; Brighton Technologies (sp? where Dan Rocco is working,
+at any rate) is hiring, too.</li>
+</ul>
+
+<h2 id="the-tax-man-cometh-daniel-rocco">The Tax Man Cometh (Daniel Rocco)</h2>
+
+<ul>
+  <li>I’m a big fan of the <a href="http://docs.python.org/2/library/csv.html"><code>csv</code></a> module, too.</li>
+  <li>But not as big of fan of it as I am of <a href="http://docs.python.org/2/library/collections.html#collections.namedtuple"><code>namedtuple</code></a>.</li>
+  <li><abbr title="Today I Learned">TIL</abbr> about <a href="http://docs.python.org/2/library/collections.html#collections.somenamedtuple._make"><code>._make</code></a>.</li>
+  <li>I have to admit, even my feeble attempts at an NCAA bracket this year
+are better than tax brackets. Taxes just suck.</li>
+  <li>I like the functional flavor, here. Data processing pipelines are so
+awesome.</li>
+  <li>I feel a mod operator coming on.</li>
+  <li>I didn’t mention it before, but the <a href="http://docs.python.org/2/library/decimal.html?highlight=decimal#decimal.Decimal"><code>Decimal</code></a> usage
+is probably super awesome for people who are new to Python.</li>
+  <li><a href="http://csvkit.readthedocs.org/en/latest/">csvkit</a> you say? That sounds <em>extremely</em> cool.</li>
+  <li>Good Question: what about <a href="http://docs.python.org/2/library/csv.html#csv.DictReader"><code>DictReader</code></a>?</li>
+</ul>
+
+<h2 id="the-trouble-with-commas-cliff-kachinske">The Trouble with Commas (Cliff Kachinske)</h2>
+
+<ul>
+  <li>Fun gotcha: A trailing <code>,</code> will often create you a tuple, usually when
+you really don’t want one. If you start seeing complaints about
+mismatches in the number of arguments, it’s a good idea to look for
+trailing commas.</li>
+  <li>What really frustrates me is when I try to get clever and do something
+like this only to find out that Python <em>isn’t</em> creating me a tuple in
+this particular instance (for whatever reason).</li>
+</ul>
+
+<h2 id="ab-testing-with-cleaver-ryan-petrello">A/B Testing with Cleaver (Ryan Petrello)</h2>
+
+<ul>
+  <li>Didn’t use Visual Website Optimizer, Google Analytics, Optimizely, etc.
+because they wanted a Python-based solution that targeted developers,
+not marketers.</li>
+  <li>Found plenty of solutions, but they were all opinionated (to the point
+of requiring specific frameworks). This might not be a show-stopper
+for me, because tight integration usually means less config to mess
+with.</li>
+  <li>They wound up creating <a href="https://github.com/ryanpetrello/cleaver">Cleaver</a> (MIT licensed?), which
+only requires <a href="https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface">WSGI</a>, basically.</li>
+  <li>Basically, you use WSGI middleware to add tracking.</li>
+  <li>It has a number of pluggable backends to store the experiment data.</li>
+  <li>You can add a weight to the tuple, easy-peasy. Does not currently
+support functions, but he seems confident it can be extended fairly
+easily.</li>
+  <li>Comes bundled with a lightweight web UI for viewing the results.</li>
+  <li>It’s cool. I wonder how much of the statistical heavy lifting it does
+(statistical power, significance, correlation with other changes, etc.)</li>
+  <li>Ryan says: They don’t do power, but it does do significance.</li>
+  <li>I missed this discussion while I was reading the <code>README</code> (curses!),
+but I believe the control is just the first option.</li>
+</ul>
+
+<p>Back to flipping out…</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/03/14/pyatl-notes-2013-03-14/">Notes From PyATL 2013-03-14</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-14T19:38:00-04:00" pubdate data-updated="true">Mar 14<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Things are going to be short tonight, because a lot of people
+(especially common presenters) are off at PyCon.</p>
+
+<h2 id="using-pyinstaller-sim-harbert">Using PyInstaller (Sim Harbert)</h2>
+
+<ul>
+  <li><strong>Important Note</strong>: It just packages up a Python script, it doesn’t
+create an installer. (It’s like py2exe?)</li>
+  <li>Available as a gzip’d tarball, not sure if they have a full-blown
+installer option or an install-from-Cheeseshop option</li>
+  <li>Gets all fancy: don’t spew output into a terminal if it’s a GUI app,
+provide an icon, etc.</li>
+  <li>I hadn’t thought about this, but: Python is a hell of a shell script
+if you’re stranded on Windows</li>
+</ul>
+
+<h2 id="continuous-integration-in-the-cloud-me">Continuous Integration in the Cloud (me)</h2>
+
+<p>You’ll have to find a video :-)</p>
+
+<h2 id="iteration-in-python-with-itertools-doug-hellmann-wrote-it-sim-gave-it">Iteration in Python with itertools (Doug Hellmann wrote it, Sim gave it)</h2>
+
+<ul>
+  <li>I &lt;3 <a href="http://docs.python.org/2/library/itertools.html"><code>itertools</code></a>. The <a href="http://docs.python.org/2/library/itertools.html#recipes">recipes section</a>
+is not to be missed.</li>
+  <li>Doug’s <a href="http://pymotw.com/2/itertools/index.html">PyMOTW on <code>itertools</code></a> is great, too.</li>
+  <li>The naming convention is “add an ‘i’ if it mimics an existing function”.</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/01/10/pyatl-2013-01-10/">Notes From PyATL 2013-01-10</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-10T19:26:00-05:00" pubdate data-updated="true">Jan 10<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+  <li>Georgia Tech Research Institute (<abbr title="Georgia Tech Research Institute">GTRI</abbr>) is hiring web developers</li>
+</ul>
+
+<h2 id="toxtoxdocs-state-of-the-art-in-testing-alfredo-deza"><a href="http://tox.readthedocs.org/en/latest/"><code>tox</code></a>: State of the Art in Testing (Alfredo Deza)</h2>
+
+<ul>
+  <li>Written by Holger Krekel, involved with py.test, helped start PyPy (no longer
+active), and generally helpful guy.</li>
+  <li><code>virtualenv</code>-based automation of test activities</li>
+  <li>So is this turning into a Continuous Integration
+(<abbr title="Continuous Integration">CI</abbr>)solution?</li>
+  <li>Supports different Python interpreters (this is how I first learned about it)</li>
+  <li>testrunner-agnostic</li>
+  <li>Even if you don’t need to support multiple Pythons, this still has benefits:
+    <ul>
+      <li>Makes sure your package can be built/installed outside your dev
+environment</li>
+      <li>Abstracts away from special start scripts, callables, etc. for your CI
+server</li>
+      <li>Oops. Alfredo used one of Rick’s libs as an example, but Rick couldn’t
+make it tonight.</li>
+    </ul>
+  </li>
+  <li>Not only can you run tests, you can execute any command you want against it,
+so you can, for example, use it to build your <a href="http://sphinx.readthedocs.org/en/latest/">Sphinx</a> docs.</li>
+  <li>Apparently, there’s a very big release just around the corner.</li>
+</ul>
+
+<h2 id="better-documentation-through-automation-creating-docutilsdocutilsdocs--sphinx-extensions-doug-hellmann">Better Documentation Through Automation: Creating <a href="http://docutils.sourceforge.net"><code>docutils</code></a> &amp; Sphinx Extensions (Doug Hellmann)</h2>
+
+<ul>
+  <li>Biggest difference between <a href="http://docutils.sourceforge.net/rst.html">ReStructuredText</a> (<abbr title="ReStructuredText">rst</abbr>)? It was designed from the ground up to be extensible.</li>
+  <li>Pieces:
+    <ul>
+      <li>Sphinx Application</li>
+      <li>Build Environment</li>
+      <li>docutils parser</li>
+      <li>Sphinx Builder</li>
+    </ul>
+  </li>
+  <li>Common extension points: parser and builder.</li>
+  <li>Extensions manipulate the <a href="https://en.wikipedia.org/wiki/Parse_tree">parse tree</a></li>
+</ul>
+
+<h3 id="extending-docutils">Extending <code>docutils</code></h3>
+<p>### Roles vs. Directives
+#### Roles</p>
+
+<ul>
+  <li>Inline, e.g., <code>:bbissue:68</code></li>
+  <li>If we had a more serious doc project, I’d be writing custom roles left and
+right; they’re simple, yet powerful.</li>
+  <li>The implementation is a simple function that returns a list of nodes</li>
+  <li>Nice: it gives you error helpers; nice to see they thought about the failure
+cases</li>
+  <li>You use the <code>setup</code> function to wire your extension into the Sphinx machinery</li>
+</ul>
+
+<h4 id="directives">Directives</h4>
+
+<ul>
+  <li>More powerful than roles, at the expense of lots more pieces to keep track of</li>
+  <li>These are things like the <code>.. note::</code> directive in vanilla Sphinx</li>
+  <li>I like Doug’s sample directive; nothing like using a database to build your
+docs to make sure your docs are legit.</li>
+  <li>Since it’s so much more sophisticated, the implementation is a class.</li>
+  <li>You’ll probably need to implement the <code>run</code> method, if nothing else. Like
+a role processor, this function returns a list of nodes.</li>
+</ul>
+
+<h3 id="sphinx-specific-extensions">Sphinx-specific extensions</h3>
+
+<h4 id="extending-the-sphinx-builder">Extending the Sphinx Builder</h4>
+
+<ul>
+  <li>This is how Doug made his spellchecker for Sphinx docs.</li>
+  <li>The concepts here aren’t hard, but you’re gonna get really familiar with
+Sphinx internals if you start doing this.</li>
+  <li>A good thing to remember: set the exit code to something that is not 0 when
+you encounter an error. Remember, only YOU can fight crappy CLI experiences.</li>
+</ul>
+
+<p>Back to flipping out…</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/12/13/notes-from-pyatl-2012-12-13/">Notes From PyATL 2012-12-13</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-13T19:33:00-05:00" pubdate data-updated="true">Dec 13<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2 id="analyze-this-john-hackett">Analyze This! (John Hackett)</h2>
+<p>### Simple Calculator Applications Using Bottle.py and Google App Engine</p>
+
+<p>Lots of introductory material explaining how analytics works, some of the
+problems you need to solve to make it work, etc.</p>
+
+<p>Google App Engine (<abbr title="Google App Engine">GAE</abbr>) is a Platform as
+a Service (<abbr title="Platform as a Service">PaaS</abbr>).</p>
+
+<h4 id="pros">Pros</h4>
+
+<ul>
+  <li>You can get started for free.</li>
+  <li>You get to run on Google’s infrastructure.</li>
+</ul>
+
+<h4 id="cons">Cons</h4>
+
+<p>You run on Google’s infrastructure:</p>
+
+<ul>
+  <li>You get BigTable, and (this is apparently new) some sort of MySQL in the
+cloud thing. No traditional RDBMS.</li>
+  <li>Short-lived requests; they will kill your request if you take more than 60
+seconds or so. They have at least added something called a “back-end
+instance” that works around this, at the expense of the auto-scaling feature.</li>
+  <li>No writes to the filesystem.</li>
+  <li>No arbitrary access, e.g., <abbr title="File Transfer Protocol">FTP</abbr>.</li>
+  <li>You’re pretty tied to <abbr title="Google App Engine">GAE</abbr>.</li>
+</ul>
+
+<h2 id="how-did-we-do-last-month-">How did we do last month? ()</h2>
+<p>### or Fun with <code>date.date</code>, <code>timedelta</code>
+### or <code>dateutil</code> to the rescue</p>
+
+<p>Ever start trying to do something useful with dates in Python? It sucked, huh.
+Time to write some boilerplate code! But wait! Surely Someone Has Already Solved This (<abbr title="Surely Someone Has Already Solved This">SSHAST</abbr>). Enter <a href="http://labix.org/python-dateutil"><code>dateutil</code></a>.</p>
+
+<p>Awesome fun things in <code>dateutil</code>:</p>
+
+<ul>
+  <li><a href="http://labix.org/python-dateutil#head-ba5ffd4df8111d1b83fc194b97ebecf837add454"><code>relativedelta</code></a></li>
+  <li><a href="http://labix.org/python-dateutil#head-a23e8ae0a661d77b89dfb3476f85b26f0b30349c"><code>parser</code></a></li>
+</ul>
+
+<p>They also handle recurrence rules, timezone stuff, etc.</p>
+
+<h2 id="flake8-alfredo-doza">Flake8 (Alfredo Doza)</h2>
+
+<p>I missed the beginning of this one. I was confused about having a break
+:-(</p>
+
+<p>Some background about why automated linters rock (preaching to the
+choir; I love it).</p>
+
+<p><a href="http://ziade.org">Tarek Ziade</a> wrote Flake8 to combine pep-8 analysis and
+pyflakes analysis, but it’s blocking.</p>
+
+<p><a href="https://github.com/alfredodeza/khuno.vim"><code>khuno.vim</code></a> (by Alfredo) is non-blocking.</p>
+
+<p>Back to flipping out…</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/2/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/07/10/notes-from-pyatl-2014-07-10/">Notes From PyATL 2014-07-10</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/09/notes-from-pyatl-2014-01-09/">Notes From PyATL 2014-01-09</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/14/sneak-attack-cant-verify-rubygems-on-os-x/">Sneak Attack: Can&#8217;t Verify RubyGems on OS X</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/12/notes-from-pyatl-2013-12-12/">Notes From PyATL 2013-12-12</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/13/notes-from-pyatl-2013-06-13/">Notes From PyATL 2013-06-13</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Popular Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2007/05/21/what-is-programmers-purpose-in-life/">What is a programmer&#8217;s purpose in life?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/05/31/picking-your-next-programming-language/">Picking Your Next Programming Language</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/05/31/speaking-of-debugging/">Speaking of Debugging…</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/06/04/education-of-programmer/">The Education of a Programmer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/06/10/g-client-and-special-sauce/">G-Client and Special Sauce</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Category Cloud</h1>
+    <span id="tag-cloud"><a href='/blog/categories/adium' style='font-size: 100.8955223880597%'>adium(1)</a> <a href='/blog/categories/amqp' style='font-size: 100.8955223880597%'>amqp(1)</a> <a href='/blog/categories/benchmarking' style='font-size: 100.8955223880597%'>benchmarking(1)</a> <a href='/blog/categories/blogger' style='font-size: 100.8955223880597%'>blogger(1)</a> <a href='/blog/categories/book-review' style='font-size: 105.3731343283582%'>book_review(6)</a> <a href='/blog/categories/compilers' style='font-size: 100.8955223880597%'>compilers(1)</a> <a href='/blog/categories/debugging' style='font-size: 100.8955223880597%'>debugging(1)</a> <a href='/blog/categories/design' style='font-size: 100.8955223880597%'>design(1)</a> <a href='/blog/categories/distutils' style='font-size: 100.8955223880597%'>distutils(1)</a> <a href='/blog/categories/django' style='font-size: 102.68656716417911%'>django(3)</a> <a href='/blog/categories/education-sicp' style='font-size: 103.58208955223881%'>Education:SICP(4)</a> <a href='/blog/categories/firefox' style='font-size: 100.8955223880597%'>firefox(1)</a> <a href='/blog/categories/five-things-i-hate' style='font-size: 101.7910447761194%'>five_things_I_hate(2)</a> <a href='/blog/categories/functional-programming' style='font-size: 100.8955223880597%'>functional_programming(1)</a> <a href='/blog/categories/git' style='font-size: 102.68656716417911%'>git(3)</a> <a href='/blog/categories/grails' style='font-size: 101.7910447761194%'>Grails(2)</a> <a href='/blog/categories/haskell' style='font-size: 100.8955223880597%'>Haskell(1)</a> <a href='/blog/categories/homebrew' style='font-size: 100.8955223880597%'>homebrew(1)</a> <a href='/blog/categories/http' style='font-size: 100.8955223880597%'>http(1)</a> <a href='/blog/categories/http-authentication' style='font-size: 100.8955223880597%'>http_authentication(1)</a> <a href='/blog/categories/humor' style='font-size: 100.8955223880597%'>humor(1)</a> <a href='/blog/categories/java' style='font-size: 104.4776119402985%'>Java(5)</a> <a href='/blog/categories/javascript' style='font-size: 101.7910447761194%'>JavaScript(2)</a> <a href='/blog/categories/man' style='font-size: 100.8955223880597%'>man(1)</a> <a href='/blog/categories/matplotlib' style='font-size: 100.8955223880597%'>matplotlib(1)</a> <a href='/blog/categories/maven' style='font-size: 100.8955223880597%'>maven(1)</a> <a href='/blog/categories/mongodb' style='font-size: 100.8955223880597%'>MongoDB(1)</a> <a href='/blog/categories/mongodb' style='font-size: 100.8955223880597%'>mongodb(1)</a> <a href='/blog/categories/netbsd' style='font-size: 100.8955223880597%'>NetBSD(1)</a> <a href='/blog/categories/non-programming' style='font-size: 101.7910447761194%'>non-programming(2)</a> <a href='/blog/categories/note-to-self' style='font-size: 108.95522388059702%'>note-to-self(10)</a> <a href='/blog/categories/note-to-self' style='font-size: 100.8955223880597%'>note_to_self(1)</a> <a href='/blog/categories/np-complete' style='font-size: 100.8955223880597%'>np-complete(1)</a> <a href='/blog/categories/open-source' style='font-size: 100.8955223880597%'>open-source(1)</a> <a href='/blog/categories/optimization' style='font-size: 100.8955223880597%'>optimization(1)</a> <a href='/blog/categories/oracle' style='font-size: 104.4776119402985%'>Oracle(5)</a> <a href='/blog/categories/osx' style='font-size: 106.26865671641791%'>osx(7)</a> <a href='/blog/categories/packaging' style='font-size: 100.8955223880597%'>packaging(1)</a> <a href='/blog/categories/postgresql' style='font-size: 101.7910447761194%'>postgresql(2)</a> <a href='/blog/categories/profiling' style='font-size: 100.8955223880597%'>profiling(1)</a> <a href='/blog/categories/project-euler' style='font-size: 119.70149253731343%'>project_euler(22)</a> <a href='/blog/categories/pyatl' style='font-size: 121.49253731343283%'>PyATL(24)</a> <a href='/blog/categories/pycon' style='font-size: 100.8955223880597%'>pycon(1)</a> <a href='/blog/categories/pygments' style='font-size: 100.8955223880597%'>pygments(1)</a> <a href='/blog/categories/python' style='font-size: 160.0%'>python(67)</a> <a href='/blog/categories/quicksilver' style='font-size: 100.8955223880597%'>quicksilver(1)</a> <a href='/blog/categories/r' style='font-size: 100.8955223880597%'>R(1)</a> <a href='/blog/categories/rails' style='font-size: 101.7910447761194%'>rails(2)</a> <a href='/blog/categories/rest' style='font-size: 100.8955223880597%'>REST(1)</a> <a href='/blog/categories/ruby' style='font-size: 100.8955223880597%'>ruby(1)</a> <a href='/blog/categories/screen' style='font-size: 100.8955223880597%'>screen(1)</a> <a href='/blog/categories/sneak-attack' style='font-size: 136.71641791044777%'>sneak_attack(41)</a> <a href='/blog/categories/solarized' style='font-size: 100.8955223880597%'>solarized(1)</a> <a href='/blog/categories/sphinx' style='font-size: 100.8955223880597%'>Sphinx(1)</a> <a href='/blog/categories/spring-security' style='font-size: 100.8955223880597%'>spring_security(1)</a> <a href='/blog/categories/sql' style='font-size: 100.8955223880597%'>sql(1)</a> <a href='/blog/categories/statistics' style='font-size: 101.7910447761194%'>statistics(2)</a> <a href='/blog/categories/subversion' style='font-size: 100.8955223880597%'>subversion(1)</a> <a href='/blog/categories/sudo' style='font-size: 100.8955223880597%'>sudo(1)</a> <a href='/blog/categories/tee' style='font-size: 100.8955223880597%'>tee(1)</a> <a href='/blog/categories/testing' style='font-size: 100.8955223880597%'>testing(1)</a> <a href='/blog/categories/tuscany' style='font-size: 100.8955223880597%'>tuscany(1)</a> <a href='/blog/categories/unix' style='font-size: 100.8955223880597%'>unix(1)</a> <a href='/blog/categories/usability' style='font-size: 100.8955223880597%'>usability(1)</a> <a href='/blog/categories/user-management' style='font-size: 100.8955223880597%'>user-management(1)</a> <a href='/blog/categories/version-control' style='font-size: 100.8955223880597%'>version-control(1)</a> <a href='/blog/categories/vim' style='font-size: 101.7910447761194%'>vim(2)</a> <a href='/blog/categories/virtualenv' style='font-size: 100.8955223880597%'>virtualenv(1)</a> <a href='/blog/categories/virtualenvwrapper' style='font-size: 100.8955223880597%'>virtualenvwrapper(1)</a> <a href='/blog/categories/windows' style='font-size: 100.8955223880597%'>Windows(1)</a> </span>
+</section>
+
+<section>
+  <h1>Stack Overflow</h1>
+  <a href="http://stackoverflow.com/users/4203/hank-gay"><img src="http://stackoverflow.com/users/flair/4203.png" width="208" height="58" alt="profile for hank-gay at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for hank-gay at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/gthank">@gthank</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'gthank',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Hank -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: R | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/r/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[An R Cheatsheet]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2008/12/09/r-cheatsheet/"/>
+    <updated>2008-12-09T00:00:00-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2008/12/09/r-cheatsheet</id>
+    <content type="html"><![CDATA[<p><a href="http://www.r-project.org/c">R</a> is seriously cool. Unfortunately for
+me, I only use it about once a year, so I can never remember how to do
+anything; hence the cheatsheet.</p>
+
+<h5 id="read-a-csv-file-into-a-variable">Read a CSV file into a variable</h5>
+
+<pre><code>users_usergroups &lt;- read.csv(file="dev/users-per-group.csv", sep=",", head=TRUE)
+</code></pre>
+
+<h5 id="generate-a-boxplot">Generate a boxplot</h5>
+
+<pre><code>boxplot(users_usergroups$NUM_OF_USERS)
+</code></pre>
+
+<h5 id="generate-a-histogram">Generate a histogram</h5>
+
+<pre><code>hist(users_usergroups$NUM_OF_USERS)
+</code></pre>
+
+<p>Back to flipping out…</p>
+]]></content>
+  </entry>
+  
+</feed>

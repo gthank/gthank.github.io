@@ -1,0 +1,491 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Notes From PyATL 2009-05-14 - Real Ultimate Programming</title>
+  <meta name="author" content="Hank">
+
+  
+  <meta name="description" content="What follows is essentially a stream-of-consciousness dump from the
+PyAtl meeting tonight. Python Atlanta Meetup 2009-05-14 Miscellaneous They’re &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.realultimateprogramming.com//blog/2009/05/14/pyatl-notes">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Real Ultimate Programming" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Real Ultimate Programming</a></h1>
+  
+    <h2>The Home for People Who Like to Flip Out and Write Code</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.realultimateprogramming.com/" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/colophon">Colophon</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Notes From PyATL 2009-05-14</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-14T00:00:00-04:00" pubdate data-updated="true">May 14<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>What follows is essentially a stream-of-consciousness dump from the
+<a href="http://pyatl.org/">PyAtl</a> meeting tonight.</p>
+
+<hr />
+
+<h4 id="python-atlanta-meetup-2009-05-14">Python Atlanta Meetup 2009-05-14</h4>
+
+<h5 id="miscellaneous">Miscellaneous</h5>
+
+<p>They’re recruiting people to do A/V work during <a href="http://www.pycon.org/">PyCon</a>
+here in Atlanta next year. Does this mean I get in to the con for free?</p>
+
+<h5 id="hot-topics">Hot Topics</h5>
+
+<ol>
+  <li>Community - you can get a lot of benefit from small-scale con-style stuff; look for the upcoming article about <a href="http://www.pyohio.org/">PyOhio</a> in <a href="http://pymag.phparch.com/">Python Magazine</a></li>
+  <li>Distutils - Interesting things on the <a href="http://mail.python.org/mailman/listinfo/distutils-sig/">distutils mailing list</a></li>
+  <li>IronPython - lots of buzz, but it’s not relevant to me right now</li>
+</ol>
+
+<h5 id="testing-with-nose">Testing with Nose</h5>
+
+<p>Alfredo Deza presenting.</p>
+
+<p>Talking about testing Supay (a daemon module; named after an Incan demon god).
+Why another daemon module?</p>
+
+<ul>
+  <li><a href="http://www.python.org/dev/peps/pep-3143">PEP 3143</a></li>
+  <li>It’s really a service, not just a daemon</li>
+  <li>At least it’s not a new web framework</li>
+  <li>Start, Stop, Status</li>
+  <li>Spawn children</li>
+</ul>
+
+<p>Originally testing was done in <a href="http://pythoscope.org/">Pythoscope</a>. Easy to
+get started. Moved on to
+<a href="http://somethingaboutorange.com/mrl/projects/nose/">nose</a>. Had problems
+because things under test were backgrounding, etc. People on the <a href="http://lists.idyll.org/listinfo/testing-in-python">testing in
+Python</a> mailing list
+advised him to test smaller chunks.
+<a href="http://nedbatchelder.com/code/modules/coverage.html">coverage</a> does testing
+coverage reporting for <code>nose</code>. <code>coverage</code> gives you really specific (package-
+specific, etc.) statistics.</p>
+
+<p>The cool thing about <code>nose</code> is that it autodetects your tests.</p>
+
+<p>One early gotcha: You have to invoke <code>nose</code> using <code>nosetests</code>. <em>ed. I might as
+well alias <code>nosetests</code> to <code>nosetests -v --cover-package=$package_name</code></em>.
+Simply add <code>--with-coverage</code> to get the coverage report.</p>
+
+<p>Cool, <code>Pythoscope</code> generates test stubs for you. I need me some of this.</p>
+
+<h5 id="intermission">Intermission</h5>
+
+<p>There was some A/V stuff going on here, so they took this opportunity to hand
+out books for review. I scored <a href="http://www.amazon.com/Expert-Python-Programming-practices-
+distributing/dp/184719494X">Expert Python
+Programming</a>.</p>
+
+<h5 id="choosing-a-testing-framework">Choosing a Testing Framework</h5>
+
+<p>Brandon Rhodes presenting.</p>
+
+<h6 id="intro">Intro</h6>
+
+<p>At first, he thought testing would help most by helping to get it right at
+first. Once he started testing, he discovered that it helped most with finding
+regressions. Much like <code>undo</code>, now he can’t imagine getting by without it. One
+thing to note: installed Python packages rarely ship with tests, so if you
+want to muck around in them, you typically need to download the tarball
+yourself.</p>
+
+<h6 id="what-does-python-testing-look-like-without-a-framework">What does Python testing look like without a framework?</h6>
+
+<p><a href="http://pypi.python.org/pypi/simplejson/">simplejson</a></p>
+
+<blockquote>
+  <p>Uses <a href="http://pypi.python.org/pypi/setuptools">setuptools</a>, so you can just
+use the built-in <code>test</code> command. You can use an <code>additional_tests</code> function to
+build a test suite for <code>setuptools</code>. <code>setuptools</code> will <em>not</em> autodetect
+<code>doctest</code> tests. All in all, this is a pretty well-behaved module.</p>
+</blockquote>
+
+<p><strong>Sidenote</strong>: <a href="http://pypi.python.org/pypi/virtualenv">virtualenv</a> - creates local, tiny Python install that you can use to avoid system-wide changes. I’ve seen it mentioned before, but this is the first time I’ve seen it in action; this could be seriously cool.</p>
+
+<p><a href="http://www.sqlalchemy.org/">SQLAlchemy</a></p>
+
+<blockquote>
+  <p>Has a <code>README.unittests</code> (referenced from <code>README</code>) that tells you exactly
+how to do things. There is a lot of work to manually keep track of the tests
+in modules; obviously, this is begging for someone to forget to add a test to
+the suite.</p>
+</blockquote>
+
+<p><a href="http://grok.zope.org/">Grok</a></p>
+
+<blockquote>
+  <p>The tests here are pretty idiosyncratic (each test defines a complete web
+app and puts it through its paces). It uses part of
+<a href="http://pypi.python.org/pypi/zc.recipe.testrunner">zc.testrunner</a>.</p>
+</blockquote>
+
+<h6 id="three-testing-frameworks">Three testing frameworks</h6>
+
+<p>Python testing frameworks:</p>
+
+<ul>
+  <li>zc.testrunner</li>
+  <li><a href="http://codespeak.net/py/dist/test/test.html">py.test</a></li>
+  <li>nose</li>
+</ul>
+
+<p>Questions you should ask:</p>
+
+<ul>
+  <li>How are tests discovered?</li>
+  <li>How can tests be filtered and selected?</li>
+  <li>How fancy are tests when reported?</li>
+</ul>
+
+<p>One benefit of testing frameworks is that it makes the testing in your project
+look like the testing in other projects that use the same testing framework.</p>
+
+<p><code>zc.testrunner</code></p>
+
+<blockquote>
+  <p>Not really covered beyond what we saw with Grok.</p>
+</blockquote>
+
+<p><code>py.test</code></p>
+
+<blockquote>
+  <p>Finds tests based on a naming convention; this is <em>not</em> configurable. Tests
+are just functions; you don’t need a class w/ test methods. You can tag tests
+any way you want. By default only outputs <code>print</code> statements if it fails. Has
+distributed tests and multiplatform, but the documentation is a bit sparse.
+Uses a module to turn on autodetection for <code>doctest</code> tests.</p>
+</blockquote>
+
+<p><code>nose</code></p>
+
+<blockquote>
+  <p>Finds tests based on a naming convention; this <em>is</em> configurable. Tests are
+just functions; you don’t need a class w/ test methods. You can tag tests any
+way you want. Has more extensive documentation and seems to have momentum.</p>
+</blockquote>
+
+<p>It is probably feasible to write your tests so both <code>py.test</code> and <code>nose</code> can
+find and run them.</p>
+
+<h5 id="selenium-demo-lightning-talk">Selenium Demo (lightning talk)</h5>
+
+<p>Brandon Rhodes presenting.</p>
+
+<p>Not a lot new to me; already used <a href="http://seleniumhq.org/">Selenium</a> at work.
+The <a href="http://seleniumhq.org/projects/remote-
+control/languages/python.html">Python client</a> seems to be doing a pretty good job of being
+Pythonic; the tests use
+<a href="http://docs.python.org/library/unittest.html">unittest</a>, etc. The basic
+commands seem pretty similar to the <a href="http://seleniumhq.org/projects/remote-control/languages/java.html">Java
+client</a>
+I’ve used before.</p>
+
+<h5 id="google-code-and-hg-lightning-talk">Google Code and Hg (lightning talk)</h5>
+
+<p>Alfredo Deza presenting.</p>
+
+<p>Brief compare/contrast between <a href="http://www.selenic.com/mercurial/wiki/">hg</a>
+and <a href="http://subversion.tigris.org/">svn</a>. I’m already familiar with both so I
+won’t recap this part of the presentation.</p>
+
+<p>Traditionally, <code>svn</code> has been the standard for <a href="http://code.google.com/">Google
+Code</a>. They’re giving invites to anyone attending the
+<a href="http://code.google.com/events/io/">Google IO Conference</a> (next week?).
+They’re also accepting applications <a href="http://google-code-
+updates.blogspot.com/2009/04/mercurial-support-for-project-hosting.html">here</a>; this
+is for old projects and they will move it over to keep the history. Not all
+features are available on the Mercurial version yet, e.g., code browsing.</p>
+
+<p><strong>Coolest feature</strong>: <code>hg serve</code>. It sets up a web interface to your entire repo on <code>localhost:8000</code>. It’s pretty sophisticated, and allows you to <code>push</code> and <code>pull</code> from it.</p>
+
+<p>And that concluded the evening.</p>
+
+<hr />
+
+<p>Back to flipping out…</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Hank</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-14T00:00:00-04:00" pubdate data-updated="true">May 14<span>th</span>, 2009</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/pyatl/'>PyATL</a>, <a class='category' href='/blog/categories/python/'>python</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2009/05/02/sneak-attack-reverting-commit-in/" title="Previous Post: Sneak Attack: Reverting a commit in Subversion">&laquo; Sneak Attack: Reverting a commit in Subversion</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2009/05/18/note-to-self-clearing-oracles-buffer/" title="Next Post: Note to Self: Clearing Oracle's Buffer Cache">Note to Self: Clearing Oracle's Buffer Cache &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+    <h1>Related Posts</h1>
+    <ul class="posts">
+    
+        <li class="related">
+        <a href="/blog/2009/08/25/pyatl-notes2009-08-20/">Notes from PyATL 2009-08-20</a>
+        </li>
+    
+        <li class="related">
+        <a href="/blog/2008/01/16/using-buildix-in-anger/">Using Buildix in Anger</a>
+        </li>
+    
+        <li class="related">
+        <a href="/blog/2011/08/30/book-review-python-3-web-development/">Book Review: Python 3 Web Development Beginner's Guide</a>
+        </li>
+    
+        <li class="related">
+        <a href="/blog/2009/06/06/review-of-expert-python-programming/">Review of Expert Python Programming, Part Three</a>
+        </li>
+    
+        <li class="related">
+        <a href="/blog/2011/11/10/pyatl-notes/">Notes from PyATL 2011-11-10</a>
+        </li>
+    
+    </ul>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/07/10/notes-from-pyatl-2014-07-10/">Notes From PyATL 2014-07-10</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/09/notes-from-pyatl-2014-01-09/">Notes From PyATL 2014-01-09</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/14/sneak-attack-cant-verify-rubygems-on-os-x/">Sneak Attack: Can't Verify RubyGems on OS X</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/12/notes-from-pyatl-2013-12-12/">Notes From PyATL 2013-12-12</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/13/notes-from-pyatl-2013-06-13/">Notes From PyATL 2013-06-13</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Popular Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2007/05/21/what-is-programmers-purpose-in-life/">What is a programmer's purpose in life?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/05/31/picking-your-next-programming-language/">Picking Your Next Programming Language</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/05/31/speaking-of-debugging/">Speaking of Debugging…</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/06/04/education-of-programmer/">The Education of a Programmer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/06/10/g-client-and-special-sauce/">G-Client and Special Sauce</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Category Cloud</h1>
+    <span id="tag-cloud"><a href='/blog/categories/adium' style='font-size: 100.8955223880597%'>adium(1)</a> <a href='/blog/categories/amqp' style='font-size: 100.8955223880597%'>amqp(1)</a> <a href='/blog/categories/benchmarking' style='font-size: 100.8955223880597%'>benchmarking(1)</a> <a href='/blog/categories/blogger' style='font-size: 100.8955223880597%'>blogger(1)</a> <a href='/blog/categories/book-review' style='font-size: 105.3731343283582%'>book_review(6)</a> <a href='/blog/categories/compilers' style='font-size: 100.8955223880597%'>compilers(1)</a> <a href='/blog/categories/debugging' style='font-size: 100.8955223880597%'>debugging(1)</a> <a href='/blog/categories/design' style='font-size: 100.8955223880597%'>design(1)</a> <a href='/blog/categories/distutils' style='font-size: 100.8955223880597%'>distutils(1)</a> <a href='/blog/categories/django' style='font-size: 102.68656716417911%'>django(3)</a> <a href='/blog/categories/education-sicp' style='font-size: 103.58208955223881%'>Education:SICP(4)</a> <a href='/blog/categories/firefox' style='font-size: 100.8955223880597%'>firefox(1)</a> <a href='/blog/categories/five-things-i-hate' style='font-size: 101.7910447761194%'>five_things_I_hate(2)</a> <a href='/blog/categories/functional-programming' style='font-size: 100.8955223880597%'>functional_programming(1)</a> <a href='/blog/categories/git' style='font-size: 102.68656716417911%'>git(3)</a> <a href='/blog/categories/grails' style='font-size: 101.7910447761194%'>Grails(2)</a> <a href='/blog/categories/haskell' style='font-size: 100.8955223880597%'>Haskell(1)</a> <a href='/blog/categories/homebrew' style='font-size: 100.8955223880597%'>homebrew(1)</a> <a href='/blog/categories/http' style='font-size: 100.8955223880597%'>http(1)</a> <a href='/blog/categories/http-authentication' style='font-size: 100.8955223880597%'>http_authentication(1)</a> <a href='/blog/categories/humor' style='font-size: 100.8955223880597%'>humor(1)</a> <a href='/blog/categories/java' style='font-size: 104.4776119402985%'>Java(5)</a> <a href='/blog/categories/javascript' style='font-size: 101.7910447761194%'>JavaScript(2)</a> <a href='/blog/categories/man' style='font-size: 100.8955223880597%'>man(1)</a> <a href='/blog/categories/matplotlib' style='font-size: 100.8955223880597%'>matplotlib(1)</a> <a href='/blog/categories/maven' style='font-size: 100.8955223880597%'>maven(1)</a> <a href='/blog/categories/mongodb' style='font-size: 100.8955223880597%'>MongoDB(1)</a> <a href='/blog/categories/mongodb' style='font-size: 100.8955223880597%'>mongodb(1)</a> <a href='/blog/categories/netbsd' style='font-size: 100.8955223880597%'>NetBSD(1)</a> <a href='/blog/categories/non-programming' style='font-size: 101.7910447761194%'>non-programming(2)</a> <a href='/blog/categories/note-to-self' style='font-size: 108.95522388059702%'>note-to-self(10)</a> <a href='/blog/categories/note-to-self' style='font-size: 100.8955223880597%'>note_to_self(1)</a> <a href='/blog/categories/np-complete' style='font-size: 100.8955223880597%'>np-complete(1)</a> <a href='/blog/categories/open-source' style='font-size: 100.8955223880597%'>open-source(1)</a> <a href='/blog/categories/optimization' style='font-size: 100.8955223880597%'>optimization(1)</a> <a href='/blog/categories/oracle' style='font-size: 104.4776119402985%'>Oracle(5)</a> <a href='/blog/categories/osx' style='font-size: 106.26865671641791%'>osx(7)</a> <a href='/blog/categories/packaging' style='font-size: 100.8955223880597%'>packaging(1)</a> <a href='/blog/categories/postgresql' style='font-size: 101.7910447761194%'>postgresql(2)</a> <a href='/blog/categories/profiling' style='font-size: 100.8955223880597%'>profiling(1)</a> <a href='/blog/categories/project-euler' style='font-size: 119.70149253731343%'>project_euler(22)</a> <a href='/blog/categories/pyatl' style='font-size: 121.49253731343283%'>PyATL(24)</a> <a href='/blog/categories/pycon' style='font-size: 100.8955223880597%'>pycon(1)</a> <a href='/blog/categories/pygments' style='font-size: 100.8955223880597%'>pygments(1)</a> <a href='/blog/categories/python' style='font-size: 160.0%'>python(67)</a> <a href='/blog/categories/quicksilver' style='font-size: 100.8955223880597%'>quicksilver(1)</a> <a href='/blog/categories/r' style='font-size: 100.8955223880597%'>R(1)</a> <a href='/blog/categories/rails' style='font-size: 101.7910447761194%'>rails(2)</a> <a href='/blog/categories/rest' style='font-size: 100.8955223880597%'>REST(1)</a> <a href='/blog/categories/ruby' style='font-size: 100.8955223880597%'>ruby(1)</a> <a href='/blog/categories/screen' style='font-size: 100.8955223880597%'>screen(1)</a> <a href='/blog/categories/sneak-attack' style='font-size: 136.71641791044777%'>sneak_attack(41)</a> <a href='/blog/categories/solarized' style='font-size: 100.8955223880597%'>solarized(1)</a> <a href='/blog/categories/sphinx' style='font-size: 100.8955223880597%'>Sphinx(1)</a> <a href='/blog/categories/spring-security' style='font-size: 100.8955223880597%'>spring_security(1)</a> <a href='/blog/categories/sql' style='font-size: 100.8955223880597%'>sql(1)</a> <a href='/blog/categories/statistics' style='font-size: 101.7910447761194%'>statistics(2)</a> <a href='/blog/categories/subversion' style='font-size: 100.8955223880597%'>subversion(1)</a> <a href='/blog/categories/sudo' style='font-size: 100.8955223880597%'>sudo(1)</a> <a href='/blog/categories/tee' style='font-size: 100.8955223880597%'>tee(1)</a> <a href='/blog/categories/testing' style='font-size: 100.8955223880597%'>testing(1)</a> <a href='/blog/categories/tuscany' style='font-size: 100.8955223880597%'>tuscany(1)</a> <a href='/blog/categories/unix' style='font-size: 100.8955223880597%'>unix(1)</a> <a href='/blog/categories/usability' style='font-size: 100.8955223880597%'>usability(1)</a> <a href='/blog/categories/user-management' style='font-size: 100.8955223880597%'>user-management(1)</a> <a href='/blog/categories/version-control' style='font-size: 100.8955223880597%'>version-control(1)</a> <a href='/blog/categories/vim' style='font-size: 101.7910447761194%'>vim(2)</a> <a href='/blog/categories/virtualenv' style='font-size: 100.8955223880597%'>virtualenv(1)</a> <a href='/blog/categories/virtualenvwrapper' style='font-size: 100.8955223880597%'>virtualenvwrapper(1)</a> <a href='/blog/categories/windows' style='font-size: 100.8955223880597%'>Windows(1)</a> </span>
+</section>
+
+<section>
+  <h1>Stack Overflow</h1>
+  <a href="http://stackoverflow.com/users/4203/hank-gay"><img src="http://stackoverflow.com/users/flair/4203.png" width="208" height="58" alt="profile for hank-gay at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for hank-gay at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/gthank">@gthank</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'gthank',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Hank -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

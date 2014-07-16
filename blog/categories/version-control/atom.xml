@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: version-control | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/version-control/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Notes from PyATL 2011-12-08]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2011/12/08/pyatl-notes/"/>
+    <updated>2011-12-08T00:00:00-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2011/12/08/pyatl-notes</id>
+    <content type="html"><![CDATA[<h2 id="an-example-python-program-brandon-rhode">An Example Python Program (Brandon Rhode)</h2>
+
+<ul>
+  <li>If I ever need to do PDFs in Python, I should look into
+<a href="http://www.reportlab.com/software/opensource/rl-toolkit/">reportlab</a>.</li>
+  <li>Lots of emphasis on <a href="http://pypi.python.org/pypi/pyflakes">PyFlakes</a>, but I’m already a
+<a href="http://www.vim.org/scripts/script.php?script_id=2736">Syntastic</a> user.</li>
+</ul>
+
+<h2 id="effective-git-commits-kelsey-hightower">Effective <code>git</code> Commits (Kelsey Hightower)</h2>
+
+<ul>
+  <li>The Prime Directive of commits: group logical changes together.</li>
+  <li>Here’s a good tip: describe the behavior <em>before</em> and after the patch</li>
+  <li>If you have your tests in a different commit, you should note that in the
+message</li>
+</ul>
+
+<h2 id="using-code-for-configuration-jr-rickerson">Using Code for Configuration (JR Rickerson)</h2>
+
+<ul>
+  <li>Advantages
+    <ul>
+      <li>typed data</li>
+      <li>easy-to-read data structures</li>
+      <li>no extra parsers</li>
+    </ul>
+  </li>
+  <li>The Django config file is used as an example</li>
+  <li>The board positions example was a very good choice</li>
+  <li>Cons from the Q and A:
+    <ul>
+      <li>Security</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="python-linkers-and-virtual-memory-pre-alpha-version-brandon-rhodes">Python, Linkers, and Virtual Memory (pre-alpha version; Brandon Rhodes)</h2>
+
+<ul>
+  <li>The talk starts with a pretty cool oral history of the group, and personal
+anecdotes from Brandon. He’ll be missed.</li>
+  <li>Ah, the joys of virtual memory…
+    <ul>
+      <li>Text Segment is where your actual, binary program resides</li>
+      <li>Data Segment is the heap</li>
+      <li>And (thankfully) modern systems have permissions built into them so data
+isn’t leaked/stomped between processes, etc.</li>
+      <li>It’s cool that the Text Segment for an executable can be shared, along
+with the dynamic libraries</li>
+      <li>Process <em>do</em> get their own working RAM</li>
+      <li><a href="http://compute.cnr.berkeley.edu/cgi-bin/man-cgi?fork"><code>fork()</code></a> FTW! Nothing like a little
+<abbr title="Copy On Write">COW</abbr>. The only difference between
+parent and child is the page that differentiates the parent from the
+child.</li>
+    </ul>
+  </li>
+  <li>Other tricks: shared executables/libraries, swap, and caching.</li>
+  <li>Bumps in the Road:
+    <ul>
+      <li>Dynamic linking: version mismatches can give you the “undefined symbol”
+error. Static linking works around it at the cost of increased memory
+usage. See <a href="https://bitbucket.org/brandon/pyzmq-static/overview"><code>pyzmq-static</code></a> for a case study.</li>
+    </ul>
+  </li>
+  <li>The little page-table diagrams make it abundantly clear why it’s hard to say
+exactly how much memory a program is “using”.</li>
+  <li>Conclusions:
+    <ul>
+      <li>RAM is an illusion: binaries, executables, swap, duplication are all part
+of the problem</li>
+      <li>Dynamic linking saves RAM at the risk of errors</li>
+      <li>Deciding how much memory a process is actually using is <em>hard</em></li>
+    </ul>
+  </li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

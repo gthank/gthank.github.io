@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: firefox | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/firefox/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Improving Browser Support for HTTP Authentication]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/02/27/improving-browser-support-http/"/>
+    <updated>2009-02-27T00:00:00-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/02/27/improving-browser-support-http</id>
+    <content type="html"><![CDATA[<p>One of the classic problems with <a href="http://www.ietf.org/rfc/rfc2617.txt">HTTP Authentication</a>
+has been the way browsers implement it: there’s no easy way to “log
+out” of a site. Once you’ve provided authentication tokens for a site,
+the browser keeps sending it. This decision has put a <em>sharp</em> dent in
+the adoption of standards-based authentication schemes. It doesn’t have
+to be this way. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=300002">Bug 300002</a> is an enhancement request for
+Firefox that would add a <abbr title="User Interface">UI</abbr> element
+for telling the browser to stop. So far, this request has languished
+in undeserved obscurity; let’s put an end to that. Please vote up
+<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=300002">Bug 300002</a>. If Firefox were to remedy this usability problem
+with HTTP authentication, maybe other browser makers would follow suit,
+and standards-based authentication would once again be seen as a viable
+option.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

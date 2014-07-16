@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Book Review: Python 3 Web Development Beginner's Guide - Real Ultimate Programming</title>
+  <meta name="author" content="Hank">
+
+  
+  <meta name="description" content="I recently received a free review copy (eBook version) of from Packt Publishing. I was looking forward to this book, because I haven’t
+really done &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.realultimateprogramming.com//blog/2011/08/30/book-review-python-3-web-development">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Real Ultimate Programming" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Real Ultimate Programming</a></h1>
+  
+    <h2>The Home for People Who Like to Flip Out and Write Code</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.realultimateprogramming.com/" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/colophon">Colophon</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Book Review: Python 3 Web Development Beginner's Guide</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-30T00:00:00-04:00" pubdate data-updated="true">Aug 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I recently received a free review copy (eBook version) of</p>
+
+<p><a href="http://www.packtpub.com/python-3-web-development-beginners-guide/book" title="Packt Publishing page for Python 3 Web Development Beginner's Guide"><img src="http://www.packtpub.com/sites/default/files/3746OS_Python%203%20Web%20Development%20Beginner’s%20Guide_0.jpg" alt="Cover art for Python 3 Web Development Beginner's Guide" width="320" height="400" /></a></p>
+
+<p>from Packt Publishing. I was looking forward to this book, because I haven’t
+really done much Python 3 work yet, and I wanted to see how it could make my
+life as a web developer better. However, the book wasn’t what I expected.
+Instead of covering the basics of web development and how Python 3 applies, it
+is more of an introduction to the sorts of concerns that come up when you
+build a web framework on top of <a href="http://www.cherrypy.org/">CherryPy</a>. The
+sample code just happens to be in Python 3.</p>
+
+<h2 id="the-good">The Good</h2>
+
+<p>The two best parts of the book, to me, were the coverage of writing a
+<a href="http://jquery.com/">jQuery</a> plugin, and growing an <abbr title="Object-Relational Mapper">ORM</abbr> that uses metaclasses
+to provide a compact, readable way to define the models.</p>
+
+<h2 id="the-bad">The Bad</h2>
+
+<p>I have a rather long list of things I didn’t like about the book, some of
+which are a function of the title setting misleading expectations, and some of
+which I think are just problematic in general.</p>
+
+<p>In general, I didn’t care for the examples. Some of this is personal
+preference: I find that many people (myself included) learn better when they
+must type in the examples instead of opening up the code and reading through a
+completed solution. While the book sometimes indicated that something had been
+left as an exercise to the reader, opening up the sample code showed that the
+exercise actually <em>had not</em> been left to the reader. This mismatch between
+what the text of the book <em>says</em> will be in the sample code and what is
+<em>actually in</em> the sample code occurs in multiple places throughout the book,
+and gives a sense that the book was sloppily edited.</p>
+
+<p>I also felt the examples in general were too complicated. It’s fine to build
+up a complicated example over the course of a book, but instead we got a task
+list, a wiki, a Customer Relationship Management (<abbr title="Customer Relationship Management">CRM</abbr>) tool, a spreadsheet,
+and more. That’s an awful lot to distract you from the beginner’s principles
+that you would expect in a book with this title.</p>
+
+<p>I also didn’t care for many of the shortcuts taken in the book. In most
+instances, the book did acknowledge that the approach taken was not
+appropriate in the real world, but then proceeded with little or no
+justification for why it was done the way it was. The two examples that really
+leap out in this category are the password hashing scheme and the failure to
+use a template engine.</p>
+
+<p>When the book first introduces authentication, it explains that you should
+never store passwords in plaintext. This is absolutely correct, but the book
+then goes on to demonstrate a completely insecure password hashing scheme:
+<strong>UNSALTED</strong> <a href="http://en.wikipedia.org/wiki/SHA-1"><abbr title="Secure Hash Algorithm">SHA1</abbr></a>. The author only
+provides a cursory link to explain what you should actually be doing. In this
+day and age, demonstrating anything less than a
+<a href="http://www.usenix.org/events/usenix99/provos/provos_html/index.html"><code>bcrypt</code></a>-based solution is wrong. Read
+<a href="http://chargen.matasano.com/chargen/2007/9/7/enough-with-the-rainbow-tables-what-you-need-to-know-about-s.html">Enough With The Rainbow Tables</a>
+and
+<a href="http://codahale.com/how-to-safely-store-a-password/">How To Safely Store A Password</a>
+for a far better explanation than I can provide. There’s
+really no excuse for this: the added complexity of using
+<a href="http://code.google.com/p/py-bcrypt/"><code>py-bcrypt</code></a> instead of writing
+your own (insecure) <abbr title="Secure Hash Algorithm">SHA1</abbr>-based solution is trivial at worst; there’s a
+strong case to be made that it would actually be simpler.</p>
+
+<p>The failure to use a template engine (also a weakness acknowledged by the
+book) really makes the code harder to follow than it should be. Virtually any
+serious web development effort is going to take advantage of a template
+engine, and for good reason. This code gives me flashbacks to my days of
+writing Java servlets before the advent of <abbr title="Java Server Pages">JSP</abbr>, and I saw where one other
+reviewer invoked the specter of PHP. The fact that this style of coding draws
+such comparisons should give you an idea of just how unpythonic it is. I would
+be sympathetic to claims of not wanting to add too many external dependencies
+if the book did not already rely significantly on the magic of
+<a href="http://jqueryui.com/">jQuery UI</a>.</p>
+
+<p>My last major complaint is simply one of focus: the book spends substantial
+amounts of time growing an <abbr title="Object-Relational Mapper">ORM</abbr> and teaching Python metaclasses (and doing a
+good job of it), but spends little more than the bare minimum required on
+CherryPy (which is at the core of the code), and essentially none on
+understanding <abbr title="HyperText Transfer Protocol">HTTP</abbr>. In fact, the few times it comes up is usually in relation
+to <code>GET</code> vs. <code>POST</code>, where the decision is usually made based on inane
+implementation details such as whether request arguments are logged by default
+instead of <abbr title="HyperText Transfer Protocol">HTTP</abbr> fundamentals such as idempotency, safety, or cacheability
+(although caching <em>is</em> mentioned elsewhere, in the context of how to prevent
+it). Also, the book does mention security, but it does not give it the sort of
+omnipresent emphasis that is necessary to write good web applications, given
+the hostile nature of the domain. <abbr title="Cross-site Scripting">XSS</abbr>, <abbr title="Cross-Site Request Forgery">CSRF</abbr>, and SQL injection attacks all
+deserve much more attention than they were given.</p>
+
+<h2 id="the-summary">The Summary</h2>
+
+<p>The book has some good content mixed in with the stuff I didn’t like.
+Unfortunately, the good content is rarely specific to web development. For
+example, the chapter that uses metaclasses to clean up the <abbr title="Object-Relational Mapper">ORM</abbr> is one of the
+better resources on metaclasses that I’ve seen, but metaclasses are clearly
+not specific to web development. Furthermore, the impression of sloppy editing
+makes it hard to put as much faith in the content as it probably deserves.
+Given these flaws, I really don’t think I’d recommend this book to a friend
+who was looking to get started with web development.</p>
+
+<p>Back to flipping out…</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Hank</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-30T00:00:00-04:00" pubdate data-updated="true">Aug 30<span>th</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/book-review/'>book_review</a>, <a class='category' href='/blog/categories/python/'>python</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/08/11/pyatl-notes/" title="Previous Post: Notes from PyATL 2011-08-11">&laquo; Notes from PyATL 2011-08-11</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/09/08/pyatl-notes/" title="Next Post: Notes from PyATL 2011-09-08">Notes from PyATL 2011-09-08 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+    <h1>Related Posts</h1>
+    <ul class="posts">
+    
+        <li class="related">
+        <a href="/blog/2009/06/06/review-of-expert-python-programming/">Review of Expert Python Programming, Part Three</a>
+        </li>
+    
+        <li class="related">
+        <a href="/blog/2009/05/14/pyatl-notes/">Notes from PyATL 2009-05-14</a>
+        </li>
+    
+        <li class="related">
+        <a href="/blog/2008/01/16/using-buildix-in-anger/">Using Buildix in Anger</a>
+        </li>
+    
+        <li class="related">
+        <a href="/blog/2009/05/21/review-of-expert-python-programming/">Review of Expert Python Programming, Part One</a>
+        </li>
+    
+        <li class="related">
+        <a href="/blog/2009/08/25/pyatl-notes2009-08-20/">Notes from PyATL 2009-08-20</a>
+        </li>
+    
+    </ul>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/07/10/notes-from-pyatl-2014-07-10/">Notes From PyATL 2014-07-10</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/09/notes-from-pyatl-2014-01-09/">Notes From PyATL 2014-01-09</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/14/sneak-attack-cant-verify-rubygems-on-os-x/">Sneak Attack: Can't Verify RubyGems on OS X</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/12/notes-from-pyatl-2013-12-12/">Notes From PyATL 2013-12-12</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/13/notes-from-pyatl-2013-06-13/">Notes From PyATL 2013-06-13</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Popular Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2007/05/21/what-is-programmers-purpose-in-life/">What is a programmer's purpose in life?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/05/31/picking-your-next-programming-language/">Picking Your Next Programming Language</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/05/31/speaking-of-debugging/">Speaking of Debugging…</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/06/04/education-of-programmer/">The Education of a Programmer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/06/10/g-client-and-special-sauce/">G-Client and Special Sauce</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Category Cloud</h1>
+    <span id="tag-cloud"><a href='/blog/categories/adium' style='font-size: 100.8955223880597%'>adium(1)</a> <a href='/blog/categories/amqp' style='font-size: 100.8955223880597%'>amqp(1)</a> <a href='/blog/categories/benchmarking' style='font-size: 100.8955223880597%'>benchmarking(1)</a> <a href='/blog/categories/blogger' style='font-size: 100.8955223880597%'>blogger(1)</a> <a href='/blog/categories/book-review' style='font-size: 105.3731343283582%'>book_review(6)</a> <a href='/blog/categories/compilers' style='font-size: 100.8955223880597%'>compilers(1)</a> <a href='/blog/categories/debugging' style='font-size: 100.8955223880597%'>debugging(1)</a> <a href='/blog/categories/design' style='font-size: 100.8955223880597%'>design(1)</a> <a href='/blog/categories/distutils' style='font-size: 100.8955223880597%'>distutils(1)</a> <a href='/blog/categories/django' style='font-size: 102.68656716417911%'>django(3)</a> <a href='/blog/categories/education-sicp' style='font-size: 103.58208955223881%'>Education:SICP(4)</a> <a href='/blog/categories/firefox' style='font-size: 100.8955223880597%'>firefox(1)</a> <a href='/blog/categories/five-things-i-hate' style='font-size: 101.7910447761194%'>five_things_I_hate(2)</a> <a href='/blog/categories/functional-programming' style='font-size: 100.8955223880597%'>functional_programming(1)</a> <a href='/blog/categories/git' style='font-size: 102.68656716417911%'>git(3)</a> <a href='/blog/categories/grails' style='font-size: 101.7910447761194%'>Grails(2)</a> <a href='/blog/categories/haskell' style='font-size: 100.8955223880597%'>Haskell(1)</a> <a href='/blog/categories/homebrew' style='font-size: 100.8955223880597%'>homebrew(1)</a> <a href='/blog/categories/http' style='font-size: 100.8955223880597%'>http(1)</a> <a href='/blog/categories/http-authentication' style='font-size: 100.8955223880597%'>http_authentication(1)</a> <a href='/blog/categories/humor' style='font-size: 100.8955223880597%'>humor(1)</a> <a href='/blog/categories/java' style='font-size: 104.4776119402985%'>Java(5)</a> <a href='/blog/categories/javascript' style='font-size: 101.7910447761194%'>JavaScript(2)</a> <a href='/blog/categories/man' style='font-size: 100.8955223880597%'>man(1)</a> <a href='/blog/categories/matplotlib' style='font-size: 100.8955223880597%'>matplotlib(1)</a> <a href='/blog/categories/maven' style='font-size: 100.8955223880597%'>maven(1)</a> <a href='/blog/categories/mongodb' style='font-size: 100.8955223880597%'>MongoDB(1)</a> <a href='/blog/categories/mongodb' style='font-size: 100.8955223880597%'>mongodb(1)</a> <a href='/blog/categories/netbsd' style='font-size: 100.8955223880597%'>NetBSD(1)</a> <a href='/blog/categories/non-programming' style='font-size: 101.7910447761194%'>non-programming(2)</a> <a href='/blog/categories/note-to-self' style='font-size: 108.95522388059702%'>note-to-self(10)</a> <a href='/blog/categories/note-to-self' style='font-size: 100.8955223880597%'>note_to_self(1)</a> <a href='/blog/categories/np-complete' style='font-size: 100.8955223880597%'>np-complete(1)</a> <a href='/blog/categories/open-source' style='font-size: 100.8955223880597%'>open-source(1)</a> <a href='/blog/categories/optimization' style='font-size: 100.8955223880597%'>optimization(1)</a> <a href='/blog/categories/oracle' style='font-size: 104.4776119402985%'>Oracle(5)</a> <a href='/blog/categories/osx' style='font-size: 106.26865671641791%'>osx(7)</a> <a href='/blog/categories/packaging' style='font-size: 100.8955223880597%'>packaging(1)</a> <a href='/blog/categories/postgresql' style='font-size: 101.7910447761194%'>postgresql(2)</a> <a href='/blog/categories/profiling' style='font-size: 100.8955223880597%'>profiling(1)</a> <a href='/blog/categories/project-euler' style='font-size: 119.70149253731343%'>project_euler(22)</a> <a href='/blog/categories/pyatl' style='font-size: 121.49253731343283%'>PyATL(24)</a> <a href='/blog/categories/pycon' style='font-size: 100.8955223880597%'>pycon(1)</a> <a href='/blog/categories/pygments' style='font-size: 100.8955223880597%'>pygments(1)</a> <a href='/blog/categories/python' style='font-size: 160.0%'>python(67)</a> <a href='/blog/categories/quicksilver' style='font-size: 100.8955223880597%'>quicksilver(1)</a> <a href='/blog/categories/r' style='font-size: 100.8955223880597%'>R(1)</a> <a href='/blog/categories/rails' style='font-size: 101.7910447761194%'>rails(2)</a> <a href='/blog/categories/rest' style='font-size: 100.8955223880597%'>REST(1)</a> <a href='/blog/categories/ruby' style='font-size: 100.8955223880597%'>ruby(1)</a> <a href='/blog/categories/screen' style='font-size: 100.8955223880597%'>screen(1)</a> <a href='/blog/categories/sneak-attack' style='font-size: 136.71641791044777%'>sneak_attack(41)</a> <a href='/blog/categories/solarized' style='font-size: 100.8955223880597%'>solarized(1)</a> <a href='/blog/categories/sphinx' style='font-size: 100.8955223880597%'>Sphinx(1)</a> <a href='/blog/categories/spring-security' style='font-size: 100.8955223880597%'>spring_security(1)</a> <a href='/blog/categories/sql' style='font-size: 100.8955223880597%'>sql(1)</a> <a href='/blog/categories/statistics' style='font-size: 101.7910447761194%'>statistics(2)</a> <a href='/blog/categories/subversion' style='font-size: 100.8955223880597%'>subversion(1)</a> <a href='/blog/categories/sudo' style='font-size: 100.8955223880597%'>sudo(1)</a> <a href='/blog/categories/tee' style='font-size: 100.8955223880597%'>tee(1)</a> <a href='/blog/categories/testing' style='font-size: 100.8955223880597%'>testing(1)</a> <a href='/blog/categories/tuscany' style='font-size: 100.8955223880597%'>tuscany(1)</a> <a href='/blog/categories/unix' style='font-size: 100.8955223880597%'>unix(1)</a> <a href='/blog/categories/usability' style='font-size: 100.8955223880597%'>usability(1)</a> <a href='/blog/categories/user-management' style='font-size: 100.8955223880597%'>user-management(1)</a> <a href='/blog/categories/version-control' style='font-size: 100.8955223880597%'>version-control(1)</a> <a href='/blog/categories/vim' style='font-size: 101.7910447761194%'>vim(2)</a> <a href='/blog/categories/virtualenv' style='font-size: 100.8955223880597%'>virtualenv(1)</a> <a href='/blog/categories/virtualenvwrapper' style='font-size: 100.8955223880597%'>virtualenvwrapper(1)</a> <a href='/blog/categories/windows' style='font-size: 100.8955223880597%'>Windows(1)</a> </span>
+</section>
+
+<section>
+  <h1>Stack Overflow</h1>
+  <a href="http://stackoverflow.com/users/4203/hank-gay"><img src="http://stackoverflow.com/users/flair/4203.png" width="208" height="58" alt="profile for hank-gay at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for hank-gay at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/gthank">@gthank</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'gthank',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Hank -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: sneak_attack | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/sneak-attack/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: Can't Verify RubyGems on OS X]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2013/12/14/sneak-attack-cant-verify-rubygems-on-os-x/"/>
+    <updated>2013-12-14T21:24:43-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2013/12/14/sneak-attack-cant-verify-rubygems-on-os-x</id>
+    <content type="html"><![CDATA[<p><a href="http://www.jacopretorius.net/2013/10/could-not-verify-the-ssl-certificate-for-rubygems.html">Why Johnny Can’t Install Gems on OS X</a></p>
+
+<p>Back to flipping out…</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: The Smell of Hell]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2010/08/11/sneak-attack-smell-of-hell/"/>
+    <updated>2010-08-11T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2010/08/11/sneak-attack-smell-of-hell</id>
+    <content type="html"><![CDATA[<p>Excellent <a href="http://www.dadhacker.com/blog/?p=1274">article on code smells</a>.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: Oops, I forgot to sudo in Vim]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2010/08/05/sneak-attack-oops-i-forgot-to-sudo-in/"/>
+    <updated>2010-08-05T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2010/08/05/sneak-attack-oops-i-forgot-to-sudo-in</id>
+    <content type="html"><![CDATA[<p>Ever forget to <code>sudo</code> before you started editing that file in vim? Here’s a
+<a href="http://al3k.net/2010/08/vim-forget-sud/">nifty, tee-based trick</a> to save you
+some hassle.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: Will it Optimize?]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2010/07/23/sneak-attack-will-it-optimize/"/>
+    <updated>2010-07-23T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2010/07/23/sneak-attack-will-it-optimize</id>
+    <content type="html"><![CDATA[<p><a href="http://ridiculousfish.com/blog/archives/2010/07/23/will-it-optimize/">Fun with optimizing compilers</a>.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: TEMPORARY (Tablespace) Insanity]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2010/07/20/sneak-attack-temporary-tablespace/"/>
+    <updated>2010-07-20T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2010/07/20/sneak-attack-temporary-tablespace</id>
+    <content type="html"><![CDATA[<p>If you ever find yourself cursing about an
+<code>ORA-01652: unable to extend temp segment by 128 in tablespace TEMP</code> at 11 PM
+on your birthday, this
+<a href="http://oratips-ddf.blogspot.com/2008/02/temporary-tablespace-insanity.html">article</a>
+might be just the thing for you.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

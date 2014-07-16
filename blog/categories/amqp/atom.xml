@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: amqp | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/amqp/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: AMQP and Python]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/05/20/sneak-attack-amqp-and-python/"/>
+    <updated>2009-05-20T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/05/20/sneak-attack-amqp-and-python</id>
+    <content type="html"><![CDATA[<p>A nice overview of <a href="http://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol">Advanced Message Queuing Protocol</a>
+(<abbr title="Advanced Message Queueing Protocol">AMQP</abbr>) concepts,
+with Python examples using <a href="http://barryp.org/software/py-amqplib/">py-amqplib</a>.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: note-to-self | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/note-to-self/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Note to Self: A NetBSD domU Doesn't Have An Entropy Source By Default]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2011/02/16/note-to-self-netbsd-domu-doesnt-have/"/>
+    <updated>2011-02-16T00:00:00-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2011/02/16/note-to-self-netbsd-domu-doesnt-have</id>
+    <content type="html"><![CDATA[<p>I discovered this after a <a href="http://unix.stackexchange.com/questions/7358/how-long-should-it-take-to-generate-300-bytes-of-entropy-on-a-vps">curious problem</a> led me
+to email my VPS provider and get back a pointer to this
+<a href="http://mail-index.netbsd.org/netbsd-bugs/2009/02/24/msg009501.html">mailing list exchange</a>. Possibly more
+interesting than the original problem, I also learned that
+<a href="http://www.daemon-systems.org/man/rndctl.8.html">this exists</a>.</p>
+
+<p>Back to flipping out…</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Note to Self: Source Django's bash Completion Automatically]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2010/12/29/note-to-self-source-djangos-bash/"/>
+    <updated>2010-12-29T00:00:00-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2010/12/29/note-to-self-source-djangos-bash</id>
+    <content type="html"><![CDATA[<p>If you’re using Doug Hellman’s awesome
+<a href="http://www.doughellmann.com/projects/virtualenvwrapper/">virtualenvwrapper</a>
+to manage your Django projects–and you really should be–try adding the
+following line to your $VIRTUAL_ENV/bin/postactivate script:</p>
+
+<pre><code>source "$VIRTUAL_ENV/build/Django/extras/django_bash_completion"
+</code></pre>
+
+<p>If you used the <code>--no-site-packages</code> option to create the virtualenv, that
+should automatically source the Django bash completion script every time you
+<code>workon</code> into your project. If you didn’t, you just need to figure out where the
+Django bash completion script is squirreled away on your system and use that
+path instead. BTW, <code>--no-site-packages</code> should really be the default.</p>
+
+<p>UPDATE: And now <code>--no-site-packages</code> <em>IS</em> the default. Yay!</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Note to Self: Changing info for the postgres system user]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2010/11/22/note-to-self-changing-info-for-postgres/"/>
+    <updated>2010-11-22T00:00:00-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2010/11/22/note-to-self-changing-info-for-postgres</id>
+    <content type="html"><![CDATA[<p>Do you use MacPorts? Ever switch from one version of PostgreSQL to another,
+e.g., 8.4 to 9.0? Did you notice that it started complaining about a non-
+existent home directory for the <code>postgres</code> system user? Me, too.</p>
+
+<p>My first instinct was to edit the user, but there is no entry for <code>postgres</code> in
+<code>/etc/passwd</code>. That led me to this
+<a href="http://girders.org/changing-postgres-user-info-on-os-x-106">excellent article</a>.
+Using that info, I cooked up the following command:</p>
+
+<pre><code>sudo dscl localhost change /Local/Default/Users/postgres NFSHomeDirectory /opt/local/var/db/postgresql84 /opt/local/var/db/postgresql90
+</code></pre>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Note to Self: apropos finds man entries]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/10/14/note-to-self-apropos-finds-man-entries/"/>
+    <updated>2009-10-14T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/10/14/note-to-self-apropos-finds-man-entries</id>
+    <content type="html"><![CDATA[<p>Ever get that feeling that there just <em>has</em> to be something built right
+into the shell that will solve the problem you’re facing, but have no
+idea what that something might be? Enter <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?apropos"><code>apropos</code></a>. It
+searches the man page blurbs for entries that match your keywords, which
+can be regular expressions. How is it that more people don’t talk about
+features like this?</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Note to Self: nohup a Running Process]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/09/25/note-to-self-nohup-running-process/"/>
+    <updated>2009-09-25T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/09/25/note-to-self-nohup-running-process</id>
+    <content type="html"><![CDATA[<pre><code>nohup -p pid
+</code></pre>
+
+<p><a href="http://publib.boulder.ibm.com/infocenter/systems/topic/com.ibm.aix.cmds/doc/aixcmds4/nohup.htm#nohup_flags_p">see also</a></p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

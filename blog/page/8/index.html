@@ -1,0 +1,1090 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Real Ultimate Programming</title>
+  <meta name="author" content="Hank">
+
+  
+  <meta name="description" content="As I mentioned, I got started with the
+PyAtl Book Club at the May meeting. The
+first book I received was
+Expert Python Programming, by
+Tarek Ziadé. &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.realultimateprogramming.com//blog/page/8">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Real Ultimate Programming" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Real Ultimate Programming</a></h1>
+  
+    <h2>The Home for People Who Like to Flip Out and Write Code</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.realultimateprogramming.com/" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/colophon">Colophon</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/21/review-of-expert-python-programming/">Review of Expert Python Programming, Part One</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-21T00:00:00-04:00" pubdate data-updated="true">May 21<span>st</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As I <a href="http://realultimateprogramming.blogspot.com/2009/05/pyatl-notes.html">mentioned</a>, I got started with the
+<a href="http://pyatl.org/bookclub">PyAtl Book Club</a> at the May meeting. The
+first book I received was
+<a href="http://www.packtpub.com/expert-python-programming/book">Expert Python Programming</a>, by
+<a href="http://ziade.org/">Tarek Ziadé</a>. Part of the deal with the book club is
+posting a review of the book, so I will be posting about the book as I
+work my way through it.</p>
+
+<h4 id="chapter-1">Chapter 1</h4>
+
+<p>This is basic setup info (though the vim section has a nice selection
+of config settings for those new to it), so I won’t really cover it; I
+already have multiple versions of Python running on my dev box.</p>
+
+<h4 id="chapter-2">Chapter 2</h4>
+
+<p>This chapter is entitled “Syntax Best Practices—Below the Class
+Level”, and that’s a pretty accurate description. There’s a short
+section on <a href="http://docs.python.org/tutorial/datastructures.html#list-comprehensions">List Comprehensions</a> followed by a longer
+section on <a href="http://docs.python.org/library/stdtypes.html#iterator-types">Iterators</a> and <a href="http://docs.python.org/tutorial/classes.html#generators">Generators</a>.
+This is a fast but detailed look at the subject, including the use
+of <a href="http://docs.python.org/reference/expressions.html#generator.send">send</a> and <a href="http://en.wikipedia.org/wiki/Coroutine">coroutines</a>
+(via the mechanisms defined in <a href="http://www.python.org/dev/peps/pep-0342">PEP 342</a>). The treatment is
+rather brief, so I recommend David Beazley’s <a href="http://www.dabeaz.com/coroutines/">A Curious Course on
+Coroutines and Concurrency</a> for more detail. Up
+next are <a href="http://docs.python.org/reference/expressions.html#generator-expressions">genexps</a> (defined in <a href="http://www.python.org/dev/peps/pep-0289">PEP 289</a>). These
+were added in Python 2.4. This section is short and to the point: use
+genexps wherever you would use a list comprehension unless you <em>need</em>
+some feature of lists that a generator lacks. The next section is a
+brief glimpse at <a href="http://docs.python.org/library/stdtypes.html#iterator-types">itertools</a>. It is hardly complete,
+but it does highlight one of the (IMO) most interesting pieces of
+the module: <a href="http://docs.python.org/library/itertools.html#itertools.tee">tee</a>. This function makes it practical to use
+genexps even when you need to make multiple passes across the data.
+Up next is the section on <a href="http://docs.python.org/glossary.html#term-decorator">decorators</a> (defined in
+<a href="http://www.python.org/dev/peps/pep-0318">PEP 318</a>), which were introduced with Python 2.4. The author
+addresses decorators in much more detail than the previous topics, with
+extended examples of using them for various things such as caching,
+proxies, and context providers. That last provides a nice segue into
+the next session, where he shows us how to replace context provider
+decorators by using the <a href="http://docs.python.org/reference/compound_stmts.html#with">with statement</a> (defined in
+<a href="http://www.python.org/dev/peps/pep-0343">PEP 343</a>) introduced in Python 2.5. The author does a pretty
+thorough job of explaining what <code>with</code> is doing and how you can use it
+to good effect, including how to use the <a href="http://docs.python.org/library/contextlib.html">contextlib</a>
+module (introduced at the same time as the <code>with</code> statement) to use
+<a href="http://docs.python.org/reference/datamodel.html#context-managers">context managers</a> with code that doesn’t provide
+them out of the box.</p>
+
+<h4 id="thoughts">Thoughts</h4>
+
+<p>Although it was a bit whirlwind at times, the author does a good job of
+covering the modern language constructs that Python has picked up in the last
+few versions. Although you may want to read a more detailed tutorial on a
+given feature, this chapter does a good job of getting you up to speed with
+modern Python.</p>
+
+<p>Back to flipping out…</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/20/sneak-attack-amqp-and-python/">Sneak Attack: AMQP and Python</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-20T00:00:00-04:00" pubdate data-updated="true">May 20<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A nice overview of <a href="http://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol">Advanced Message Queuing Protocol</a>
+(<abbr title="Advanced Message Queueing Protocol">AMQP</abbr>) concepts,
+with Python examples using <a href="http://barryp.org/software/py-amqplib/">py-amqplib</a>.</p>
+
+<p>Back to flipping out…</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/20/note-to-self-oracles-timestamp-literal/">Note to Self: Oracle&#8217;s TIMESTAMP Literal Syntax</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-20T00:00:00-04:00" pubdate data-updated="true">May 20<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><code>TIMESTAMP'2009-01-15 00:00:00.000'</code></p>
+
+<p>Back to flipping out…</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/19/sneak-attack-decorator-module/">Sneak Attack: The Decorator Module</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-19T00:00:00-04:00" pubdate data-updated="true">May 19<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The <a href="http://pypi.python.org/pypi/decorator/"><code>decorator</code> module</a> is
+spiffy stuff.</p>
+
+<p>Back to flipping out…</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/18/note-to-self-clearing-oracles-buffer/">Note to Self: Clearing Oracle&#8217;s Buffer Cache</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-18T00:00:00-04:00" pubdate data-updated="true">May 18<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The next time you’re doing some rough benchmarking and you want to
+prevent Oracle’s cache from skewing your subsequent runs:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="sql"><span class="line">    <span class="k">alter</span> <span class="k">system</span> <span class="n">flush</span> <span class="n">buffer_cache</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Be forewarned: sometimes it takes a while to run this one, and you need
+system-level privileges.</p>
+
+<p>Back to flipping out…</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/14/pyatl-notes/">Notes From PyATL 2009-05-14</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-14T00:00:00-04:00" pubdate data-updated="true">May 14<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>What follows is essentially a stream-of-consciousness dump from the
+<a href="http://pyatl.org/">PyAtl</a> meeting tonight.</p>
+
+<hr />
+
+<h4 id="python-atlanta-meetup-2009-05-14">Python Atlanta Meetup 2009-05-14</h4>
+
+<h5 id="miscellaneous">Miscellaneous</h5>
+
+<p>They’re recruiting people to do A/V work during <a href="http://www.pycon.org/">PyCon</a>
+here in Atlanta next year. Does this mean I get in to the con for free?</p>
+
+<h5 id="hot-topics">Hot Topics</h5>
+
+<ol>
+  <li>Community - you can get a lot of benefit from small-scale con-style stuff; look for the upcoming article about <a href="http://www.pyohio.org/">PyOhio</a> in <a href="http://pymag.phparch.com/">Python Magazine</a></li>
+  <li>Distutils - Interesting things on the <a href="http://mail.python.org/mailman/listinfo/distutils-sig/">distutils mailing list</a></li>
+  <li>IronPython - lots of buzz, but it’s not relevant to me right now</li>
+</ol>
+
+<h5 id="testing-with-nose">Testing with Nose</h5>
+
+<p>Alfredo Deza presenting.</p>
+
+<p>Talking about testing Supay (a daemon module; named after an Incan demon god).
+Why another daemon module?</p>
+
+<ul>
+  <li><a href="http://www.python.org/dev/peps/pep-3143">PEP 3143</a></li>
+  <li>It’s really a service, not just a daemon</li>
+  <li>At least it’s not a new web framework</li>
+  <li>Start, Stop, Status</li>
+  <li>Spawn children</li>
+</ul>
+
+<p>Originally testing was done in <a href="http://pythoscope.org/">Pythoscope</a>. Easy to
+get started. Moved on to
+<a href="http://somethingaboutorange.com/mrl/projects/nose/">nose</a>. Had problems
+because things under test were backgrounding, etc. People on the <a href="http://lists.idyll.org/listinfo/testing-in-python">testing in
+Python</a> mailing list
+advised him to test smaller chunks.
+<a href="http://nedbatchelder.com/code/modules/coverage.html">coverage</a> does testing
+coverage reporting for <code>nose</code>. <code>coverage</code> gives you really specific (package-
+specific, etc.) statistics.</p>
+
+<p>The cool thing about <code>nose</code> is that it autodetects your tests.</p>
+
+<p>One early gotcha: You have to invoke <code>nose</code> using <code>nosetests</code>. <em>ed. I might as
+well alias <code>nosetests</code> to <code>nosetests -v --cover-package=$package_name</code></em>.
+Simply add <code>--with-coverage</code> to get the coverage report.</p>
+
+<p>Cool, <code>Pythoscope</code> generates test stubs for you. I need me some of this.</p>
+
+<h5 id="intermission">Intermission</h5>
+
+<p>There was some A/V stuff going on here, so they took this opportunity to hand
+out books for review. I scored <a href="http://www.amazon.com/Expert-Python-Programming-practices-
+distributing/dp/184719494X">Expert Python
+Programming</a>.</p>
+
+<h5 id="choosing-a-testing-framework">Choosing a Testing Framework</h5>
+
+<p>Brandon Rhodes presenting.</p>
+
+<h6 id="intro">Intro</h6>
+
+<p>At first, he thought testing would help most by helping to get it right at
+first. Once he started testing, he discovered that it helped most with finding
+regressions. Much like <code>undo</code>, now he can’t imagine getting by without it. One
+thing to note: installed Python packages rarely ship with tests, so if you
+want to muck around in them, you typically need to download the tarball
+yourself.</p>
+
+<h6 id="what-does-python-testing-look-like-without-a-framework">What does Python testing look like without a framework?</h6>
+
+<p><a href="http://pypi.python.org/pypi/simplejson/">simplejson</a></p>
+
+<blockquote>
+  <p>Uses <a href="http://pypi.python.org/pypi/setuptools">setuptools</a>, so you can just
+use the built-in <code>test</code> command. You can use an <code>additional_tests</code> function to
+build a test suite for <code>setuptools</code>. <code>setuptools</code> will <em>not</em> autodetect
+<code>doctest</code> tests. All in all, this is a pretty well-behaved module.</p>
+</blockquote>
+
+<p><strong>Sidenote</strong>: <a href="http://pypi.python.org/pypi/virtualenv">virtualenv</a> - creates local, tiny Python install that you can use to avoid system-wide changes. I’ve seen it mentioned before, but this is the first time I’ve seen it in action; this could be seriously cool.</p>
+
+<p><a href="http://www.sqlalchemy.org/">SQLAlchemy</a></p>
+
+<blockquote>
+  <p>Has a <code>README.unittests</code> (referenced from <code>README</code>) that tells you exactly
+how to do things. There is a lot of work to manually keep track of the tests
+in modules; obviously, this is begging for someone to forget to add a test to
+the suite.</p>
+</blockquote>
+
+<p><a href="http://grok.zope.org/">Grok</a></p>
+
+<blockquote>
+  <p>The tests here are pretty idiosyncratic (each test defines a complete web
+app and puts it through its paces). It uses part of
+<a href="http://pypi.python.org/pypi/zc.recipe.testrunner">zc.testrunner</a>.</p>
+</blockquote>
+
+<h6 id="three-testing-frameworks">Three testing frameworks</h6>
+
+<p>Python testing frameworks:</p>
+
+<ul>
+  <li>zc.testrunner</li>
+  <li><a href="http://codespeak.net/py/dist/test/test.html">py.test</a></li>
+  <li>nose</li>
+</ul>
+
+<p>Questions you should ask:</p>
+
+<ul>
+  <li>How are tests discovered?</li>
+  <li>How can tests be filtered and selected?</li>
+  <li>How fancy are tests when reported?</li>
+</ul>
+
+<p>One benefit of testing frameworks is that it makes the testing in your project
+look like the testing in other projects that use the same testing framework.</p>
+
+<p><code>zc.testrunner</code></p>
+
+<blockquote>
+  <p>Not really covered beyond what we saw with Grok.</p>
+</blockquote>
+
+<p><code>py.test</code></p>
+
+<blockquote>
+  <p>Finds tests based on a naming convention; this is <em>not</em> configurable. Tests
+are just functions; you don’t need a class w/ test methods. You can tag tests
+any way you want. By default only outputs <code>print</code> statements if it fails. Has
+distributed tests and multiplatform, but the documentation is a bit sparse.
+Uses a module to turn on autodetection for <code>doctest</code> tests.</p>
+</blockquote>
+
+<p><code>nose</code></p>
+
+<blockquote>
+  <p>Finds tests based on a naming convention; this <em>is</em> configurable. Tests are
+just functions; you don’t need a class w/ test methods. You can tag tests any
+way you want. Has more extensive documentation and seems to have momentum.</p>
+</blockquote>
+
+<p>It is probably feasible to write your tests so both <code>py.test</code> and <code>nose</code> can
+find and run them.</p>
+
+<h5 id="selenium-demo-lightning-talk">Selenium Demo (lightning talk)</h5>
+
+<p>Brandon Rhodes presenting.</p>
+
+<p>Not a lot new to me; already used <a href="http://seleniumhq.org/">Selenium</a> at work.
+The <a href="http://seleniumhq.org/projects/remote-
+control/languages/python.html">Python client</a> seems to be doing a pretty good job of being
+Pythonic; the tests use
+<a href="http://docs.python.org/library/unittest.html">unittest</a>, etc. The basic
+commands seem pretty similar to the <a href="http://seleniumhq.org/projects/remote-control/languages/java.html">Java
+client</a>
+I’ve used before.</p>
+
+<h5 id="google-code-and-hg-lightning-talk">Google Code and Hg (lightning talk)</h5>
+
+<p>Alfredo Deza presenting.</p>
+
+<p>Brief compare/contrast between <a href="http://www.selenic.com/mercurial/wiki/">hg</a>
+and <a href="http://subversion.tigris.org/">svn</a>. I’m already familiar with both so I
+won’t recap this part of the presentation.</p>
+
+<p>Traditionally, <code>svn</code> has been the standard for <a href="http://code.google.com/">Google
+Code</a>. They’re giving invites to anyone attending the
+<a href="http://code.google.com/events/io/">Google IO Conference</a> (next week?).
+They’re also accepting applications <a href="http://google-code-
+updates.blogspot.com/2009/04/mercurial-support-for-project-hosting.html">here</a>; this
+is for old projects and they will move it over to keep the history. Not all
+features are available on the Mercurial version yet, e.g., code browsing.</p>
+
+<p><strong>Coolest feature</strong>: <code>hg serve</code>. It sets up a web interface to your entire repo on <code>localhost:8000</code>. It’s pretty sophisticated, and allows you to <code>push</code> and <code>pull</code> from it.</p>
+
+<p>And that concluded the evening.</p>
+
+<hr />
+
+<p>Back to flipping out…</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/02/sneak-attack-reverting-commit-in/">Sneak Attack: Reverting a Commit in Subversion</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-02T00:00:00-04:00" pubdate data-updated="true">May 2<span>nd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The <a href="http://blog.johang.se/2009/03/revert-commit-in-subversion.html">plain Subversion equivalent of <code>git-revert</code></a>.</p>
+
+<p>Back to flipping out…</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/27/note-to-self-parsing-accepts-header/">Note to Self: Parsing the Accepts Header</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-27T00:00:00-04:00" pubdate data-updated="true">Apr 27<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Here’s an <a href="http://www.djangosnippets.org/snippets/1042/">easy-to-follow snippet</a> for the next time you
+need to parse an <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1"><code>Accepts</code> header</a>.</p>
+
+<p>Back to flipping out…</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/17/sneak-attack-importing-csv-files-to/">Sneak Attack: Importing CSV Files to PostgreSQL Databases</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-17T00:00:00-04:00" pubdate data-updated="true">Apr 17<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.ensode.net/postgresql_csv_import.html">Importing <abbr title="Comma Separated Values">CSV</abbr> Files to PostgreSQL Databases</a>.</p>
+
+<p>Back to flipping out…</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/13/project-euler-problem-17/">Project Euler: Problem 17</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-13T00:00:00-04:00" pubdate data-updated="true">Apr 13<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I recently finished up <a href="http://projecteuler.net/index.php?section=problems&amp;id=17">Problem 17</a>, and since the problem was
+fairly straightforward, I used it as an opportunity to explore some of
+Python’s language features that I’ve been meaning to look into.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+<span class="line-number">24</span>
+<span class="line-number">25</span>
+<span class="line-number">26</span>
+<span class="line-number">27</span>
+<span class="line-number">28</span>
+<span class="line-number">29</span>
+<span class="line-number">30</span>
+<span class="line-number">31</span>
+<span class="line-number">32</span>
+<span class="line-number">33</span>
+<span class="line-number">34</span>
+<span class="line-number">35</span>
+<span class="line-number">36</span>
+<span class="line-number">37</span>
+<span class="line-number">38</span>
+<span class="line-number">39</span>
+<span class="line-number">40</span>
+<span class="line-number">41</span>
+<span class="line-number">42</span>
+<span class="line-number">43</span>
+<span class="line-number">44</span>
+<span class="line-number">45</span>
+<span class="line-number">46</span>
+<span class="line-number">47</span>
+<span class="line-number">48</span>
+<span class="line-number">49</span>
+<span class="line-number">50</span>
+<span class="line-number">51</span>
+<span class="line-number">52</span>
+<span class="line-number">53</span>
+<span class="line-number">54</span>
+<span class="line-number">55</span>
+<span class="line-number">56</span>
+<span class="line-number">57</span>
+<span class="line-number">58</span>
+<span class="line-number">59</span>
+<span class="line-number">60</span>
+<span class="line-number">61</span>
+<span class="line-number">62</span>
+<span class="line-number">63</span>
+<span class="line-number">64</span>
+<span class="line-number">65</span>
+<span class="line-number">66</span>
+<span class="line-number">67</span>
+<span class="line-number">68</span>
+<span class="line-number">69</span>
+<span class="line-number">70</span>
+<span class="line-number">71</span>
+<span class="line-number">72</span>
+<span class="line-number">73</span>
+<span class="line-number">74</span>
+<span class="line-number">75</span>
+<span class="line-number">76</span>
+<span class="line-number">77</span>
+<span class="line-number">78</span>
+<span class="line-number">79</span>
+<span class="line-number">80</span>
+<span class="line-number">81</span>
+<span class="line-number">82</span>
+<span class="line-number">83</span>
+<span class="line-number">84</span>
+<span class="line-number">85</span>
+<span class="line-number">86</span>
+<span class="line-number">87</span>
+<span class="line-number">88</span>
+<span class="line-number">89</span>
+<span class="line-number">90</span>
+<span class="line-number">91</span>
+<span class="line-number">92</span>
+<span class="line-number">93</span>
+<span class="line-number">94</span>
+<span class="line-number">95</span>
+<span class="line-number">96</span>
+<span class="line-number">97</span>
+<span class="line-number">98</span>
+<span class="line-number">99</span>
+<span class="line-number">100</span>
+</pre></td><td class="code"><pre><code class="python"><span class="line">    <span class="c"># problem17.py</span>
+</span><span class="line">    <span class="sd">&quot;&quot;&quot;</span>
+</span><span class="line"><span class="sd">    Find the solution to `Problem 17`_ at `Project Euler`_.</span>
+</span><span class="line"><span class="sd">    </span>
+</span><span class="line"><span class="sd">    .. _Problem 17: http://projecteuler.net/index.php?section=problems&amp;id;=17</span>
+</span><span class="line"><span class="sd">    .. _Project Euler: http://projecteuler.net/</span>
+</span><span class="line"><span class="sd">    &quot;&quot;&quot;</span>
+</span><span class="line">    <span class="n">__docformat__</span> <span class="o">=</span> <span class="s">&quot;restructuredtext en&quot;</span>
+</span><span class="line">
+</span><span class="line">    <span class="kn">import</span> <span class="nn">re</span>
+</span><span class="line">
+</span><span class="line">    <span class="n">_NUMBER_NAMES</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s">&quot;one&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s">&quot;two&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s">&quot;three&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="s">&quot;four&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="s">&quot;five&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">6</span><span class="p">:</span> <span class="s">&quot;six&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">:</span> <span class="s">&quot;seven&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">:</span> <span class="s">&quot;eight&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">:</span> <span class="s">&quot;nine&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span> <span class="s">&quot;ten&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">11</span><span class="p">:</span> <span class="s">&quot;eleven&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">:</span> <span class="s">&quot;twelve&quot;</span><span class="p">,</span> <span class="mi">13</span><span class="p">:</span> <span class="s">&quot;thirteen&quot;</span><span class="p">,</span> <span class="mi">14</span><span class="p">:</span> <span class="s">&quot;fourteen&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">15</span><span class="p">:</span> <span class="s">&quot;fifteen&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">:</span> <span class="s">&quot;sixteen&quot;</span><span class="p">,</span> <span class="mi">17</span><span class="p">:</span> <span class="s">&quot;seventeen&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">18</span><span class="p">:</span> <span class="s">&quot;eighteen&quot;</span><span class="p">,</span> <span class="mi">19</span><span class="p">:</span> <span class="s">&quot;nineteen&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">:</span> <span class="s">&quot;twenty&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">21</span><span class="p">:</span> <span class="s">&quot;twenty-one&quot;</span><span class="p">,</span> <span class="mi">22</span><span class="p">:</span> <span class="s">&quot;twenty-two&quot;</span><span class="p">,</span> <span class="mi">23</span><span class="p">:</span> <span class="s">&quot;twenty-three&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">24</span><span class="p">:</span> <span class="s">&quot;twenty-four&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">:</span> <span class="s">&quot;twenty-five&quot;</span><span class="p">,</span> <span class="mi">26</span><span class="p">:</span> <span class="s">&quot;twenty-six&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">27</span><span class="p">:</span> <span class="s">&quot;twenty-seven&quot;</span><span class="p">,</span> <span class="mi">28</span><span class="p">:</span> <span class="s">&quot;twenty-eight&quot;</span><span class="p">,</span> <span class="mi">29</span><span class="p">:</span> <span class="s">&quot;twenty-nine&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">30</span><span class="p">:</span> <span class="s">&quot;thirty&quot;</span><span class="p">,</span> <span class="mi">31</span><span class="p">:</span> <span class="s">&quot;thirty-one&quot;</span><span class="p">,</span> <span class="mi">32</span><span class="p">:</span> <span class="s">&quot;thirty-two&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">33</span><span class="p">:</span> <span class="s">&quot;thirty-three&quot;</span><span class="p">,</span> <span class="mi">34</span><span class="p">:</span> <span class="s">&quot;thirty-four&quot;</span><span class="p">,</span> <span class="mi">35</span><span class="p">:</span> <span class="s">&quot;thirty-five&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">36</span><span class="p">:</span> <span class="s">&quot;thirty-six&quot;</span><span class="p">,</span> <span class="mi">37</span><span class="p">:</span> <span class="s">&quot;thirty-seven&quot;</span><span class="p">,</span> <span class="mi">38</span><span class="p">:</span> <span class="s">&quot;thirty-eight&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">39</span><span class="p">:</span> <span class="s">&quot;thirty-nine&quot;</span><span class="p">,</span> <span class="mi">40</span><span class="p">:</span> <span class="s">&quot;forty&quot;</span><span class="p">,</span> <span class="mi">41</span><span class="p">:</span> <span class="s">&quot;forty-one&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">42</span><span class="p">:</span> <span class="s">&quot;forty-two&quot;</span><span class="p">,</span> <span class="mi">43</span><span class="p">:</span> <span class="s">&quot;forty-three&quot;</span><span class="p">,</span> <span class="mi">44</span><span class="p">:</span> <span class="s">&quot;forty-four&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">45</span><span class="p">:</span> <span class="s">&quot;forty-five&quot;</span><span class="p">,</span> <span class="mi">46</span><span class="p">:</span> <span class="s">&quot;forty-six&quot;</span><span class="p">,</span> <span class="mi">47</span><span class="p">:</span> <span class="s">&quot;forty-seven&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">48</span><span class="p">:</span> <span class="s">&quot;forty-eight&quot;</span><span class="p">,</span> <span class="mi">49</span><span class="p">:</span> <span class="s">&quot;forty-nine&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">:</span> <span class="s">&quot;fifty&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">51</span><span class="p">:</span> <span class="s">&quot;fifty-one&quot;</span><span class="p">,</span> <span class="mi">52</span><span class="p">:</span> <span class="s">&quot;fifty-two&quot;</span><span class="p">,</span> <span class="mi">53</span><span class="p">:</span> <span class="s">&quot;fifty-three&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">54</span><span class="p">:</span> <span class="s">&quot;fifty-four&quot;</span><span class="p">,</span> <span class="mi">55</span><span class="p">:</span> <span class="s">&quot;fifty-five&quot;</span><span class="p">,</span> <span class="mi">56</span><span class="p">:</span> <span class="s">&quot;fifty-six&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">57</span><span class="p">:</span> <span class="s">&quot;fifty-seven&quot;</span><span class="p">,</span> <span class="mi">58</span><span class="p">:</span> <span class="s">&quot;fifty-eight&quot;</span><span class="p">,</span> <span class="mi">59</span><span class="p">:</span> <span class="s">&quot;fifty-nine&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">60</span><span class="p">:</span> <span class="s">&quot;sixty&quot;</span><span class="p">,</span> <span class="mi">61</span><span class="p">:</span> <span class="s">&quot;sixty-one&quot;</span><span class="p">,</span> <span class="mi">62</span><span class="p">:</span> <span class="s">&quot;sixty-two&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">63</span><span class="p">:</span> <span class="s">&quot;sixty-three&quot;</span><span class="p">,</span> <span class="mi">64</span><span class="p">:</span> <span class="s">&quot;sixty-four&quot;</span><span class="p">,</span> <span class="mi">65</span><span class="p">:</span> <span class="s">&quot;sixty-five&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">66</span><span class="p">:</span> <span class="s">&quot;sixty-six&quot;</span><span class="p">,</span> <span class="mi">67</span><span class="p">:</span> <span class="s">&quot;sixty-seven&quot;</span><span class="p">,</span> <span class="mi">68</span><span class="p">:</span> <span class="s">&quot;sixty-eight&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">69</span><span class="p">:</span> <span class="s">&quot;sixty-nine&quot;</span><span class="p">,</span> <span class="mi">70</span><span class="p">:</span> <span class="s">&quot;seventy&quot;</span><span class="p">,</span> <span class="mi">71</span><span class="p">:</span> <span class="s">&quot;seventy-one&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">72</span><span class="p">:</span> <span class="s">&quot;seventy-two&quot;</span><span class="p">,</span> <span class="mi">73</span><span class="p">:</span> <span class="s">&quot;seventy-three&quot;</span><span class="p">,</span> <span class="mi">74</span><span class="p">:</span> <span class="s">&quot;seventy-four&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">75</span><span class="p">:</span> <span class="s">&quot;seventy-five&quot;</span><span class="p">,</span> <span class="mi">76</span><span class="p">:</span> <span class="s">&quot;seventy-six&quot;</span><span class="p">,</span> <span class="mi">77</span><span class="p">:</span> <span class="s">&quot;seventy-seven&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">78</span><span class="p">:</span> <span class="s">&quot;seventy-eight&quot;</span><span class="p">,</span> <span class="mi">79</span><span class="p">:</span> <span class="s">&quot;seventy-nine&quot;</span><span class="p">,</span> <span class="mi">80</span><span class="p">:</span> <span class="s">&quot;eighty&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">81</span><span class="p">:</span> <span class="s">&quot;eighty-one&quot;</span><span class="p">,</span> <span class="mi">82</span><span class="p">:</span> <span class="s">&quot;eighty-two&quot;</span><span class="p">,</span> <span class="mi">83</span><span class="p">:</span> <span class="s">&quot;eighty-three&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">84</span><span class="p">:</span> <span class="s">&quot;eighty-four&quot;</span><span class="p">,</span> <span class="mi">85</span><span class="p">:</span> <span class="s">&quot;eighty-five&quot;</span><span class="p">,</span> <span class="mi">86</span><span class="p">:</span> <span class="s">&quot;eighty-six&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">87</span><span class="p">:</span> <span class="s">&quot;eighty-seven&quot;</span><span class="p">,</span> <span class="mi">88</span><span class="p">:</span> <span class="s">&quot;eighty-eight&quot;</span><span class="p">,</span> <span class="mi">89</span><span class="p">:</span> <span class="s">&quot;eighty-nine&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">90</span><span class="p">:</span> <span class="s">&quot;ninety&quot;</span><span class="p">,</span> <span class="mi">91</span><span class="p">:</span> <span class="s">&quot;ninety-one&quot;</span><span class="p">,</span> <span class="mi">92</span><span class="p">:</span> <span class="s">&quot;ninety-two&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">93</span><span class="p">:</span> <span class="s">&quot;ninety-three&quot;</span><span class="p">,</span> <span class="mi">94</span><span class="p">:</span> <span class="s">&quot;ninety-four&quot;</span><span class="p">,</span> <span class="mi">95</span><span class="p">:</span> <span class="s">&quot;ninety-five&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">96</span><span class="p">:</span> <span class="s">&quot;ninety-six&quot;</span><span class="p">,</span> <span class="mi">97</span><span class="p">:</span> <span class="s">&quot;ninety-seven&quot;</span><span class="p">,</span> <span class="mi">98</span><span class="p">:</span> <span class="s">&quot;ninety-eight&quot;</span><span class="p">,</span>
+</span><span class="line">                    <span class="mi">99</span><span class="p">:</span> <span class="s">&quot;ninety-nine&quot;</span><span class="p">}</span>
+</span><span class="line">
+</span><span class="line">    <span class="n">_CHARACTERS_WE_CARE_ABOUT</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s">&quot;\w&quot;</span><span class="p">)</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">def</span> <span class="nf">_words_from_num</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+</span><span class="line">        <span class="sd">&quot;&quot;&quot;</span>
+</span><span class="line"><span class="sd">        Convert ``num`` to its (British) English phrase equivalent.</span>
+</span><span class="line"><span class="sd">    </span>
+</span><span class="line"><span class="sd">        If ``num`` is greater than 9,999 then raise an ``Exception``.</span>
+</span><span class="line"><span class="sd">        &gt;&gt;&gt; _words_from_num(115)</span>
+</span><span class="line"><span class="sd">        &#39;one hundred and fifteen&#39;</span>
+</span><span class="line"><span class="sd">        &quot;&quot;&quot;</span>
+</span><span class="line">        <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="mi">10000</span><span class="p">:</span>
+</span><span class="line">            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">,</span> <span class="s">&#39;This function only supports numbers less than 10000.&#39;</span>
+</span><span class="line">
+</span><span class="line">        <span class="n">parts_list</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span class="line">        <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="mi">1000</span><span class="p">:</span>
+</span><span class="line">            <span class="n">thousands</span> <span class="o">=</span> <span class="n">num</span> <span class="o">//</span> <span class="mi">1000</span>
+</span><span class="line">            <span class="n">parts_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_NUMBER_NAMES</span><span class="p">[</span><span class="n">thousands</span><span class="p">])</span>
+</span><span class="line">            <span class="n">parts_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot; thousand&quot;</span><span class="p">)</span>
+</span><span class="line">            <span class="n">num</span> <span class="o">-=</span> <span class="n">thousands</span> <span class="o">*</span> <span class="mi">1000</span>
+</span><span class="line">        <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="mi">100</span><span class="p">:</span>
+</span><span class="line">            <span class="n">hundreds</span> <span class="o">=</span> <span class="n">num</span> <span class="o">//</span> <span class="mi">100</span>
+</span><span class="line">            <span class="n">parts_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_NUMBER_NAMES</span><span class="p">[</span><span class="n">hundreds</span><span class="p">])</span>
+</span><span class="line">            <span class="n">parts_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot; hundred&quot;</span><span class="p">)</span>
+</span><span class="line">            <span class="n">num</span> <span class="o">-=</span> <span class="n">hundreds</span> <span class="o">*</span> <span class="mi">100</span>
+</span><span class="line">        <span class="k">if</span> <span class="n">num</span><span class="p">:</span>
+</span><span class="line">            <span class="k">if</span> <span class="n">parts_list</span><span class="p">:</span>
+</span><span class="line">                <span class="n">parts_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot; and&quot;</span><span class="p">)</span>
+</span><span class="line">            <span class="n">parts_list</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="n">_NUMBER_NAMES</span><span class="p">[</span><span class="n">num</span><span class="p">]])</span>
+</span><span class="line">
+</span><span class="line">        <span class="k">return</span> <span class="s">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">parts_list</span><span class="p">)</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">def</span> <span class="nf">_count_characters_we_care_about</span><span class="p">(</span><span class="n">string_to_count</span><span class="p">):</span>
+</span><span class="line">        <span class="sd">&quot;&quot;&quot;</span>
+</span><span class="line"><span class="sd">        Count the characters in ``string_to_count``, excluding things like hyphens and spaces.</span>
+</span><span class="line"><span class="sd">    </span>
+</span><span class="line"><span class="sd">        &gt;&gt;&gt; _count_characters_we_care_about(&quot;one hundred and twenty-three&quot;)</span>
+</span><span class="line"><span class="sd">        24</span>
+</span><span class="line"><span class="sd">        &quot;&quot;&quot;</span>
+</span><span class="line">        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">_CHARACTERS_WE_CARE_ABOUT</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">string_to_count</span><span class="p">))</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">def</span> <span class="nf">problem_17</span><span class="p">(</span><span class="n">upper_bound</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">):</span>
+</span><span class="line">        <span class="sd">&quot;&quot;&quot;</span>
+</span><span class="line"><span class="sd">        Find the solution to `Problem 17`_ at `Project Euler`_.</span>
+</span><span class="line"><span class="sd">    </span>
+</span><span class="line"><span class="sd">        .. _Problem 17: http://projecteuler.net/index.php?section=problems&amp;id;=17</span>
+</span><span class="line"><span class="sd">        .. _Project Euler: http://projecteuler.net/</span>
+</span><span class="line"><span class="sd">    </span>
+</span><span class="line"><span class="sd">        &gt;&gt;&gt; problem_17(2)</span>
+</span><span class="line"><span class="sd">        6</span>
+</span><span class="line"><span class="sd">        &quot;&quot;&quot;</span>
+</span><span class="line">        <span class="n">converted_nums</span> <span class="o">=</span> <span class="p">(</span><span class="n">_words_from_num</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">upper_bound</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+</span><span class="line">        <span class="n">lengths</span> <span class="o">=</span> <span class="p">(</span><span class="n">_count_characters_we_care_about</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span> <span class="k">for</span> <span class="n">phrase</span> <span class="ow">in</span> <span class="n">converted_nums</span><span class="p">)</span>
+</span><span class="line">        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">lengths</span><span class="p">)</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+</span><span class="line">        <span class="k">print</span> <span class="n">problem_17</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h4 id="generator-expressions">Generator Expressions</h4>
+
+<p>The quick version: They’re like list comprehensions, only lazy. The
+longer version resides in <a href="http://www.python.org/dev/peps/pep-0289">PEP 289</a>. The verdict: They rock. It
+didn’t make a big difference in this problem, but in general, it’s nice
+that you don’t have to allocate enough memory to contain an entire list.
+One problem with them is that once you’ve consumed an element of the
+generator expression, you can’t get it back, so they aren’t well-suited
+for problems where you need to iterate across the data more than once.</p>
+
+<h4 id="regexes">Regexes</h4>
+
+<p>Regexes are hardly unique to Python, but this is the first time I’ve
+ever used them in Python. One feature I was excited to try—and that
+Python pioneered—is <a href="http://www.regular-expressions.info/named.html">named capturing groups</a>
+but the regex I used in this example didn’t need them.</p>
+
+<h4 id="docstrings">Docstrings</h4>
+
+<p>I’ve written docstrings before, but this is the first time I’ve tried
+to generate stand-alone documentation from them. To do the generation,
+I used <a href="http://epydoc.sourceforge.net/">epydoc</a>. The original <a href="http://www.python.org/dev/peps/pep-0257">PEP 257</a> defines
+docstrings in terms of plaintext, but <a href="http://www.python.org/dev/peps/pep-0287">PEP 287</a> establishes
+<a href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> as a richer alternative. Since I was
+generating documentation from the docstrings, I decided to go with
+reStructuredText. To avoid typing <code>--docformat restructuredtext</code> every
+time I invoked <code>epydoc</code> again:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="python"><span class="line">    <span class="n">__docformat__</span> <span class="o">=</span> <span class="s">&quot;restructuredtext en&quot;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>While it took a while to get used to it (I’ve gotten pretty set in my
+<a href="http://daringfireball.net/projects/markdown/">Markdown</a> ways), I really like it so far. In fact, I
+liked it enough to write this entire blog post in it and simply post the
+generated HTML into Blogger.</p>
+
+<p>Back to flipping out…</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/9/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/7/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/07/10/notes-from-pyatl-2014-07-10/">Notes From PyATL 2014-07-10</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/09/notes-from-pyatl-2014-01-09/">Notes From PyATL 2014-01-09</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/14/sneak-attack-cant-verify-rubygems-on-os-x/">Sneak Attack: Can&#8217;t Verify RubyGems on OS X</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/12/notes-from-pyatl-2013-12-12/">Notes From PyATL 2013-12-12</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/13/notes-from-pyatl-2013-06-13/">Notes From PyATL 2013-06-13</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Popular Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2007/05/21/what-is-programmers-purpose-in-life/">What is a programmer&#8217;s purpose in life?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/05/31/picking-your-next-programming-language/">Picking Your Next Programming Language</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/05/31/speaking-of-debugging/">Speaking of Debugging…</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/06/04/education-of-programmer/">The Education of a Programmer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2007/06/10/g-client-and-special-sauce/">G-Client and Special Sauce</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Category Cloud</h1>
+    <span id="tag-cloud"><a href='/blog/categories/adium' style='font-size: 100.8955223880597%'>adium(1)</a> <a href='/blog/categories/amqp' style='font-size: 100.8955223880597%'>amqp(1)</a> <a href='/blog/categories/benchmarking' style='font-size: 100.8955223880597%'>benchmarking(1)</a> <a href='/blog/categories/blogger' style='font-size: 100.8955223880597%'>blogger(1)</a> <a href='/blog/categories/book-review' style='font-size: 105.3731343283582%'>book_review(6)</a> <a href='/blog/categories/compilers' style='font-size: 100.8955223880597%'>compilers(1)</a> <a href='/blog/categories/debugging' style='font-size: 100.8955223880597%'>debugging(1)</a> <a href='/blog/categories/design' style='font-size: 100.8955223880597%'>design(1)</a> <a href='/blog/categories/distutils' style='font-size: 100.8955223880597%'>distutils(1)</a> <a href='/blog/categories/django' style='font-size: 102.68656716417911%'>django(3)</a> <a href='/blog/categories/education-sicp' style='font-size: 103.58208955223881%'>Education:SICP(4)</a> <a href='/blog/categories/firefox' style='font-size: 100.8955223880597%'>firefox(1)</a> <a href='/blog/categories/five-things-i-hate' style='font-size: 101.7910447761194%'>five_things_I_hate(2)</a> <a href='/blog/categories/functional-programming' style='font-size: 100.8955223880597%'>functional_programming(1)</a> <a href='/blog/categories/git' style='font-size: 102.68656716417911%'>git(3)</a> <a href='/blog/categories/grails' style='font-size: 101.7910447761194%'>Grails(2)</a> <a href='/blog/categories/haskell' style='font-size: 100.8955223880597%'>Haskell(1)</a> <a href='/blog/categories/homebrew' style='font-size: 100.8955223880597%'>homebrew(1)</a> <a href='/blog/categories/http' style='font-size: 100.8955223880597%'>http(1)</a> <a href='/blog/categories/http-authentication' style='font-size: 100.8955223880597%'>http_authentication(1)</a> <a href='/blog/categories/humor' style='font-size: 100.8955223880597%'>humor(1)</a> <a href='/blog/categories/java' style='font-size: 104.4776119402985%'>Java(5)</a> <a href='/blog/categories/javascript' style='font-size: 101.7910447761194%'>JavaScript(2)</a> <a href='/blog/categories/man' style='font-size: 100.8955223880597%'>man(1)</a> <a href='/blog/categories/matplotlib' style='font-size: 100.8955223880597%'>matplotlib(1)</a> <a href='/blog/categories/maven' style='font-size: 100.8955223880597%'>maven(1)</a> <a href='/blog/categories/mongodb' style='font-size: 100.8955223880597%'>MongoDB(1)</a> <a href='/blog/categories/mongodb' style='font-size: 100.8955223880597%'>mongodb(1)</a> <a href='/blog/categories/netbsd' style='font-size: 100.8955223880597%'>NetBSD(1)</a> <a href='/blog/categories/non-programming' style='font-size: 101.7910447761194%'>non-programming(2)</a> <a href='/blog/categories/note-to-self' style='font-size: 108.95522388059702%'>note-to-self(10)</a> <a href='/blog/categories/note-to-self' style='font-size: 100.8955223880597%'>note_to_self(1)</a> <a href='/blog/categories/np-complete' style='font-size: 100.8955223880597%'>np-complete(1)</a> <a href='/blog/categories/open-source' style='font-size: 100.8955223880597%'>open-source(1)</a> <a href='/blog/categories/optimization' style='font-size: 100.8955223880597%'>optimization(1)</a> <a href='/blog/categories/oracle' style='font-size: 104.4776119402985%'>Oracle(5)</a> <a href='/blog/categories/osx' style='font-size: 106.26865671641791%'>osx(7)</a> <a href='/blog/categories/packaging' style='font-size: 100.8955223880597%'>packaging(1)</a> <a href='/blog/categories/postgresql' style='font-size: 101.7910447761194%'>postgresql(2)</a> <a href='/blog/categories/profiling' style='font-size: 100.8955223880597%'>profiling(1)</a> <a href='/blog/categories/project-euler' style='font-size: 119.70149253731343%'>project_euler(22)</a> <a href='/blog/categories/pyatl' style='font-size: 121.49253731343283%'>PyATL(24)</a> <a href='/blog/categories/pycon' style='font-size: 100.8955223880597%'>pycon(1)</a> <a href='/blog/categories/pygments' style='font-size: 100.8955223880597%'>pygments(1)</a> <a href='/blog/categories/python' style='font-size: 160.0%'>python(67)</a> <a href='/blog/categories/quicksilver' style='font-size: 100.8955223880597%'>quicksilver(1)</a> <a href='/blog/categories/r' style='font-size: 100.8955223880597%'>R(1)</a> <a href='/blog/categories/rails' style='font-size: 101.7910447761194%'>rails(2)</a> <a href='/blog/categories/rest' style='font-size: 100.8955223880597%'>REST(1)</a> <a href='/blog/categories/ruby' style='font-size: 100.8955223880597%'>ruby(1)</a> <a href='/blog/categories/screen' style='font-size: 100.8955223880597%'>screen(1)</a> <a href='/blog/categories/sneak-attack' style='font-size: 136.71641791044777%'>sneak_attack(41)</a> <a href='/blog/categories/solarized' style='font-size: 100.8955223880597%'>solarized(1)</a> <a href='/blog/categories/sphinx' style='font-size: 100.8955223880597%'>Sphinx(1)</a> <a href='/blog/categories/spring-security' style='font-size: 100.8955223880597%'>spring_security(1)</a> <a href='/blog/categories/sql' style='font-size: 100.8955223880597%'>sql(1)</a> <a href='/blog/categories/statistics' style='font-size: 101.7910447761194%'>statistics(2)</a> <a href='/blog/categories/subversion' style='font-size: 100.8955223880597%'>subversion(1)</a> <a href='/blog/categories/sudo' style='font-size: 100.8955223880597%'>sudo(1)</a> <a href='/blog/categories/tee' style='font-size: 100.8955223880597%'>tee(1)</a> <a href='/blog/categories/testing' style='font-size: 100.8955223880597%'>testing(1)</a> <a href='/blog/categories/tuscany' style='font-size: 100.8955223880597%'>tuscany(1)</a> <a href='/blog/categories/unix' style='font-size: 100.8955223880597%'>unix(1)</a> <a href='/blog/categories/usability' style='font-size: 100.8955223880597%'>usability(1)</a> <a href='/blog/categories/user-management' style='font-size: 100.8955223880597%'>user-management(1)</a> <a href='/blog/categories/version-control' style='font-size: 100.8955223880597%'>version-control(1)</a> <a href='/blog/categories/vim' style='font-size: 101.7910447761194%'>vim(2)</a> <a href='/blog/categories/virtualenv' style='font-size: 100.8955223880597%'>virtualenv(1)</a> <a href='/blog/categories/virtualenvwrapper' style='font-size: 100.8955223880597%'>virtualenvwrapper(1)</a> <a href='/blog/categories/windows' style='font-size: 100.8955223880597%'>Windows(1)</a> </span>
+</section>
+
+<section>
+  <h1>Stack Overflow</h1>
+  <a href="http://stackoverflow.com/users/4203/hank-gay"><img src="http://stackoverflow.com/users/flair/4203.png" width="208" height="58" alt="profile for hank-gay at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for hank-gay at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/gthank">@gthank</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'gthank',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Hank -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

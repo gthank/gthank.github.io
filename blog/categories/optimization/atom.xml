@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: optimization | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/optimization/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: Will it Optimize?]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2010/07/23/sneak-attack-will-it-optimize/"/>
+    <updated>2010-07-23T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2010/07/23/sneak-attack-will-it-optimize</id>
+    <content type="html"><![CDATA[<p><a href="http://ridiculousfish.com/blog/archives/2010/07/23/will-it-optimize/">Fun with optimizing compilers</a>.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

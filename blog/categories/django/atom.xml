@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: django | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/django/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Note to Self: Source Django's bash Completion Automatically]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2010/12/29/note-to-self-source-djangos-bash/"/>
+    <updated>2010-12-29T00:00:00-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2010/12/29/note-to-self-source-djangos-bash</id>
+    <content type="html"><![CDATA[<p>If you’re using Doug Hellman’s awesome
+<a href="http://www.doughellmann.com/projects/virtualenvwrapper/">virtualenvwrapper</a>
+to manage your Django projects–and you really should be–try adding the
+following line to your $VIRTUAL_ENV/bin/postactivate script:</p>
+
+<pre><code>source "$VIRTUAL_ENV/build/Django/extras/django_bash_completion"
+</code></pre>
+
+<p>If you used the <code>--no-site-packages</code> option to create the virtualenv, that
+should automatically source the Django bash completion script every time you
+<code>workon</code> into your project. If you didn’t, you just need to figure out where the
+Django bash completion script is squirreled away on your system and use that
+path instead. BTW, <code>--no-site-packages</code> should really be the default.</p>
+
+<p>UPDATE: And now <code>--no-site-packages</code> <em>IS</em> the default. Yay!</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: Fixing Django Management Commands]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/12/09/sneak-attack-fixing-django-management/"/>
+    <updated>2009-12-09T00:00:00-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/12/09/sneak-attack-fixing-django-management</id>
+    <content type="html"><![CDATA[<p>Nifty post on
+<a href="http://blog.zacharyvoase.com/post/275566873">reducing boilerplate and improving argument parsing in Django management commands</a>.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: Django Circular Model References]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/06/24/sneak-attack-django-circular-model/"/>
+    <updated>2009-06-24T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/06/24/sneak-attack-django-circular-model</id>
+    <content type="html"><![CDATA[<p><a href="http://spindrop.us/2008/02/03/django-circular-model-references/">Django Circular Model References</a> highlights
+a neat trick to make Django models play nice with circular references.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

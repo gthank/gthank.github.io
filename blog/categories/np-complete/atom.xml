@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: np-complete | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/np-complete/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak Attack: Graph of NP-Complete Problems]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/02/09/sneak-attack-graph-of-np-complete/"/>
+    <updated>2009-02-09T00:00:00-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/02/09/sneak-attack-graph-of-np-complete</id>
+    <content type="html"><![CDATA[<p>Mmm… <a href="http://page.mi.fu-berlin.de/aneumann/npc.html">NP-completeness</a>….</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

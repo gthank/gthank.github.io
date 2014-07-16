@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Windows | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/windows/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Notes from PyATL 2012-02-09]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2012/02/09/pyatl-notes/"/>
+    <updated>2012-02-09T19:39:00-05:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2012/02/09/pyatl-notes</id>
+    <content type="html"><![CDATA[<h2 id="python-chef-and-mongodb-rick-copeland">Python, Chef, and MongoDB (Rick Copeland)</h2>
+
+<ul>
+  <li><code>chef-client</code> is what is actually managing your machine</li>
+  <li>This talk focuses on replacing the Chef server</li>
+  <li>TIL: Chef server is currently based on CouchDB (really?), but they’re
+probably migrating to Postgres (already done for the hosted service?)</li>
+  <li>Way more guts of Chef that I’ve looked at before</li>
+  <li>I wonder how that fat model thing affects testability in Python. He conceded
+that maybe you don’t have to put stuff in the model, as long as you don’t put
+it in the view.</li>
+  <li>Interesting approach for testing: a little <code>urllib</code> hackery, some
+WebOb-derived machinery, etc.</li>
+</ul>
+
+<h2 id="wmi-api-justin-simms">WMI-API (Justin Simms)</h2>
+
+<ul>
+  <li>Windows Management Instrumentation
+(<abbr title="Windows Management Instrumentation">WMI</abbr>)</li>
+  <li>Got started down this path due to i18n (that’s possibly the most interesting
+thing I’ve ever heard tied to i18n).</li>
+  <li>It’s like DevOps city up in here</li>
+</ul>
+
+<h2 id="better-documentation-through-automation-creating-docutils--sphinx-extensions-doug-hellmann">Better Documentation Through Automation: Creating <code>docutils</code> &amp; Sphinx Extensions (Doug Hellmann)</h2>
+
+<h3 id="the-basics">The basics</h3>
+
+<ul>
+  <li><a href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> (<abbr title="reStructuredText">RST</abbr>) is
+commonly described as a Markup Language for Documents; the
+<a href="http://docutils.sourceforge.net/"><code>docutils</code></a> module provides parsing, etc. for RST.</li>
+  <li>Not so fast, says Doug. He says it’s a programming language for building
+documents (makes me think of <a href="http://en.wikipedia.org/wiki/TeX">TeX</a>), because you can extend it
+without changing the syntax.</li>
+  <li>Just like with a programming language, you should strive for
+<abbr title="Don't Repeat Yourself">DRY</abbr>.</li>
+  <li>Demoing a <a href="http://docutils.sourceforge.net/docs/ref/rst/roles.html">Role</a> for linking to issues on <a href="https://bitbucket.org/">BitBucket</a>:
+it’s just a single Role-processor function, which returns a 2-tuple (I
+missed the details of exactly what is in this tuple, but part of it is a
+collection of nodes from a parse tree).</li>
+  <li>Parse trees? He wasn’t kidding with the compiler comparisons.</li>
+  <li>You have to explicitly register config values in <code>conf.py</code> to get Sphinx to
+remember stuff.</li>
+  <li><a href="http://docutils.sourceforge.net/docs/ref/rst/directives.html">Directives</a> are a bit more complicated than Roles, but that
+makes sense given how much more powerful they are.</li>
+  <li>Directive processors are implemented as classes instead of functions, but
+most of the work is handled by the <code>run</code> method.</li>
+  <li>I should dig into <a href="http://sphinx.pocoo.org/">Sphinx</a>; I’d write better docs <em>and</em> I’d freshen up my
+theoretical <abbr title="Computer Science">CS</abbr> skills.</li>
+  <li>The Table Node Hierarchy is very similar to the HTML <code>&lt;table&gt;</code> stuff.</li>
+  <li>You can also write your own <a href="http://sphinx.pocoo.org/ext/builderapi.html">Document Builder</a> (this is
+Sphinx-specific, whereas the earlier stuff we covered was generic <code>docutils</code>
+stuff), which is yet another level higher in the hierarchy.</li>
+</ul>
+
+<h3 id="sphinxcontribspellingsphinxcontribspellingdocs"><a href="http://www.doughellmann.com/docs/sphinxcontrib.spelling/"><code>sphinxcontrib.spelling</code></a></h3>
+
+<ul>
+  <li>This is a project that Doug wrote when he was writing his book, and most of
+the magic is in the custom Document Builder.</li>
+  <li>There’s an <code>init</code> method; don’t confuse it with <code>__init__</code>.</li>
+  <li>Document Builders basically works by walking the parse tree and doing
+whatever they want to, then spit out some results.</li>
+</ul>
+
+<p>Back to flipping out…</p>
+]]></content>
+  </entry>
+  
+</feed>

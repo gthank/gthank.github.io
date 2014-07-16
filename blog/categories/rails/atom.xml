@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: rails | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/rails/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Notes on acts-as-taggable-on]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/03/26/notes-on-acts-as-taggable-on/"/>
+    <updated>2009-03-26T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/03/26/notes-on-acts-as-taggable-on</id>
+    <content type="html"><![CDATA[<p>If you’re using <a href="http://wiki.github.com/mbleigh/acts-as-taggable-on">acts-as-taggable-on</a>, you may
+have noticed the documentation is a bit… sparse. The following are
+some of the more helpful resources I’ve found.</p>
+
+<ul>
+  <li>The <a href="http://svn.viney.net.nz/things/rails/plugins/acts_as_taggable_on_steroids/README">README</a> from <code>Acts as Taggable on Steroids</code> (the
+inspiration for <code>acts-as-taggable-on</code>)</li>
+  <li>crunchytoast.com has a nice <a href="http://crunchytoast.com/2009/02/15/return-to-acts_as_taggable_on/">documentation effort</a></li>
+</ul>
+
+<p>Finally, I ran into errors with trying to build a tag cloud when there
+were no tags to count. My solution was to embed</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>    <span class="vi">@tags</span> <span class="o">=</span> <span class="no">Post</span><span class="o">.</span><span class="n">tag_counts</span> <span class="o">||</span> <span class="o">[]</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>(or similar) into whichever method on the controller was responsible for
+the page to contain the tag cloud so that the default is an empty list
+instead of <code>nil</code>.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Note to Self: In Rails 2.3, application.rb -> application_controller.rb]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/03/20/mental-note-in-rails-23-applicationrb/"/>
+    <updated>2009-03-20T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/03/20/mental-note-in-rails-23-applicationrb</id>
+    <content type="html"><![CDATA[<p>Rails 2.3.2 apparently forgot to rename <code>app/controllers/application.rb</code>
+to <code>app/controllers/application_controller.rb</code>, so
+<a href="http://guides.rubyonrails.org/getting_started.html">Getting Started with Rails</a> fails with the following
+error:</p>
+
+<pre><code>uninitialized constant ApplicationController
+</code></pre>
+
+<p>A simple <code>mv</code> should fix things right up.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>

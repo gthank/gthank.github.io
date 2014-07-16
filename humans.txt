@@ -1,0 +1,17 @@
+/* TEAM */
+	Author:Hank Gay
+	Contact: hank@realultimateprogramming.com
+	From:Atlanta, GA, USA
+
+/* THANKS */
+
+	Blogging Software: The authors of Octopress, Jekyll, and all the great plugins I'm using to power this site.
+	
+	Editor: Bram Moolenar and everyone that contributes to Vim (and MacVim).
+	
+	Hosting: The awesome people behind GitHub Pages.
+
+/* SITE */
+	Last update:2013/12/14
+	Language: English
+	Doctype:HTML5

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: http | Real Ultimate Programming]]></title>
+  <link href="http://www.realultimateprogramming.com//blog/categories/http/atom.xml" rel="self"/>
+  <link href="http://www.realultimateprogramming.com//"/>
+  <updated>2014-07-15T22:20:37-04:00</updated>
+  <id>http://www.realultimateprogramming.com//</id>
+  <author>
+    <name><![CDATA[Hank]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Note to Self: Parsing the Accepts header]]></title>
+    <link href="http://www.realultimateprogramming.com//blog/2009/04/27/note-to-self-parsing-accepts-header/"/>
+    <updated>2009-04-27T00:00:00-04:00</updated>
+    <id>http://www.realultimateprogramming.com//blog/2009/04/27/note-to-self-parsing-accepts-header</id>
+    <content type="html"><![CDATA[<p>Here’s an <a href="http://www.djangosnippets.org/snippets/1042/">easy-to-follow snippet</a> for the next time you
+need to parse an <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1"><code>Accepts</code> header</a>.</p>
+
+<p>Back to flipping out…</p>
+
+]]></content>
+  </entry>
+  
+</feed>
